@@ -27,7 +27,6 @@ learning provision). Static site only — no app backend.
 | `static/` | Static files served as-is |
 | `config.toml` | Site config, main menu, params |
 | `netlify.toml` | Build command + Hugo/Node versions |
-| `ONEDRIVE_SETUP.md` | How to embed password-protected policy docs from OneDrive |
 
 ## Commands
 
@@ -52,7 +51,7 @@ Netlify build: `yarn install && yarn build && hugo` → publish `public/`.
 
 - Prefer Tailwind utility classes in templates; brand colours via `sc-*` from `tailwind.js`.
 - Content edits live in `content/**/*.md`; structural/UI in `layouts/`.
-- Policy embeds: set `iframe_url` in front matter — see `ONEDRIVE_SETUP.md`.
+- Policy embeds: set `iframe_url` in front matter (OneDrive setup docs live on the policies feature branch when present).
 - Do not commit on the user's behalf unless explicitly asked.
 - After material ownership, hosting, or architecture changes, update
   [`TIMELINE.md`](TIMELINE.md) in the same PR.

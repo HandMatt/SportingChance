@@ -13,7 +13,7 @@ hosting, or architecture changes.
 
 - Edit page copy in `content/`; templates in `layouts/`; assets in `src/`.
 - Use existing Tailwind / `sc-*` brand classes before adding custom CSS.
-- For policy embeds, follow `ONEDRIVE_SETUP.md` (`iframe_url` front matter).
+- For policy embeds, set `iframe_url` in front matter (OneDrive embed docs when that file is on the branch).
 - Prefer PRs into `develop`; leave `master` for production releases.
 - Prefer updating `PROJECT.md` / `TIMELINE.md` over creating new context docs.
 

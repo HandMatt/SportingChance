@@ -8,7 +8,7 @@ Update in the same PR as the change. Keep entries to one short bullet.
 - **Cursor context** — Added `.cursor/` + `AGENTS.md` as the starting point for AI-assisted maintenance (this file, `PROJECT.md`, project rules).
 - **`develop` branch** — Created from `master` as the integration branch; Netlify branch deploys for preview still pending account access.
 - **Maintainer handover** — Lead maintenance moving to Matt / SCP; GitHub transfer and Netlify access requested from previous owner (`Ieuanoh`).
-- **Policy docs** — Site direction is OneDrive (Microsoft 365) embeds with optional link passwords; see `ONEDRIVE_SETUP.md`. Embed URL wiring may still be in progress on a feature branch.
+- **Policy docs** — Site direction is OneDrive (Microsoft 365) embeds with optional link passwords. Setup notes and embed URL wiring may still be in progress on a feature branch.
 
 ## Earlier (pre-handover)
 

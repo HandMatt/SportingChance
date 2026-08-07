@@ -12,8 +12,7 @@ Keep it small — prefer updating existing files over adding new ones.
 | [`rules/`](rules/) | Cursor rules (`.mdc`) |
 | [`plans/`](plans/) | Short-lived feature/chore plans (delete when done) |
 
-Root pointers: [`AGENTS.md`](../AGENTS.md). Human docs: [`README.md`](../README.md),
-[`ONEDRIVE_SETUP.md`](../ONEDRIVE_SETUP.md).
+Root pointers: [`AGENTS.md`](../AGENTS.md). Human docs: [`README.md`](../README.md).
 
 ## Conventions
 

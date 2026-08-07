@@ -16,7 +16,7 @@ inside is plain Markdown and agent-agnostic.
 | Short-lived plans | [`.cursor/plans/`](.cursor/plans/) |
 | Folder index | [`.cursor/README.md`](.cursor/README.md) |
 
-Human docs: [`README.md`](README.md), [`ONEDRIVE_SETUP.md`](ONEDRIVE_SETUP.md).
+Human docs: [`README.md`](README.md).
 
 ## Keeping context alive
 
