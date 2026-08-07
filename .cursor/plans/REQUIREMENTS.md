@@ -4,8 +4,10 @@ Short backlog captured 2026-08. Each item has a brief plan; detailed design happ
 
 | Plan | Summary | Existing work |
 |------|---------|---------------|
-| [onedrive-policy-embeds.md](onedrive-policy-embeds.md) | Policies moved to OneDrive; restore accessible embeds | Local `feature/update-policies-and-procedures` (WIP) |
-| [homepage-scp-banner.md](homepage-scp-banner.md) | Homepage banner linking to Supporting Children's Pathways | None yet |
+| [three-service-pages.md](three-service-pages.md) | Three leaflet pillars: Mentoring, Construction, Alternative Learning | Mentoring + vocational page exist; ALP page missing |
+| [homepage-scp-banner.md](homepage-scp-banner.md) | Homepage bar + education CTAs → Supporting Children's Pathways | Depends on three-service-pages |
 | [content-testimonials-imagery.md](content-testimonials-imagery.md) | Content refresh, new testimonials, source/add pictures | Testimonials page + `feedback-quote` block already exist; images TBD with Tony |
+| [rebrand-styling.md](rebrand-styling.md) | Visual rebrand / styling pass (after structure + signposting) | None yet — brief only |
+| [onedrive-policy-embeds.md](onedrive-policy-embeds.md) | Policies moved to OneDrive; restore accessible embeds | Local `feature/update-policies-and-procedures` (WIP) |
 
 Delete individual plan files (and this index if empty) when the work ships.
