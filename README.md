@@ -19,5 +19,8 @@ The Sporting Chance website, built using Hugo.
 ## Deployment
 
 - Netlify currently deploys the site on each push of the master branch of the repository
+- Integration work should target the `develop` branch; promote to `master` for production
 
-TODO
+## Agent / AI context
+
+Shared project context for Cursor (and other agents) lives under [`.cursor/`](.cursor/) — start at [`AGENTS.md`](AGENTS.md). Update [`.cursor/context/TIMELINE.md`](.cursor/context/TIMELINE.md) when material ownership, hosting, or architecture facts change.

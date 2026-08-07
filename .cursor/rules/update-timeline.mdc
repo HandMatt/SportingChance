@@ -1,0 +1,16 @@
+---
+description: Keep TIMELINE.md current when material project facts change
+alwaysApply: true
+---
+
+# Living context
+
+When a change affects how this site is owned, built, deployed, or maintained,
+add a short dated bullet to `.cursor/context/TIMELINE.md` (newest first) in the
+same PR. Update `.cursor/context/PROJECT.md` only if the overview would otherwise
+be wrong.
+
+Examples that need a timeline entry: branch/deploy workflow, Netlify/GitHub
+ownership, policy document hosting, stack upgrades, CMS changes.
+
+Skip timeline noise for routine copy edits and small UI tweaks.

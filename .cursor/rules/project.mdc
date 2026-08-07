@@ -1,0 +1,24 @@
+---
+description: Sporting Chance site conventions for agents
+alwaysApply: true
+---
+
+# Sporting Chance
+
+Hugo + Tailwind + Webpack static site. Read `.cursor/context/PROJECT.md` for
+stack and layout. Keep `.cursor/context/TIMELINE.md` current when ownership,
+hosting, or architecture changes.
+
+## Do
+
+- Edit page copy in `content/`; templates in `layouts/`; assets in `src/`.
+- Use existing Tailwind / `sc-*` brand classes before adding custom CSS.
+- For policy embeds, set `iframe_url` in front matter (OneDrive embed docs when that file is on the branch).
+- Prefer PRs into `develop`; leave `master` for production releases.
+- Prefer updating `PROJECT.md` / `TIMELINE.md` over creating new context docs.
+
+## Don't
+
+- Don't add app/backend scaffolding — this is a static marketing site.
+- Don't invent a large docs tree; two context files plus rules are enough.
+- Don't commit unless the user explicitly asks.
