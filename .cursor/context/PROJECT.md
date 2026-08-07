@@ -11,7 +11,7 @@ learning provision). Static site only — no app backend.
 | CSS | Tailwind 3 (`tailwind.js` brand tokens as `sc-*` classes) |
 | JS/CSS build | Webpack 5 + PostCSS (`src/` → compiled assets) |
 | Package manager | Yarn 4 (`packageManager` in `package.json`) |
-| Local Hugo | Docker (`docker-compose.yml`, port 1313) |
+| Local dev | Docker Compose - `hugo` + `assets` (Node 18 / Yarn 4); site on port 1313 |
 | Hosting | Netlify — production deploys from `master` |
 | CMS (legacy) | Forestry.io noted in README; content is plain Markdown in git |
 
@@ -27,14 +27,18 @@ learning provision). Static site only — no app backend.
 | `static/` | Static files served as-is |
 | `config.toml` | Site config, main menu, params |
 | `netlify.toml` | Build command + Hugo/Node versions |
+| `docker-compose.yml` | Local `hugo` + `assets` services |
+| `Dockerfile.assets`| Node 18 image with Yarn 4.9.2 (Corepack) |
+| `.yarnrc.yml` | `nodeLinker: node-modules` (required for Webpack) |
 
 ## Commands
 
 ```bash
-yarn            # install
-yarn dev        # Docker Hugo + webpack --watch → http://localhost:1313
-yarn build      # webpack production build
-yarn start      # hugo server (needs local Hugo; prefer yarn dev)
+docker compose build assets                   # first time / Dockerfile changes
+docker compose run --rm assets yarn install   # first time / after dep changes
+docker compose up                             # or: yarn dev -> http://localhost:1313
+yarn build                                    # webpack once (Netlify / host Node)
+yarn start                                    # local Hugo only (needs Hugo on host)
 ```
 
 Netlify build: `yarn install && yarn build && hugo` → publish `public/`.

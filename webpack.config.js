@@ -9,6 +9,12 @@ module.exports = {
     filename: 'app.js',
     publicPath: '/'
   },
+  watchOptions: {
+    aggregateTimeout: 500,
+    poll: 1000,
+    // ignore must cover relative and absolute output paths under Docker/WSL.
+    ignored: /(^|[\\/])(node_modules|static|public)([\\/]|$)/,
+  },
   module: {
     rules: [
       {

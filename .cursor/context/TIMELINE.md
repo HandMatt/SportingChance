@@ -5,6 +5,7 @@ Update in the same PR as the change. Keep entries to one short bullet.
 
 ## 2026-08
 
+- **Docker** — Moved local Node/Yarn into a Compose `assets` service so the site runs with Docker only; Netlify build unchanged.
 - **Identified work (Tony / Matt)** — Captured brief plans for OneDrive policy embeds (restore access), a homepage banner to Supporting Children's Pathways, and a content/testimonials/imagery refresh; see `.cursor/plans/REQUIREMENTS.md`.
 - **Cursor context** — Added `.cursor/` + `AGENTS.md` as the starting point for AI-assisted maintenance (this file, `PROJECT.md`, project rules).
 - **`develop` branch** — Created from `master` as the integration branch; Netlify branch deploys for preview still pending account access.
