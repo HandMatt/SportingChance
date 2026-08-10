@@ -1,70 +1,88 @@
 ---
 type: page
-title: Vocational Workshops
-description: Sporting Chance Project offers alternative learning and vocational
-  workshops to young people
+title: Alternative Learning Provision
+description: Sporting Chance Project provides mentoring, education, and life skills
+  coaching for ages 5–18, including those with SEN or an EHCP.
 page_sections:
 - template: generic-header
-  title: Vocational Workshops
-  subtext: Our dedicated learning hub in Bristol allows learners aged 14-18 years
-    to gain skills in specific trades and vocations, and supports 
-    their career pathways.
-  image: "/img/mentoring-and-life-skills-1.png"
-  alt: Student in workshop
+  title: Alternative Learning Provision
+  subtext: Sporting Chance Project provides mentoring, education, and life skills
+    coaching for ages 5–18, including those with SEN or an EHCP. We collaborate with
+    parents and professionals to help young people reach their full potential.
+  image: "/img/mentoring-and-life-skills-2.png"
+  alt: Young people in a learning session
 - template: icon-grid
   icon_boxes:
-  - copy: The trades we cover include carpentry, bricklaying, plastering, plumbing,
-      painting & decorating, tiling.<br/><br/> We also provide learning for 
-      catering, sport & fitness, and animal care.
-    title: Construction Trades
-    icon: "/img/school.svg"
-    iconalt: trades icon
-  - copy: Our skilled tradesmen and experienced tutors provide nationally recognised
-      qualifications, including ASDAN and NCFE Functional Skills - Maths, English and ICT.
-    title: Qualifications Provided
+  - title: Functional Skills
+    copy: ASDAN and NCFE qualifications in Maths, English and ICT, delivered through
+      one-to-one or small group tuition.
     icon: "/img/altedu.svg"
-    iconalt: qualifications icon
-  - copy: Caters for students that may not engage with traditional classroom learning
-      and builds confidence by gaining invaluable vocational hands-on experience.
-    title: Hands-on Learning
-    icon: "/img/sportcoaching.svg"
-    iconalt: learning icon
-  - copy: A supportive environment with directed learning one-to-one or in small groups.
-    title: Supportive Environment
+    iconalt: functional skills icon
+  - title: Cooking & Food Preparation
+    copy: Practical cooking and food preparation skills that build independence and
+      confidence in everyday life.
+    icon: "/img/school.svg"
+    iconalt: cooking icon
+  - title: Money Management
+    copy: Life skills around managing money and living independently, tailored to
+      individual needs.
     icon: "/img/maths.svg"
-    iconalt: supportive environment icon
-  - copy: Young learners can use their skills and qualification to go on to an apprenticeship,
-      further education or employment.
-    title: Career Pathways
-    icon: "/img/career.svg"
-    iconalt: career pathways icon
-  - copy: Work experience placements available for Year 11 and above, as well as transition
-      support to meet future student pathways.
-    title: Transition Support
-    icon: "/img/apprentice.svg"
-    iconalt: transition support icon
-  - copy: 'We offer free half-day taster sessions for all our trades. If it''s the
-      right pathway for the student, full-day or half-day workshops can be booked
-      in six-week (term time) blocks. '
-    title: Taster sessions
-    icon: "/img/intervention.svg"
-    iconalt: education icon
-  - copy: Transportation offered for 2+ students from school to our specialist education
-      site in Brislington, Bristol.
-    title: Transport Provided
+    iconalt: money management icon
+  - title: Animal Care
+    copy: Hands-on animal care sessions that engage young people and develop
+      responsibility and practical skills.
     icon: "/img/book.svg"
-    iconalt: transport icon
+    iconalt: animal care icon
+  - title: Sports & Fitness
+    copy: Sport and fitness activities that support health, wellbeing, and positive
+      engagement.
+    icon: "/img/sportcoaching.svg"
+    iconalt: sports and fitness icon
+  - title: Employability
+    copy: Employability skills that help young people prepare for work, further
+      education, or the next step on their pathway.
+    icon: "/img/career.svg"
+    iconalt: employability icon
+  - title: SEN & EHCP Support
+    copy: Support for young people with Special Educational Needs or an Education,
+      Health and Care Plan, working alongside parents and professionals.
+    icon: "/img/intervention.svg"
+    iconalt: SEN and EHCP support icon
+  - title: Personal Development
+    copy: Personal and social development in a supportive environment, helping young
+      people build confidence and reach their full potential.
+    icon: "/img/apprentice.svg"
+    iconalt: personal development icon
 - template: centred-text
-  header: Alternative Learning
+  header: Our sessions include
   left-align: true
-  main_text: Our construction workshops help students build confidence by gaining
-    invaluable vocational hands-on experience in a supportive environment with directed
-    learning or small groups.<br/><br/> The trades we cover include carpentry, plastering, tiling,
-    bricklaying, plumbing, painting & decorating. We also provide learning opportunities for 
-    catering, sport & fitness, and animal care.<br/><br/> All of which, can be provided at various levels to meet individual needs, in half-day (3 hours) and full-day (6 hours) sessions.
-  buttonlink: "/contact"
-  buttontext: Get in touch
+  main_text: Functional skills (ASDAN/NCFE qualifications), cooking & food
+    preparation, money management, animal care, sports & fitness, and
+    employability.<br/><br/>Sessions are tailored to individual needs, working
+    closely with parents and professionals.
   button: true
+  buttontext: Get in touch
+  buttonlink: "/contact"
+  text_section: []
+- template: two-columns-links
+  columns:
+  - header: Mentoring & Life Skills
+    main_text: Our experienced team also offers one-to-one mentoring and life skills coaching for young people aged 5–18.
+    buttontext: Find out more
+    buttonlink: "/mentoring-life-skills"
+  - header: Construction Workshops
+    main_text: Looking for hands-on construction trades for 14–18 year olds? See our Construction Workshops.
+    buttontext: Find out more
+    buttonlink: "/construction-workshops"
+- template: centred-text
+  header: Education provision
+  left-align: false
+  main_text: Our education arm is now <strong>Supporting Children's Pathways</strong>,
+    a charitable not-for-profit.
+  button: true
+  buttontext: Learn more
+  buttonlink: "https://www.supportingchildrenspathways.org/"
+  external: true
   text_section: []
 - template: cta-block
   heading: How can we help you?
@@ -72,14 +90,4 @@ page_sections:
     you.
   buttonlink: "/contact"
   buttontext: Contact Us
-- template: centred-text
-  button: true
-  main_text: Sporting Chance Project's experienced team also offers education, mentoring
-    and life skills coaching to young people.
-  buttontext: Find out more
-  header: Mentoring & Life Skills
-  left-align: true
-  text_section: []
-  buttonlink: "/mentoring-life-skills"
-
 ---

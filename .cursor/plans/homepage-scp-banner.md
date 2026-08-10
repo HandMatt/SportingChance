@@ -1,22 +1,20 @@
 # Homepage banner → Supporting Children's Pathways
 
-**Status:** Identified — starts **after** [three-service-pages.md](three-service-pages.md)  
+**Status:** Ready to implement — three service pillars + education CTAs have shipped  
 **Priority:** Medium — cross-site signposting for the sister charity  
 **Suggested branch:** `feature/homepage-scp-banner` from `develop`  
-**Depends on:** Three service pillars live (Mentoring, Construction, Alternative Learning)  
-**Follows / precedes:** After three-service-pages; before rebrand/styling.
+**Depends on:** Done (Mentoring, Construction, Alternative Learning live)  
+**Follows / precedes:** Before rebrand/styling.
 
 ## Goal
 
 1. **Homepage** — subtle top bar → Supporting Children's Pathways  
    (https://www.supportingchildrenspathways.org/).
-2. **Service pages** — shared education-provision CTA on each of the three pillars  
-   (education arm spun off as charitable NFP).
-3. **SCP reciprocal banner** — out of scope; separate SCPCharity task.
+2. **SCP reciprocal banner** — out of scope; separate SCPCharity task.
 
 ## Context
 
-- Two sites, two purposes; visitors need clear signposting once the three Sporting Chance service pages exist.
+- Service-page and homepage **Education provision** CTAs already ship on the three-pillars work; this task is the slim top-of-page bar only.
 - Homepage already has a **hero**; this is a separate **slim site notice**, not a hero redesign.
 - Nav is `fixed top-0`; hero uses `margin-top: 4.8rem`. Prefer bar **inside the fixed header stack**.
 - Visual polish / rebrand is a later task — keep this shippable with existing `sc-*` tokens.

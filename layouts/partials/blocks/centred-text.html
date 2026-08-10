@@ -19,7 +19,9 @@
 
     {{ with .Params.button }}
         <div class="my-12">
-            <a href="{{ $Params.buttonlink}}" class="trans-02 border-2 border-black hover:border-transparent hover:bg-sc-blue my-5 text-xl rounded mt-4 p-4 text-right font-semibold no-underline text-black hover:text-white block w-fit button-style">{{ $Params.buttontext }} →</a>
+            <a href="{{ $Params.buttonlink }}"
+            class="trans-02 border-2 border-black hover:border-transparent hover:bg-sc-blue my-5 text-xl rounded mt-4 p-4 text-right font-semibold no-underline text-black hover:text-white block w-fit button-style"
+            {{ if $Params.external }}target="_blank" rel="noopener noreferrer"{{ end }}>{{ $Params.buttontext }} →</a>
         </div>
     {{ end }}
 </section>

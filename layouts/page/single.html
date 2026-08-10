@@ -9,6 +9,7 @@
         {{- if eq .template "partners" -}}{{ partial "blocks/partners" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "contact-form" -}}{{ partial "blocks/contact-form" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "cta-block" -}}{{ partial "blocks/cta-block" (dict "Params" .) }}{{- end -}}
+        {{- if eq .template "two-columns-links" -}}{{ partial "blocks/two-columns-links" (dict "Params" .) }}{{- end -}}
 {{- end -}}
 
 {{end}}
