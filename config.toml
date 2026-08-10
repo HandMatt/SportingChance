@@ -17,14 +17,19 @@ name = "Services"
 url = "/services"
 weight = 30
 [[menu.main]]
-name = "Mentoring"
+name = "Mentoring & Life Skills"
 url = "/mentoring-life-skills"
 weight = 1
 parent = "Services"
 [[menu.main]]
-name = "Vocational"
-url = "/alternative-learning-provision"
+name = "Construction Workshops"
+url = "/construction-workshops"
 weight = 2
+parent = "Services"
+[[menu.main]]
+name = "Alternative Learning Provision"
+url = "/alternative-learning-provision"
+weight = 3
 parent = "Services"
 [[menu.main]]
 name = "Testimonials"

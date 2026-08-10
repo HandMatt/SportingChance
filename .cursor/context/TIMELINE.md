@@ -5,6 +5,7 @@ Update in the same PR as the change. Keep entries to one short bullet.
 
 ## 2026-08
 
+- **Three service pillars** — Mentoring & Life Skills, Construction Workshops, and Alternative Learning Provision pages live with leaflet-aligned copy, Services nav/hub updates, and SCP education CTAs (homepage + service pages).
 - **Docker** — Moved local Node/Yarn into a Compose `assets` service so the site runs with Docker only; Netlify build unchanged.
 - **Identified work (Tony / Matt)** — Captured brief plans for OneDrive policy embeds (restore access), a homepage banner to Supporting Children's Pathways, and a content/testimonials/imagery refresh; see `.cursor/plans/REQUIREMENTS.md`.
 - **Cursor context** — Added `.cursor/` + `AGENTS.md` as the starting point for AI-assisted maintenance (this file, `PROJECT.md`, project rules).
