@@ -7,7 +7,7 @@
         <p class="md:text-xl sm:text-xl opacity-75">{{ markdownify . }}</p>
         {{ end }}
         <div class="py-3 flex justify-center">
-            <div class="my-12"><a href="{{ .Params.buttonlink}}"
+            <div class="my-12"><a href="{{ .Params.buttonlink | default "/" }}"
                     class="trans-02 border-2 hover:border-sc-yellow hover:bg-sc-yellow shadow my-5 text-xl border-grey-darker rounded mt-4 p-4 text-right font-semibold no-underline text-black hover:text-white"
                     >{{ .Params.buttontext }} →</a></div>
         </div>

@@ -132,7 +132,7 @@ body.has-scp-site-notice {
 }
 
 main {
-    margin-top: 4.8rem;
+    margin-top: var(--site-header-offset);
 }
 
 .scp-site-notice {
