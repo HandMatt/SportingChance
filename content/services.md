@@ -65,7 +65,7 @@ page_sections:
   buttonlink: "/alternative-learning-provision"
 - template: feedback-quote
   header: Success Stories
-  name: Cory O
+  name: C. O.
   caption: Now travelling Australia and New Zealand
   quote: 'Sporting Chance Project, in conjunction with my school, helped me to focus
     on my academic studies, which allowed me to participate in sport alongside my
