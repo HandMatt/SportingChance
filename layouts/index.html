@@ -5,6 +5,7 @@
         {{- if eq .template "centred-text" -}}{{ partial "blocks/centred-text" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "three-columns" -}}{{ partial "blocks/three-columns" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "feedback-quote" -}}{{ partial "blocks/feedback-quote" (dict "Params" .) }}{{- end -}}
+        {{- if eq .template "feedback-quote-carousel" -}}{{ partial "blocks/feedback-quote-carousel" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "news-block" -}}{{ partial "blocks/news-block" (dict "Params" . "ctx" $) }}{{- end -}}
         {{- if eq .template "partners" -}}{{ partial "blocks/partners" (dict "Params" .) }}{{- end -}}
 {{- end -}}

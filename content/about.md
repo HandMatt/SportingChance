@@ -22,7 +22,7 @@ heading = "What we do"
 [[page_sections]]
 caption = "Now working as an apprentice at Mercedes"
 header = "Success Stories"
-name = "Cory N"
+name = "C. N."
 quote = "Sporting Chance was a great way for me to get back into school while having fun playing my favourite sports. My teachers at Sporting Chance were very helpful with getting me to focus on my school work and eventually getting me to work independently."
 template = "feedback-quote"
 [[page_sections]]

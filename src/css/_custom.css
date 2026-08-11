@@ -128,3 +128,212 @@ main {
 .news--content p {
     padding: .5rem 0;
 }
+
+.feedback-quote-carousel__icon {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-quote-carousel__stage {
+    position: relative;
+    height: 22rem;
+    overflow: hidden;
+}
+
+@media (min-width: 640px) {
+    .feedback-quote-carousel__stage {
+        height: 24rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .feedback-quote-carousel__stage {
+        height: 26rem;
+    }
+}
+
+.feedback-quote-carousel__slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    overflow-y: auto;
+    padding: 0 0.25rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(0);
+    transition: opacity 0.38s ease, transform 0.38s ease, visibility 0.38s ease;
+    will-change: opacity, transform;
+}
+
+.feedback-quote-carousel__slide[hidden] {
+    display: none;
+}
+
+.feedback-quote-carousel__slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    z-index: 1;
+}
+
+.feedback-quote-carousel__slide.is-enter-from-right {
+    opacity: 0;
+    visibility: visible;
+    transform: translateX(2.75rem);
+    z-index: 2;
+}
+
+.feedback-quote-carousel__slide.is-enter-from-left {
+    opacity: 0;
+    visibility: visible;
+    transform: translateX(-2.75rem);
+    z-index: 2;
+}
+
+.feedback-quote-carousel__slide.is-leave-to-left {
+    opacity: 0;
+    visibility: visible;
+    transform: translateX(-2.75rem);
+    z-index: 1;
+}
+
+.feedback-quote-carousel__slide.is-leave-to-right {
+    opacity: 0;
+    visibility: visible;
+    transform: translateX(2.75rem);
+    z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .feedback-quote-carousel__slide {
+        transition: none;
+        will-change: auto;
+    }
+}
+
+.feedback-quote-carousel__quote {
+    margin: 0;
+    padding: 0.5rem 0 1rem;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: clamp(1.05rem, 2.1vw, 1.5rem);
+    line-height: 1.45;
+    color: #3d4852;
+}
+
+.feedback-quote-carousel__slide--long .feedback-quote-carousel__quote {
+    font-size: clamp(0.95rem, 1.7vw, 1.2rem);
+    line-height: 1.4;
+}
+
+.feedback-quote-carousel__caption {
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+
+.feedback-quote-carousel__name {
+    margin: 0;
+    color: #3d4852;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    font-size: 1.15rem;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.feedback-quote-carousel__role {
+    margin: 0.25rem 0 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.feedback-quote-carousel__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 2px solid #3d4852;
+    border-radius: 0.25rem;
+    background: transparent;
+    color: #3d4852;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.feedback-quote-carousel__btn:hover,
+.feedback-quote-carousel__btn:focus-visible {
+    background-color: #2ab7ca;
+    border-color: #2ab7ca;
+    color: #fff;
+    outline: none;
+}
+
+.feedback-quote-carousel__dots {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    gap: 0.5rem;
+}
+
+/* Hit target stays square; the visible pip is ::after so flex can't oval it. */
+.feedback-quote-carousel__dot {
+    position: relative;
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.feedback-quote-carousel__dot::after {
+    content: "";
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    box-sizing: border-box;
+    border: 2px solid #3d4852;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.feedback-quote-carousel__dot.is-active::after,
+.feedback-quote-carousel__dot:hover::after,
+.feedback-quote-carousel__dot:focus-visible::after {
+    background-color: #2ab7ca;
+    border-color: #2ab7ca;
+}
+
+.feedback-quote-carousel__dot:focus-visible {
+    outline: 2px solid #2ab7ca;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .feedback-quote-carousel__btn,
+    .feedback-quote-carousel__dot {
+        transition: none;
+    }
+}
