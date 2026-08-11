@@ -1,4 +1,7 @@
 <header class="w-full fixed top-0 z-50 bg-white shadow-sm">
+  {{ if and .IsHome .Params.scp_site_notice }}
+    {{ partial "scp-site-notice.html" . }}
+  {{ end }}
   <nav
     class="w-11/12 sm:w-10/12 md:w-11/12 lg:w-11/12 xl:w-11/12 mx-auto flex items-center justify-between px-4 lg:px-6 py-2"
     aria-label="Global">

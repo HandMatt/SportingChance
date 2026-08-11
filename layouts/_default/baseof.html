@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/main.css"/>
     
   </head>
-  <body class="overflow-x-hidden w-100">
+  <body class="overflow-x-hidden w-100{{ if and .IsHome .Params.scp_site_notice }} has-scp-site-notice{{ end }}">
 
     {{ block "header" . }}{{ partial "header" . }}{{end}}
     <main>
