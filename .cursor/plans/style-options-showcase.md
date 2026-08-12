@@ -7,9 +7,9 @@ Use the bullet lists below when walking stakeholders through each option.
 
 | Option | Branch | Status | Inspiration |
 |--------|--------|--------|-------------|
-| **A — Leaflet** | `experiment/style-option-a` | Concept absorbed into B; branch matches `develop` | Printed service leaflets (green / teal / purple per pillar) |
-| **B — ALP depth** | `experiment/style-option-b` | WIP in git stash (not committed) | [South West ALP & Mentoring](https://www.southwestalpandmentoring.com/) — parallax, layered shapes |
-| **C — Brand motion** | `experiment/style-option-c` | Active WIP (current work) | SCP yellow / red / blue + ALP-style scroll reveals |
+| **A — Leaflet** | `experiment/style-option-a` | Committed — static hero, leaflet bands | Printed service leaflets (green / teal / purple per pillar) |
+| **B — ALP depth** | `experiment/style-option-b` | Committed — parallax hero + leaflet bands | [South West ALP & Mentoring](https://www.southwestalpandmentoring.com/) — parallax, layered shapes |
+| **C — Brand motion** | `experiment/style-option-c` | Committed — scroll reveals, snap, SCP palette | SCP yellow / red / blue + ALP-style scroll reveals |
 
 ---
 
@@ -20,13 +20,22 @@ docker compose up
 # → http://127.0.0.1:1313/
 ```
 
-| Option | Checkout / restore |
-|--------|-------------------|
-| **A** | No unique preview — same as `develop`. See **B** for leaflet-aligned work. |
-| **B** | `git checkout experiment/style-option-b` then `git stash pop stash@{1}` (or `stash@{0}`). Resolve conflicts if any; restart Hugo. |
-| **C** | `git checkout experiment/style-option-c` — current branch. |
+**Switch between options** (each branch is a self-contained commit):
+
+```bash
+git checkout experiment/style-option-a   # Leaflet / brochure
+git checkout experiment/style-option-b   # ALP parallax + leaflet
+git checkout experiment/style-option-c   # Brand motion / snap
+docker compose restart hugo             # if the server was already running
+```
 
 Hard-refresh the browser after switching (`Ctrl+Shift+R`).
+
+| Option | Branch | What you'll see |
+|--------|--------|-----------------|
+| **A** | `experiment/style-option-a` | Leaflet green/teal/purple bands, static hero, simple icon grid |
+| **B** | `experiment/style-option-b` | Same leaflet system + parallax hero, triangles, icon-grid focus |
+| **C** | `experiment/style-option-c` | Yellow/red/blue palette, scroll reveals, soft snap, back-to-top |
 
 ---
 
@@ -151,7 +160,7 @@ Hard-refresh the browser after switching (`Ctrl+Shift+R`).
 | **Motion** | Minimal | Parallax + hover focus | Scroll reveals + snap + icon animations |
 | **Typography feel** | Panel / brochure | Editorial / uppercase hero | Mixed alignment, existing SCP fonts |
 | **Service pages** | Theme per pillar | Theme + watermarks + icon focus | Icon grid + image strip + alignment |
-| **Dev readiness** | Superseded | Stashed WIP | Active branch, closest to demo-ready |
+| **Dev readiness** | Committed on branch | Committed on branch | Committed on branch |
 | **Risk** | Low | Medium (perf / complexity) | Low–medium (motion tuning) |
 
 ---
@@ -165,8 +174,8 @@ Hard-refresh the browser after switching (`Ctrl+Shift+R`).
    - Challenges section: icon bullets
    - Continue to testimonials; show back-to-top
    - Mention `scrollSnapMode` toggle if they want firmer snap
-3. **Option B** — if stash restored: hero parallax + one service page icon grid hover
-4. **Option A** — explain as the colour/theming foundation that B built on (leaflet palette vs SCP palette in C)
+3. **Option B** — `git checkout experiment/style-option-b`: hero parallax + one service page icon grid hover
+4. **Option A** — `git checkout experiment/style-option-a`: leaflet bands without parallax (calmer brochure feel)
 
 ---
 
@@ -194,4 +203,4 @@ Before choosing a direction, confirm:
 
 ---
 
-*Last updated: Aug 2026 — reflects `experiment/style-option-c` WIP and stashed Option B work.*
+*Last updated: Aug 2026 — all three options committed on `experiment/style-option-a/b/c`.*
