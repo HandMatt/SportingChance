@@ -1,27 +1,45 @@
 {{ $Params := .Params }}
-<section class="w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 sm:my-24 my-4 m-auto py-10 text-center">
-    {{ with .Params.header }}
-        <h2 class="font-header text-4xl sm:text-5xl font-gray font-medium py-10">{{ . }}</h2>
-    {{ end }}
-    
-    {{ with .Params.main_text }}
-        <p class="font-main lg:text-2xl text-lg leading-normal text-grey-darkest">{{ $Params.main_text | safeHTML }}</p>
-    {{ end }}
-    
-    {{ with .Params.text_section}}
-        {{ range $i, $e:= . }}
-            {{ with .heading }}
-                <h2 class="md:text-4xl text-2xl font-thin text-left py-8 font-fancy text-black">{{ . }}</h2>
-            {{ end }}
-            <p class="font-main lg:text-2xl text-lg leading-normal text-grey-darkest">{{ .content | safeHTML }}</p>
-        {{ end }}
-    {{ end }}
+{{- $theme := "teal" -}}
+{{- if reflect.IsMap . -}}
+  {{- with index . "theme" -}}{{- $theme = . -}}{{- end -}}
+{{- end -}}
 
-    {{ with .Params.button }}
-        <div class="my-12">
-            <a href="{{ $Params.buttonlink }}"
-            class="trans-02 border-2 border-black hover:border-transparent hover:bg-sc-blue my-5 text-xl rounded mt-4 p-4 text-right font-semibold no-underline text-black hover:text-white block w-fit button-style"
+<section class="leaflet-theme-{{ $theme }} w-full">
+  <div class="leaflet-band leaflet-band--light leaflet-panel-band">
+    <div class="leaflet-geo" aria-hidden="true">
+      <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
+      <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>
+    </div>
+    <div class="leaflet-watermark leaflet-watermark--logo" aria-hidden="true">
+      <img src="/img/scplogo1.png" alt="" />
+    </div>
+    <div class="leaflet-band__inner">
+      <div class="leaflet-panel">
+        {{- with $Params.header -}}
+        <h2 class="leaflet-panel__title">{{ . }}</h2>
+        {{- end -}}
+
+        {{- with $Params.main_text -}}
+        <p class="leaflet-panel__body">{{ $Params.main_text | safeHTML }}</p>
+        {{- end -}}
+
+        {{- with $Params.text_section -}}
+          {{- range . -}}
+            {{- with .heading -}}
+            <h3 class="leaflet-panel__title" style="font-size:1.35rem;margin-top:1.5rem">{{ . }}</h3>
+            {{- end -}}
+            <p class="leaflet-panel__body">{{ .content | safeHTML }}</p>
+          {{- end -}}
+        {{- end -}}
+
+        {{- with $Params.button -}}
+        <div class="leaflet-panel__actions">
+          <a href="{{ $Params.buttonlink }}"
+            class="leaflet-panel__btn"
             {{ if $Params.external }}target="_blank" rel="noopener noreferrer"{{ end }}>{{ $Params.buttontext }} →</a>
         </div>
-    {{ end }}
+        {{- end -}}
+      </div>
+    </div>
+  </div>
 </section>

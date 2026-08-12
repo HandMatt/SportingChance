@@ -1,29 +1,50 @@
-<section class="w-full my-4 flex flex-col lg:flex-row text-white">
+<section class="leaflet-columns w-full my-4 flex flex-col lg:flex-row text-white">
 
     <article style="background-image:url({{ .Params.bg_1}})"
-        class="flex-1 relative z-10 bg-cover px-6 lg:px-8 py-24 lg:py-32 text-center mb-4 lg:mb-0 lg:mr-2 max-w-full lg:max-w-md lg:mx-auto">
-        <div class="absolute inset-0 w-full h-full z-20 opacity-85 bg-sc-yellow"></div>
+        class="leaflet-columns__card leaflet-columns__card--green flex-1 relative z-10 bg-cover px-6 lg:px-8 py-24 lg:py-32 text-center mb-4 lg:mb-0 lg:mr-2 max-w-full lg:max-w-md lg:mx-auto">
+        <div class="leaflet-columns__overlay leaflet-columns__overlay--green"></div>
+        <div class="leaflet-columns__geo" aria-hidden="true">
+          <span class="leaflet-geo__shape leaflet-geo__shape--a" style="opacity:0.35;mix-blend-mode:multiply;background:rgba(69,95,42,0.45)"></span>
+          <span class="leaflet-geo__shape leaflet-geo__shape--b" style="opacity:0.28;mix-blend-mode:multiply;background:rgba(131,175,80,0.4)"></span>
+        </div>
+        <div class="leaflet-columns__logo" aria-hidden="true">
+          <img src="/img/scplogo1.png" alt="" />
+        </div>
         <div class="relative z-30">
-            <h2 class="font-fancy text-3xl lg:text-4xl font-medium">{{ .Params.header_1 }}</h2>
-            <p class="text-lg lg:text-xl leading-normal py-5">{{ .Params.text_1}}</p>
+            <h2 class="leaflet-columns__title text-3xl lg:text-4xl">{{ .Params.header_1 }}</h2>
+            <p class="font-main text-lg lg:text-xl leading-normal py-5">{{ .Params.text_1}}</p>
         </div>
     </article>
 
     <article style="background-image:url({{ .Params.bg_2}})"
-        class="flex-1 relative z-10 bg-cover px-6 lg:px-8 py-24 lg:py-32 text-center mb-4 lg:mb-0 max-w-full lg:max-w-md lg:mx-auto">
-        <div class="absolute inset-0 w-full h-full z-20 opacity-85 bg-sc-red"></div>
+        class="leaflet-columns__card leaflet-columns__card--teal flex-1 relative z-10 bg-cover px-6 lg:px-8 py-24 lg:py-32 text-center mb-4 lg:mb-0 max-w-full lg:max-w-md lg:mx-auto">
+        <div class="leaflet-columns__overlay leaflet-columns__overlay--teal"></div>
+        <div class="leaflet-columns__geo" aria-hidden="true">
+          <span class="leaflet-geo__shape leaflet-geo__shape--a" style="opacity:0.32;mix-blend-mode:multiply;background:rgba(20,109,122,0.45)"></span>
+          <span class="leaflet-geo__shape leaflet-geo__shape--b" style="opacity:0.28;mix-blend-mode:multiply;background:rgba(25,173,180,0.4)"></span>
+        </div>
+        <div class="leaflet-columns__logo" aria-hidden="true">
+          <img src="/img/scplogo1.png" alt="" />
+        </div>
         <div class="relative z-30">
-            <h2 class="font-fancy text-3xl lg:text-4xl font-medium">{{ .Params.header_2 }}</h2>
-            <p class="text-lg lg:text-xl leading-normal py-5">{{ .Params.text_2}}</p>
+            <h2 class="leaflet-columns__title text-3xl lg:text-4xl">{{ .Params.header_2 }}</h2>
+            <p class="font-main text-lg lg:text-xl leading-normal py-5">{{ .Params.text_2}}</p>
         </div>
     </article>
 
     <article style="background-image:url({{ .Params.bg_3}})"
-        class="flex-1 relative z-10 bg-cover px-6 lg:px-8 py-24 lg:py-32 text-center lg:ml-2 max-w-full lg:max-w-md lg:mx-auto">
-        <div class="absolute inset-0 w-full h-full z-20 opacity-85 bg-sc-blue"></div>
+        class="leaflet-columns__card leaflet-columns__card--purple flex-1 relative z-10 bg-cover px-6 lg:px-8 py-24 lg:py-32 text-center lg:ml-2 max-w-full lg:max-w-md lg:mx-auto">
+        <div class="leaflet-columns__overlay leaflet-columns__overlay--purple"></div>
+        <div class="leaflet-columns__geo" aria-hidden="true">
+          <span class="leaflet-geo__shape leaflet-geo__shape--a" style="opacity:0.32;mix-blend-mode:multiply;background:rgba(82,49,127,0.42)"></span>
+          <span class="leaflet-geo__shape leaflet-geo__shape--b" style="opacity:0.28;mix-blend-mode:multiply;background:rgba(184,151,198,0.4)"></span>
+        </div>
+        <div class="leaflet-columns__logo" aria-hidden="true">
+          <img src="/img/scplogo1.png" alt="" />
+        </div>
         <div class="relative z-30">
-            <h2 class="font-fancy text-3xl lg:text-4xl font-medium">{{ .Params.header_3 }}</h2>
-            <p class="text-lg lg:text-xl leading-normal py-5">{{ .Params.text_3}}</p>
+            <h2 class="leaflet-columns__title text-3xl lg:text-4xl">{{ .Params.header_3 }}</h2>
+            <p class="font-main text-lg lg:text-xl leading-normal py-5">{{ .Params.text_3}}</p>
         </div>
     </article>
 

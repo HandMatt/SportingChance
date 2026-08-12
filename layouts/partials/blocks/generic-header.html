@@ -1,42 +1,42 @@
-<style>
-    .header-overlay::after {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: absolute;
-        content: '';
-        height: 100%;
-        width: 100%;
-        z-index: 1;
-        opacity: 0.6;
-        background-image: linear-gradient(to right, #77a3de 10%, #1cbed4 100%);
-    }
-
-    .clean-hr {
-        border: none;
-        height: 4px;
-        background-image: linear-gradient(to right, #ff7c70 0, #fb4d3d 100%);
-        margin: 2rem auto;
-    }
-</style>
-
 {{ $Params := .Params }}
+{{- $theme := "teal" -}}
+{{- if reflect.IsMap . -}}
+  {{- with index . "theme" -}}{{- $theme = . -}}{{- end -}}
+{{- end -}}
+{{- /* Empty string image should not render a frame */ -}}
+{{- $image := "" -}}
+{{- with $Params.image -}}{{- if ne . "" -}}{{- $image = . -}}{{- end -}}{{- end -}}
 
-<section class="w-full relative mt-24">
-    <div
-        class="animated fadeIn w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 relative z-10 m-auto text-center py-16">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-header text-grey-darker font-medium">{{
-            .Params.title }}</h1>
-        <hr class="clean-hr md:w-28 w-24">
-        <p class="text-base sm:text-xl mx-auto text-center leading-normal text-grey-darker">{{ .Params.subtext }}</p>
-
+<section class="leaflet-theme-{{ $theme }} w-full">
+  <div class="leaflet-band py-16 sm:py-20 px-6">
+    <div class="leaflet-geo" aria-hidden="true">
+      <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
+      <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>
     </div>
-
-    {{ with .Params.image }}
-    <div class="w-full relative text-center mt-12">
-        <img src="{{ $Params.image }}" alt="{{ $Params.alt }}" class="w-full relative" />
+    <div class="leaflet-band__inner max-w-4xl mx-auto text-center">
+      <h1 class="font-header text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-white leading-tight">
+        {{ $Params.title }}
+      </h1>
+      {{- with $Params.subtext -}}
+      <p class="mt-6 font-main text-base sm:text-lg leading-relaxed text-white max-w-3xl mx-auto" style="opacity:0.95">{{ . }}</p>
+      {{- end -}}
     </div>
-    {{ end }}
+  </div>
 
+  {{- with $image -}}
+  <div class="leaflet-band pb-14 sm:pb-16 px-6">
+    <div class="leaflet-geo" aria-hidden="true">
+      <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
+      <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>
+    </div>
+    <div class="leaflet-band__inner leaflet-media max-w-5xl mx-auto relative">
+      <div class="leaflet-columns__logo leaflet-media__logo" aria-hidden="true" style="opacity:0.2;transform:none;bottom:1rem;right:1rem">
+        <img src="/img/scplogo1.png" alt="" />
+      </div>
+      <figure class="leaflet-media__frame leaflet-media__frame--hero">
+        <img src="{{ . }}" alt="{{ $Params.alt | default "" }}" />
+      </figure>
+    </div>
+  </div>
+  {{- end -}}
 </section>
