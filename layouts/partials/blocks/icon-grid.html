@@ -2,7 +2,7 @@
 {{- if reflect.IsMap . -}}
   {{- with index . "theme" -}}{{- $theme = . -}}{{- end -}}
 {{- end -}}
-<section class="py-4 w-11/12 sm:w-11/12 md:w-11/12 lg:w-11/12 xl:w-11/12 px-4 lg:px-6 m-auto{{ with $theme }} leaflet-theme-{{ . }} icon-grid--leaflet{{ end }}">
+<section class="py-4 sc-page-gutter m-auto{{ with $theme }} leaflet-theme-{{ . }} icon-grid--leaflet{{ end }} sc-reveal" data-reveal data-reveal-delay-ms="120">
 
   <div class="icon-grid__row my-4 py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4">
 

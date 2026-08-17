@@ -55,7 +55,7 @@ page_sections:
     iconalt: personal development icon
 - template: centred-text
   header: Our sessions include
-  left-align: true
+  align: left
   main_text: Functional skills (ASDAN/NCFE qualifications), cooking & food
     preparation, money management, animal care, sports & fitness, and
     employability.<br/><br/>Sessions are tailored to individual needs, working
@@ -76,7 +76,7 @@ page_sections:
     buttonlink: "/construction-workshops"
 - template: centred-text
   header: Education provision
-  left-align: false
+  align: right
   main_text: Our education arm is now <strong>Supporting Children's Pathways</strong>,
     a charitable not-for-profit.
   button: true

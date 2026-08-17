@@ -27,6 +27,9 @@ page_sections:
   bg_1: "/img/1.png"
   bg_2: "/img/2.png"
   bg_3: "/img/3.png"
+  link_1: "/mentoring-life-skills"
+  link_2: "/construction-workshops"
+  link_3: "/alternative-learning-provision"
 - template: centred-text
   left-align: true
   header: Mentoring & Life Skills

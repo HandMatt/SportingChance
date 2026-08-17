@@ -2,24 +2,21 @@
 {{- if reflect.IsMap . -}}
   {{- with index . "theme" -}}{{- $theme = . -}}{{- end -}}
 {{- end -}}
-<section class="leaflet-theme-{{ $theme }} w-full">
+<section class="leaflet-theme-{{ $theme }} w-full sc-section--right">
   <div class="leaflet-band leaflet-band--dark leaflet-panel-band">
     <div class="leaflet-geo" aria-hidden="true">
       <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
       <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>
     </div>
-    <div class="leaflet-watermark leaflet-watermark--logo" aria-hidden="true" style="opacity:0.14">
-      <img src="/img/scplogo1.png" alt="" />
-    </div>
-    <div class="leaflet-band__inner">
-      <div class="leaflet-panel">
+    <div class="leaflet-band__inner sc-page-gutter">
+      <div class="leaflet-panel sc-reveal sc-reveal--right" data-reveal data-reveal-delay-ms="140">
         {{- with .Params.heading -}}
         <h2 class="leaflet-panel__title">{{ markdownify . }}</h2>
         {{- end -}}
         {{- with .Params.text -}}
         <p class="leaflet-panel__body">{{ markdownify . }}</p>
         {{- end -}}
-        <div class="leaflet-panel__actions">
+        <div class="leaflet-panel__actions sc-section__actions">
           <a href="{{ .Params.buttonlink | default "/" }}" class="leaflet-panel__btn">{{ .Params.buttontext }} →</a>
         </div>
       </div>

@@ -1,4 +1,4 @@
-<section class="hero-b hero-with-nav-offset relative z-0 overflow-hidden" data-parallax-hero>
+<section class="hero-b hero-with-nav-offset relative z-0 overflow-hidden{{ if .Params.scroll_snap }} sc-snap-section{{ end }}" data-parallax-hero>
   <div class="hero-b__media" aria-hidden="true">
     <div
       class="hero-b__parallax"
@@ -7,15 +7,15 @@
     <div class="hero-b__tint"></div>
   </div>
 
-  {{/* Two large translucent triangles — ALP-inspired depth over the photo */}}
-  <div class="hero-b__triangles" aria-hidden="true">
-    <span class="hero-b__tri hero-b__tri--a"></span>
-    <span class="hero-b__tri hero-b__tri--b"></span>
+  {{/* Soft teal gradients over the photo — no grey, no hard colour planes */}}
+  <div class="hero-b__washes" aria-hidden="true">
+    <span class="hero-b__wash hero-b__wash--a"></span>
+    <span class="hero-b__wash hero-b__wash--b"></span>
   </div>
 
   <div class="hero-b__content sm:w-4/5 w-5/6 m-auto text-center pt-10 relative z-20">
     <div class="mw6 pv5 animated fadeIn">
-      <p class="hero-b__brand font-header uppercase tracking-widest">
+      <p class="hero-b__brand font-header uppercase tracking-widest text-white">
         Sporting Chance Project
       </p>
       <h1 class="font-header text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white my-2 py-5">
@@ -32,11 +32,15 @@
     </div>
   </div>
 
-  {{/* Low, highly transparent dual-triangle edge at the base of the hero */}}
+  {{/* Quiet teal edge into the next section */}}
   <div class="hero-b__edge" aria-hidden="true">
     <svg class="hero-b__edge-svg" viewBox="0 0 100 12" preserveAspectRatio="none" focusable="false">
-      <polygon class="hero-b__edge-a" points="0,12 0,4 42,12" />
-      <polygon class="hero-b__edge-b" points="28,12 100,0 100,12" />
+      <polygon class="hero-b__edge-a" points="0,12 0,5 44,12" />
+      <polygon class="hero-b__edge-b" points="56,12 100,1 100,12" />
     </svg>
   </div>
+  <a class="hero-b__scroll" href="#content-start" aria-label="Scroll to content">
+    <span>Explore</span>
+    <span class="hero-b__scroll-chevron" aria-hidden="true"></span>
+  </a>
 </section>

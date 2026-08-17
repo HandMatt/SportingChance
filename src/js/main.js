@@ -1,3 +1,5 @@
 import styles from '../css/main.css'
 import './quote-carousel.js'
 import './parallax-hero.js'
+import './scroll-reveal.js'
+import './back-to-top.js'

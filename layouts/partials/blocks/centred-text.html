@@ -3,24 +3,56 @@
 {{- if reflect.IsMap . -}}
   {{- with index . "theme" -}}{{- $theme = . -}}{{- end -}}
 {{- end -}}
+{{- $align := "center" -}}
+{{- if $Params.align -}}
+  {{- $align = $Params.align -}}
+{{- else if (index $Params "left-align") -}}
+  {{- $align = "left" -}}
+{{- end -}}
 
-<section class="leaflet-theme-{{ $theme }} w-full">
+{{- $reveal := true -}}
+{{- if isset $Params "reveal" -}}{{- $reveal = $Params.reveal -}}{{- end -}}
+
+<section class="leaflet-theme-{{ $theme }} w-full sc-section--{{ $align }}{{ partial "helpers/snap-section-class.html" $Params }}">
   <div class="leaflet-band leaflet-band--light leaflet-panel-band">
     <div class="leaflet-geo" aria-hidden="true">
       <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
       <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>
     </div>
-    <div class="leaflet-watermark leaflet-watermark--logo" aria-hidden="true">
-      <img src="/img/scplogo1.png" alt="" />
-    </div>
-    <div class="leaflet-band__inner">
-      <div class="leaflet-panel">
+    <div class="leaflet-band__inner sc-page-gutter">
+      <div class="leaflet-panel{{ if $reveal }} sc-reveal{{ if ne $align "center" }} sc-reveal--{{ $align }}{{ end }}{{ end }}"
+        {{ if $reveal }}data-reveal data-reveal-delay-ms="120"{{ end }}>
         {{- with $Params.header -}}
         <h2 class="leaflet-panel__title">{{ . }}</h2>
         {{- end -}}
 
+        {{- with $Params.list_intro -}}
+        <p class="sc-icon-list__intro leaflet-panel__body">{{ . }}</p>
+        {{- end -}}
+
+        {{- with $Params.list_items -}}
+        <ul class="sc-icon-list sc-icon-list--{{ $align }}">
+          {{- range $i, $item := . -}}
+          <li class="sc-icon-list__item sc-reveal{{ if ne $align "center" }} sc-reveal--{{ $align }}{{ end }}"
+            data-reveal data-reveal-delay="{{ add $i 1 }}" data-reveal-delay-ms="{{ add (mul $i 90) 220 }}">
+            <span class="sc-icon-list__icon" aria-hidden="true">?</span>
+            <span class="sc-icon-list__text leaflet-panel__body">{{ $item }}</span>
+          </li>
+          {{- end -}}
+        </ul>
+        {{- end -}}
+
+        {{- with $Params.list_outro -}}
+        <p class="sc-icon-list__outro leaflet-panel__body sc-reveal{{ if ne $align "center" }} sc-reveal--{{ $align }}{{ end }}"
+          data-reveal data-reveal-delay-ms="680">{{ . }}</p>
+        {{- end -}}
+
         {{- with $Params.main_text -}}
+        {{ if $Params.embed }}
+        <div class="leaflet-panel__body">{{ $Params.main_text | safeHTML }}</div>
+        {{ else }}
         <p class="leaflet-panel__body">{{ $Params.main_text | safeHTML }}</p>
+        {{ end }}
         {{- end -}}
 
         {{- with $Params.text_section -}}
@@ -33,7 +65,7 @@
         {{- end -}}
 
         {{- with $Params.button -}}
-        <div class="leaflet-panel__actions">
+        <div class="leaflet-panel__actions sc-section__actions">
           <a href="{{ $Params.buttonlink }}"
             class="leaflet-panel__btn"
             {{ if $Params.external }}target="_blank" rel="noopener noreferrer"{{ end }}>{{ $Params.buttontext }} →</a>

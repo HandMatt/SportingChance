@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ $.Site.Language.Lang }}">
+<html lang="{{ $.Site.Language.Lang }}" id="top" class="{{ if .Params.scroll_snap }}has-scroll-snap{{ end }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -17,11 +17,13 @@
   <body class="overflow-x-hidden w-100{{ if and .IsHome .Params.scp_site_notice }} has-scp-site-notice{{ end }}">
 
     {{ block "header" . }}{{ partial "header" . }}{{end}}
-    <main>
+    <main class="{{ if .Params.hero_banner }}main--after-hero{{ end }}">
     {{ block "main" . }}{{end}}
     </main>
 
     {{ block "footer" . }}{{ partial "footer" . }}{{end}}
+
+    {{ partial "back-to-top.html" . }}
 
     <script src="/app.js"></script>
 

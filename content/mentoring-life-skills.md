@@ -55,7 +55,7 @@ page_sections:
     iconalt: working together icon
 - template: centred-text
   header: Our sessions include
-  left-align: true
+  align: left
   main_text: Functional skills (ASDAN/NCFE qualifications), one-to-one mentoring
     & life skills coaching, and transition back to education.<br/><br/>Support is
     tailored to the young person, with parents and educational authorities involved
@@ -76,7 +76,7 @@ page_sections:
     buttonlink: "/alternative-learning-provision"
 - template: centred-text
   header: Education provision
-  left-align: false
+  align: right
   main_text: Our education arm is now <strong>Supporting Children's Pathways</strong>,
     a charitable not-for-profit.
   button: true
