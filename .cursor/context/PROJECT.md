@@ -53,7 +53,7 @@ Netlify build: `yarn install && yarn build && hugo` → publish `public/`.
 
 ## Conventions
 
-- Prefer Tailwind utility classes in templates; brand colours via `sc-*` from `tailwind.js`.
+- Prefer Tailwind utility classes in templates; brand colours via leaflet green / teal / purple (`leaflet-theme-*`). Teal is the default on non-service pages.
 - Content edits live in `content/**/*.md`; structural/UI in `layouts/`.
 - Policy embeds: set `iframe_url` in front matter (OneDrive setup docs live on the policies feature branch when present).
 - Do not commit on the user's behalf unless explicitly asked.

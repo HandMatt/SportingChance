@@ -1,43 +1,26 @@
-<section class="py-4 w-11/12 sm:w-11/12 md:w-11/12 lg:w-11/12 xl:w-11/12 px-4 lg:px-6 m-auto">
+{{- $theme := "" -}}
+{{- if reflect.IsMap . -}}
+  {{- with index . "theme" -}}{{- $theme = . -}}{{- end -}}
+{{- end -}}
+<section class="py-4 sc-page-gutter m-auto{{ with $theme }} leaflet-theme-{{ . }} icon-grid--leaflet{{ end }} sc-reveal" data-reveal data-reveal-delay-ms="120">
 
-  <style>
-    .icon-box:nth-child(odd)>div {
-      background-color: #eac435;
-    }
-
-    .icon-box:nth-child(even)>div {
-      background-color: #2ab7ca;
-    }
-
-    .icon-box {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .icon-box>div {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-  </style>
-
-  <div class="my-4 py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4">
+  <div class="icon-grid__row my-4 py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4">
 
     {{ $icons := .Params.icon_boxes }}
     {{ range $i, $e:= $icons }}
-    <div class="icon-box">
-      <div class="p-4 text-white flex flex-col">
+    <article class="icon-box" tabindex="0">
+      <div class="icon-box__card p-4 text-white flex flex-col">
         <div style="height:4rem;width:4rem;" class="my-3">
           <img alt="{{ .iconalt }}" class="max-w-full" src="{{ .icon }}" />
         </div>
-        <h3 class="font-fancy text-2xl font-hairline">
+        <h3 class="font-header text-2xl font-semibold">
           {{ .title }}
         </h3>
         <p class="text-md py-2 leading-normal flex-grow">
           {{ .copy | safeHTML }}
         </p>
       </div>
-    </div>
+    </article>
 
     {{ end }}
 

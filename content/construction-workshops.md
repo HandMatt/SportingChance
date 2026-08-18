@@ -2,7 +2,7 @@
 type: page
 title: Construction Workshops
 description: Sporting Chance Project supports 14–18 year olds, including SEN
-  students, with hands-on construction workshops in a safe, structured environment.
+  students, with hands-on construction workshops in a safe,   structured environment.
 page_sections:
 - template: generic-header
   title: Construction Workshops
@@ -56,7 +56,7 @@ page_sections:
     iconalt: transport icon
 - template: centred-text
   header: Our sessions include
-  left-align: true
+  align: left
   main_text: Carpentry, bricklaying, plastering, tiling, painting & decorating,
     plumbing, and basic electrics.<br/><br/>Sessions can be tailored to individual
     needs in half-day (3 hours) or full-day (6 hours) formats.
@@ -76,7 +76,7 @@ page_sections:
     buttonlink: "/alternative-learning-provision"
 - template: centred-text
   header: Education provision
-  left-align: false
+  align: right
   main_text: Our education arm is now <strong>Supporting Children's Pathways</strong>,
     a charitable not-for-profit.
   button: true

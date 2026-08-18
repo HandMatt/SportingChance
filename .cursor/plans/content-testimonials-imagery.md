@@ -2,7 +2,7 @@
 
 **Status:** Identified — brief only; **testimonials moved** to [testimonials-refresh.md](testimonials-refresh.md)  
 **Priority:** Medium — page copy + pictures; imagery blocked on sourcing  
-**Suggested branch:** `feature/content-and-imagery` from `develop` (after or parallel to testimonials)
+**Suggested branch:** `feature/content-and-imagery` from `develop` (copy) plus `feature/photo-strips` (grids — already parked, rebase onto rebrand when photos exist)
 
 ## Goal
 

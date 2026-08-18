@@ -14,7 +14,9 @@ buttonlink = ""
 buttontext = ""
 header = ""
 left-align = false
-main_text = "    <script type=\"text/javascript\" src=\"https://form.jotform.com/jsform/222916591903056\"></script>"
+reveal = false
+embed = true
+main_text = "<iframe title=\"Contact form\" src=\"https://form.jotform.com/222916591903056\" style=\"width:100%;min-height:32rem;border:0;\" loading=\"lazy\"></iframe>"
 template = "centred-text"
 text_section = []
 

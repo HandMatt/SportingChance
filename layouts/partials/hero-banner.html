@@ -1,13 +1,46 @@
-<section style="background-image: url({{ .Params.hero_bg }});"
-    class="hero-with-nav-offset relative bg-cover z-0 flex items-center justify-center">
-    <div class="texture-overlay opacity-75 absolute pin h-full w-full z-10"></div>
-    <div class="sm:w-4/5 w-5/6 m-auto text-center pt-10 relative z-20">
-        <div class="mw6 pv5 animated fadeIn">
-            <h1 class="font-header text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-black my-2 py-5">{{ .Params.hero_text | safeHTML }}</h1>
-            <p class="font-main lg:text-2xl text-xl leading-normal text-grey-darkest">{{ .Params.hero_sub }}</p>
-            <div class="my-12">
-                <a class="shadow hover:shadow-lg sc-yellow-grad trans-02 my-5 text-xl rounded mt-4 py-4 px-6 text-right font-semibold no-underline text-white" href="{{ .Params.herolink }}">{{ .Params.herobuttontext }} →</a>
-            </div>
-        </div>
+<section class="hero-b hero-with-nav-offset relative z-0 overflow-hidden{{ if .Params.scroll_snap }} sc-snap-section{{ end }}" data-parallax-hero>
+  <div class="hero-b__media" aria-hidden="true">
+    <div
+      class="hero-b__parallax"
+      style="background-image: url({{ .Params.hero_bg }});"
+      data-parallax-layer></div>
+    <div class="hero-b__tint"></div>
+  </div>
+
+  {{/* Soft teal gradients over the photo — no grey, no hard colour planes */}}
+  <div class="hero-b__washes" aria-hidden="true">
+    <span class="hero-b__wash hero-b__wash--a"></span>
+    <span class="hero-b__wash hero-b__wash--b"></span>
+  </div>
+
+  <div class="hero-b__content sm:w-4/5 w-5/6 m-auto text-center pt-10 relative z-20">
+    <div class="mw6 pv5 animated fadeIn">
+      <p class="hero-b__brand font-header uppercase tracking-widest text-white">
+        Sporting Chance Project
+      </p>
+      <h1 class="font-header text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white my-2 py-5">
+        {{ .Params.hero_text | safeHTML }}
+      </h1>
+      <p class="font-main lg:text-2xl text-xl leading-normal text-white" style="opacity:0.92">
+        {{ .Params.hero_sub }}
+      </p>
+      <div class="my-12">
+        <a
+          class="hero-b__cta shadow hover:shadow-lg trans-02 my-5 text-xl rounded mt-4 py-4 px-6 text-right font-semibold no-underline text-white inline-block"
+          href="{{ .Params.herolink }}">{{ .Params.herobuttontext }} →</a>
+      </div>
     </div>
+  </div>
+
+  {{/* Quiet teal edge into the next section */}}
+  <div class="hero-b__edge" aria-hidden="true">
+    <svg class="hero-b__edge-svg" viewBox="0 0 100 12" preserveAspectRatio="none" focusable="false">
+      <polygon class="hero-b__edge-a" points="0,12 0,5 44,12" />
+      <polygon class="hero-b__edge-b" points="56,12 100,1 100,12" />
+    </svg>
+  </div>
+  <a class="hero-b__scroll" href="#content-start" aria-label="Scroll to content">
+    <span>Explore</span>
+    <span class="hero-b__scroll-chevron" aria-hidden="true"></span>
+  </a>
 </section>
