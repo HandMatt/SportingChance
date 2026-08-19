@@ -2,6 +2,7 @@
 {{- if reflect.IsMap . -}}
   {{- with index . "theme" -}}{{- $theme = . -}}{{- end -}}
 {{- end -}}
+{{- $formID := "222916591903056" -}}
 <section class="leaflet-theme-{{ $theme }} w-full sc-section--center">
   <div class="leaflet-band leaflet-band--light leaflet-panel-band">
     <div class="leaflet-geo" aria-hidden="true">
@@ -13,9 +14,9 @@
         {{- with .Params.form_text -}}
         <p class="leaflet-panel__body sc-contact-form__intro">{{ . }}</p>
         {{- end -}}
-        <form class="sc-contact-form__form" method="POST" action="https://eu-submit.jotform.com/submit/222916591903056" accept-charset="utf-8" autocomplete="on">
-          <input type="hidden" name="formID" value="222916591903056" />
-          <input type="hidden" name="simple_spc" value="222916591903056" />
+        <form class="sc-contact-form__form" method="POST" action="https://eu-submit.jotform.com/submit/{{ $formID }}" accept-charset="utf-8" autocomplete="on">
+          <input type="hidden" name="formID" value="{{ $formID }}" />
+          <input type="hidden" name="simple_spc" value="{{ $formID }}-{{ $formID }}" />
           <div class="sc-contact-form__honeypot" aria-hidden="true">
             <label for="website">Website</label>
             <input type="text" id="website" name="website" value="" tabindex="-1" autocomplete="off" />
@@ -39,7 +40,7 @@
 
           <div class="sc-contact-form__field">
             <label for="q10_phone">Phone number</label>
-            <input id="q10_phone" type="tel" name="q10_phoneNumber[full]" autocomplete="tel" inputmode="numeric" pattern="[0-9]{11}" title="Your 11-digit phone number, no spaces" required />
+            <input id="q10_phone" type="tel" name="q10_phoneNumber[full]" autocomplete="tel" inputmode="tel" title="UK phone number, e.g. 0117 203 4322 or +44 7748 633711" required />
           </div>
 
           <div class="sc-contact-form__row">
