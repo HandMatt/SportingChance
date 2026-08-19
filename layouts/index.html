@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div id="content-start" class="leaflet-theme-teal"></div>
+<div id="content-start" class="sc-content-start"></div>
 {{- range .Params.page_sections -}}
         {{- if eq .template "centred-text" -}}{{ partial "blocks/centred-text" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "three-columns" -}}{{ partial "blocks/three-columns" (dict "Params" .) }}{{- end -}}

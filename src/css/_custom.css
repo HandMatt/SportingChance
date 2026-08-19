@@ -94,6 +94,10 @@ html {
     --site-header-offset: 4.8rem;
 }
 
+body {
+    scroll-padding-top: var(--site-header-offset);
+}
+
 body.has-scp-site-notice {
     --site-header-offset: 6.75rem;
 }
@@ -110,6 +114,11 @@ main {
 
 main.main--after-hero {
     margin-top: 0;
+}
+
+.sc-content-start {
+    height: 0;
+    scroll-margin-top: var(--site-header-offset);
 }
 
 .scp-site-notice {

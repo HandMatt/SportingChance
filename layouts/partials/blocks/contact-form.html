@@ -3,6 +3,8 @@
   {{- with index . "theme" -}}{{- $theme = . -}}{{- end -}}
 {{- end -}}
 {{- $formID := "222916591903056" -}}
+{{- $jotformSubmitURL := printf "https://eu-submit.jotform.com/submit/%s" $formID -}}
+{{/* Embed: form.jotform.com/{{ $formID }}. Live source action is eu-submit (EU data region), not submit.jotform.com. */}}
 <section class="leaflet-theme-{{ $theme }} w-full sc-section--center">
   <div class="leaflet-band leaflet-band--light leaflet-panel-band">
     <div class="leaflet-geo" aria-hidden="true">
@@ -14,7 +16,7 @@
         {{- with .Params.form_text -}}
         <p class="leaflet-panel__body sc-contact-form__intro">{{ . }}</p>
         {{- end -}}
-        <form class="sc-contact-form__form" method="POST" action="https://eu-submit.jotform.com/submit/{{ $formID }}" accept-charset="utf-8" autocomplete="on">
+        <form class="sc-contact-form__form" method="POST" action="{{ $jotformSubmitURL }}" accept-charset="utf-8" autocomplete="on">
           <input type="hidden" name="formID" value="{{ $formID }}" />
           <input type="hidden" name="simple_spc" value="{{ $formID }}-{{ $formID }}" />
           <div class="sc-contact-form__honeypot" aria-hidden="true">
