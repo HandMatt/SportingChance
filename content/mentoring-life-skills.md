@@ -68,22 +68,12 @@ page_sections:
   columns:
   - header: Construction Workshops
     main_text: Looking for hands-on construction trades for 14–18 year olds? See our Construction Workshops.
-    buttontext: Find out more
+    buttontext: Construction Workshops
     buttonlink: "/construction-workshops"
   - header: Alternative Learning Provision
     main_text: Looking for functional skills, cooking, money management, animal care, sports & fitness, or employability? See our Alternative Learning Provision.
-    buttontext: Find out more
+    buttontext: Alternative Learning Provision
     buttonlink: "/alternative-learning-provision"
-- template: centred-text
-  header: Education provision
-  align: right
-  main_text: Our education arm is now <strong>Supporting Children's Pathways</strong>,
-    a charitable not-for-profit.
-  button: true
-  buttontext: Learn more
-  buttonlink: "https://www.supportingchildrenspathways.org/"
-  external: true
-  text_section: []
 - template: cta-block
   heading: How can we help you?
   text: Find out more about our mentoring and life skills services and how we can

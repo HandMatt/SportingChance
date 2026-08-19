@@ -1,35 +1,69 @@
-<footer class="w-full sc-blue-grad py-12">
-  <div class="flex md:flex-row flex-col flex-auto px-8 justify-between items-center">
-    <div class="md:w-1/3 w-full mb-8 md:mb-0 order-2 md:order-1">
-      <address class="text-white leading-normal text-lg roman">
-        Sporting Chance Project<br />
-        Unit 1A &amp; 1B <br />
-        Heston House<br />
-        7-9 Emery Road<br />
-        Bristol<br />
-        BS4 5PF<br />
-        United Kingdom
+<footer class="sc-footer w-full sc-blue-grad">
+  <div class="sc-page-gutter sc-footer__inner flex md:flex-row flex-col justify-between items-center">
+    <div class="sc-footer__block sc-footer__address md:w-1/3 w-full order-2 md:order-1">
+      <p class="sc-footer__label">
+        <svg class="sc-footer__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        Address
+      </p>
+      <address class="sc-footer__text roman not-italic">
+        <a class="sc-footer__link sc-footer__link--address" href="https://www.google.com/maps/search/?api=1&amp;query=Sporting+Chance+Project,+Unit+1A+and+1B,+Heston+House,+7-9+Emery+Road,+Bristol,+BS4+5PF,+United+Kingdom" target="_blank" rel="noopener noreferrer">
+          Sporting Chance Project<br />
+          Unit 1A &amp; 1B<br />
+          Heston House<br />
+          7-9 Emery Road<br />
+          Bristol<br />
+          BS4 5PF<br />
+          United Kingdom
+          <span class="sc-footer__action">Open in Google Maps</span>
+        </a>
       </address>
     </div>
 
-    <div id="footerLogo"
-      class="md:w-1/3 sm:py-0 py-8 w-full text-center flex justify-center items-center mb-8 md:mb-0 order-1 md:order-2">
-      <img src="/img/scplogo1.png" alt="sporting chance logo" class="max-w-full h-auto max-h-24 md:max-h-32">
+    <div id="footerLogo" class="sc-footer__logo md:w-1/3 w-full text-center flex justify-center items-center order-1 md:order-2">
+      <img src="/img/scplogo1.png" alt="sporting chance logo" class="max-w-full h-auto">
     </div>
 
-    <div class="md:w-1/3 w-full order-3 md:order-3">
-      <address class="text-white md:text-right leading-normal text-lg roman break-words">
-        Telephone : 0117 203 4322<br />
-        Mobile : 07748 633711<br />
-        Email : info@sportingchanceproject.co.uk
-      </address>
+    <div class="sc-footer__block sc-footer__contact md:w-1/3 w-full order-3 md:order-3">
+      <ul class="sc-footer__contact-list md:text-right">
+        <li class="sc-footer__contact-item">
+          <p class="sc-footer__label">
+            <svg class="sc-footer__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            Telephone
+          </p>
+          <a class="sc-footer__link" href="tel:+441172034322">Call 0117 203 4322</a>
+        </li>
+        <li class="sc-footer__contact-item">
+          <p class="sc-footer__label">
+            <svg class="sc-footer__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+            Mobile
+          </p>
+          <a class="sc-footer__link" href="tel:+447748633711">Call 07748 633711</a>
+        </li>
+        <li class="sc-footer__contact-item">
+          <p class="sc-footer__label">
+            <svg class="sc-footer__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Email
+          </p>
+          <a class="sc-footer__link" href="mailto:info@sportingchanceproject.co.uk">info@sportingchanceproject.co.uk</a>
+        </li>
+      </ul>
     </div>
   </div>
-  
-  <!-- Policies Link -->
-  <div class="text-center mt-8 pt-8 border-t border-white border-opacity-20">
-    <a href="/policies/" class="text-white text-sm hover:text-sc-yellow trans-02 no-underline">
-      Policies & Procedures
+
+  <div class="sc-footer__policies text-center">
+    <a href="/policies/" class="sc-footer__policies-link hover:text-sc-yellow trans-02 no-underline">
+      Policies &amp; Procedures
     </a>
   </div>
 </footer>

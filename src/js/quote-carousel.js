@@ -1,3 +1,17 @@
+const MAX_VISIBLE_DOTS = 5
+
+function getDotWindow(activeIndex, total) {
+  if (total <= MAX_VISIBLE_DOTS) {
+    return { start: 0, end: total - 1 }
+  }
+
+  const half = Math.floor(MAX_VISIBLE_DOTS / 2)
+  let start = activeIndex - half
+  start = Math.max(0, Math.min(start, total - MAX_VISIBLE_DOTS))
+
+  return { start, end: start + MAX_VISIBLE_DOTS - 1 }
+}
+
 function initQuoteCarousels() {
   const carousels = document.querySelectorAll('[data-quote-carousel]')
   if (!carousels.length) return
@@ -26,12 +40,23 @@ function initQuoteCarousels() {
       )
     }
 
+    const updateDotWindow = () => {
+      if (!dots.length) return
+
+      const { start, end } = getDotWindow(index, dots.length)
+      dots.forEach((dot, i) => {
+        const visible = i >= start && i <= end
+        dot.hidden = !visible
+      })
+    }
+
     const syncDots = () => {
       dots.forEach((dot, i) => {
         const active = i === index
         dot.classList.toggle('is-active', active)
         dot.setAttribute('aria-selected', active ? 'true' : 'false')
       })
+      updateDotWindow()
     }
 
     const settle = (activeIndex) => {
@@ -64,7 +89,6 @@ function initQuoteCarousels() {
       clearMotionClasses(current)
       clearMotionClasses(incoming)
 
-      // 1) Outgoing slide leaves fully first.
       current.classList.remove('is-active')
       current.classList.add(dir === 'next' ? 'is-leave-to-left' : 'is-leave-to-right')
       current.setAttribute('aria-hidden', 'true')
@@ -73,7 +97,6 @@ function initQuoteCarousels() {
         current.hidden = true
         clearMotionClasses(current)
 
-        // 2) Incoming slide starts only after the previous one is gone.
         incoming.hidden = false
         incoming.setAttribute('aria-hidden', 'false')
         incoming.classList.add(dir === 'next' ? 'is-enter-from-right' : 'is-enter-from-left')

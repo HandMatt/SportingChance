@@ -12,7 +12,17 @@
     {{- template "_internal/twitter_cards.html" . -}}   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <link rel="stylesheet" href="/css/main.css"/>
-    
+    {{ if and .IsHome .Params.scp_site_notice }}
+    <script>
+      (function () {
+        try {
+          if (sessionStorage.getItem('scp-site-notice-dismissed') === '1') {
+            document.documentElement.classList.add('scp-site-notice-dismissed');
+          }
+        } catch (error) {}
+      })();
+    </script>
+    {{ end }}
   </head>
   <body class="overflow-x-hidden w-100{{ if and .IsHome .Params.scp_site_notice }} has-scp-site-notice{{ end }}">
 

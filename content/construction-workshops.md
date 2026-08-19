@@ -68,22 +68,12 @@ page_sections:
   columns:
   - header: Mentoring & Life Skills
     main_text: Our experienced team also offers one-to-one mentoring and life skills coaching for young people aged 5–18.
-    buttontext: Find out more
+    buttontext: Mentoring & Life Skills
     buttonlink: "/mentoring-life-skills"
   - header: Alternative Learning Provision
     main_text: Looking for functional skills, cooking, money management, animal care, sports & fitness, or employability? See our Alternative Learning Provision.
-    buttontext: Find out more
+    buttontext: Alternative Learning Provision
     buttonlink: "/alternative-learning-provision"
-- template: centred-text
-  header: Education provision
-  align: right
-  main_text: Our education arm is now <strong>Supporting Children's Pathways</strong>,
-    a charitable not-for-profit.
-  button: true
-  buttontext: Learn more
-  buttonlink: "https://www.supportingchildrenspathways.org/"
-  external: true
-  text_section: []
 - template: cta-block
   heading: How can we help you?
   text: Find out more about our construction workshops and how we can help you.

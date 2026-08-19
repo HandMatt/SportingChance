@@ -1,10 +1,12 @@
 <section class="w-full mb-12 py-20 sc-section--left{{ partial "helpers/snap-section-class.html" .Params }}">
-  <div class="sc-page-gutter sc-section__inner sc-reveal sc-reveal--left" data-reveal data-reveal-delay-ms="140">
-    <h2 class="font-header md:text-5xl text-4xl font-gray font-medium py-10">{{ .Params.header }}</h2>
-    <p class="font-main font-gray font-medium">{{ .Params.main_text | safeHTML }}</p>
-    <div class="flex sm:flex-row flex-col flex-auto justify-start py-5 flex-wrap sc-reveal sc-reveal--scale" data-reveal data-reveal-delay-ms="200">
+  <div class="sc-page-gutter sc-reveal sc-reveal--left" data-reveal data-reveal-delay-ms="140">
+    <div class="sc-section__inner">
+      <h2 class="font-header md:text-5xl text-4xl font-gray font-medium py-10">{{ .Params.header }}</h2>
+      <p class="font-main font-gray font-medium">{{ .Params.main_text | safeHTML }}</p>
+    </div>
+    <div class="partners-logos sc-reveal sc-reveal--scale" data-reveal data-reveal-delay-ms="200">
       {{ range .Params.partner_logos }}
-      <img class="self-center mr-8 h-16 sm:py-0 my-4" src="{{ .src }}" alt="{{ .name }}" />
+      <img src="{{ .src }}" alt="{{ .name }}" />
       {{ end }}
     </div>
   </div>

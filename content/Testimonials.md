@@ -78,38 +78,13 @@ page_sections:
     name: C. O.
     caption: Previous student now travelling Australia and New Zealand
 - template: centred-text
-  header: Full feedback from a CAMHS / wellbeing professional
+  header: A CAMHS case study
   left-align: false
   text_section: []
-  main_text: I would like to provide the following feedback from my experience as a
-    professional working in a collaborative way to support and provide opportunities
-    for engagement within the CAMHS service.<br/><br/>Sporting Chance enabled me to
-    <em>carefully and sensitively</em> meet with the young person with a <strong>significant
-    trauma history</strong>, difficulty with trusting professionals due to a number of
-    significant professionals changing within their lives along with inconsistent
-    sustainment of the professional relationships. Due to these experiences it has made
-    it difficult to engage with professionals.<br/><br/>J and the other mentors built
-    relationships worked to build on the relationship which enabled different key mentors
-    to support their time with Sporting Chance <strong>sustaining engagement and
-    relationships</strong> as this can often contribute to lack of engagement as trauma
-    and attachment challenges add to the complexity of building trusting relationships.<br/><br/>I
-    feel that Sporting Chance through their <strong>positive and trusting relationship</strong>
-    with the young person gave me the opportunity to <em>support and advocate</em> for the
-    young person in their engagement and assessment with CAMHS. J and the other Mentors were
-    <strong>approachable, positive, professional</strong> and created a trusting relationship
-    with the young person, parents and other professionals in the network.<br/><br/>Their
-    positive relationship with the young person supported my engagement and assessment with
-    the young person. Enabled them to build further positive and trusting relationships by
-    adapting to a few different mentors which is credit to the young person and the mentors
-    approaches and <em>positive encouragement and understanding</em> of them and their needs,
-    whilst keeping <strong>boundaries and consistent in approach</strong>.<br/><br/>Thank you
-    for your support and professional approach, <strong>commitment and dedication</strong> as
-    individual and as a team to really advocate and support a positive experience and
-    relationship with them and also myself as a professional. <em>Really amazing</em> to have
-    been able to be part of the journey and supporting my role with the young person, family
-    and network.
-  button: false
-  buttonlink: ''
-  buttontext: ''
-
+  main_text: A CAMHS wellbeing professional wrote at length about how Sporting Chance
+    mentors helped a young person with a significant trauma history engage with assessment
+    and support. That full account now lives with our case studies.
+  button: true
+  buttonlink: "/case-studies/camhs-wellbeing/"
+  buttontext: Read the case study
 ---

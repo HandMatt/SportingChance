@@ -8,6 +8,7 @@ googleAnalytics = ""
 languageCode = "en-us"
 relativeURLs = false
 title = "Sporting Chance"
+
 [[menu.main]]
 name = "About"
 url = "/about"
@@ -35,6 +36,10 @@ parent = "Services"
 name = "Testimonials"
 url = "/testimonials"
 weight = 40
+[[menu.main]]
+name = "Case Studies"
+url = "/case-studies"
+weight = 45
 [[menu.main]]
 name = "Contact"
 url = "/contact"

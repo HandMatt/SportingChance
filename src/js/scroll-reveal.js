@@ -6,16 +6,28 @@
  */
 function initScrollReveal() {
   const nodes = document.querySelectorAll('[data-reveal]')
-  if (!nodes.length) return
+  const groups = document.querySelectorAll('[data-reveal-group]')
+
+  if (!nodes.length && !groups.length) return
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)')
   if (reduce.matches) {
     nodes.forEach((el) => el.classList.add('is-revealed'))
+    groups.forEach((group) => {
+      group.classList.add('is-revealed')
+      group.querySelectorAll('[data-reveal-step], .sc-reveal-step').forEach((step) => {
+        step.classList.add('is-revealed')
+      })
+    })
     return
   }
 
   if (!('IntersectionObserver' in window)) {
     nodes.forEach((el) => el.classList.add('is-revealed'))
+    groups.forEach((group) => {
+      group.classList.add('is-revealed')
+      group.querySelectorAll('.sc-reveal-step').forEach((step) => step.classList.add('is-revealed'))
+    })
     return
   }
 
@@ -26,25 +38,92 @@ function initScrollReveal() {
     }, extraDelay)
   }
 
+  const revealGroup = (group) => {
+    const steps = group.querySelectorAll('.sc-reveal-step')
+    const staggerMs = 70
+
+    steps.forEach((step, index) => {
+      window.setTimeout(() => {
+        step.classList.add('is-revealed')
+      }, index * staggerMs)
+    })
+
+    group.classList.add('is-revealed')
+  }
+
   const firstScreenBottom = window.innerHeight * 0.92
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -8% 0px',
+    threshold: 0.06,
+  }
+
+  const groupedSteps = new Set()
+  groups.forEach((group) => {
+    group.querySelectorAll('.sc-reveal-step').forEach((step) => groupedSteps.add(step))
+  })
+
+  const iconListItems = new Set()
+  document.querySelectorAll('.sc-icon-list').forEach((list) => {
+    if (list.closest('[data-reveal-group]')) return
+
+    const items = list.querySelectorAll('.sc-icon-list__item[data-reveal]')
+    items.forEach((item) => iconListItems.add(item))
+
+    if (!items.length) return
+
+    const revealItems = () => {
+      items.forEach((item) => reveal(item))
+    }
+
+    const rect = list.getBoundingClientRect()
+    const onFirstScreen = rect.top < firstScreenBottom && rect.bottom > 0
+    if (onFirstScreen) {
+      revealItems()
+      return
+    }
+
+    const listObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        revealItems()
+        listObserver.unobserve(entry.target)
+      })
+    }, observerOptions)
+
+    listObserver.observe(list)
+  })
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return
-        reveal(entry.target)
+
+        if (entry.target.hasAttribute('data-reveal-group')) {
+          revealGroup(entry.target)
+        } else {
+          reveal(entry.target)
+        }
+
         observer.unobserve(entry.target)
       })
     },
-    {
-      root: null,
-      // Require content to scroll further into view before animating
-      rootMargin: '0px 0px -28% 0px',
-      threshold: 0.12,
-    }
+    observerOptions
   )
 
+  groups.forEach((group) => {
+    const rect = group.getBoundingClientRect()
+    const onFirstScreen = rect.top < firstScreenBottom && rect.bottom > 0
+    if (onFirstScreen) {
+      revealGroup(group)
+      return
+    }
+    observer.observe(group)
+  })
+
   nodes.forEach((el) => {
+    if (iconListItems.has(el) || groupedSteps.has(el)) return
+
     const rect = el.getBoundingClientRect()
     const onFirstScreen = rect.top < firstScreenBottom && rect.bottom > 0
     if (onFirstScreen) {

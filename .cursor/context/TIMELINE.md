@@ -5,8 +5,11 @@ Update in the same PR as the change. Keep entries to one short bullet.
 
 ## 2026-08
 
-- **Photo strips deferred** — Homepage and service image-grid placeholders parked on `feature/photo-strips` so the rebrand can ship without empty tiles; restore once real photos exist.
-- **Combined rebrand direction** — Leaflet green / teal / purple (teal default off service pages), B parallax hero + quiet C scroll reveals, and Montserrat. Locked in `.cursor/plans/style-options-cherry-pick.md`; building on `feature/rebrand-styling`.
+- **Rebrand styling pass 2** — Follow-up from feedback on `feature/rebrand-styling-pass-2`: tighter mobile gutters, partner logos on one row, coloured cross-service links, SCP CTA on the main Services page, native Jotform contact form.
+- **Case studies section** — Long CAMHS professional account moved from Testimonials onto `/case-studies/` so quotes stay scannable and stories get their own URLs for SEO.
+- **Rebrand shipped** — Leaflet green / teal / purple (teal default off service pages), parallax hero, quiet scroll reveals, Montserrat. Experiment branches and decision plans removed from `.cursor/plans/`.
+- **Testimonials carousel shipped** — Professional and family quotes with homepage + `/testimonials` carousel (#18).
+- **Photo strips deferred** — Homepage and service image-grid placeholders parked on `feature/photo-strips`; restore once real photos exist.
 - **Three service pillars** — Mentoring & Life Skills, Construction Workshops, and Alternative Learning Provision pages live with leaflet-aligned copy, Services nav/hub updates, and SCP education CTAs (homepage + service pages).
 - **Docker** — Moved local Node/Yarn into a Compose `assets` service so the site runs with Docker only; Netlify build unchanged.
 - **Identified work (Tony / Matt)** — Captured brief plans for OneDrive policy embeds (restore access), a homepage banner to Supporting Children's Pathways, and a content/testimonials/imagery refresh; see `.cursor/plans/REQUIREMENTS.md`.
