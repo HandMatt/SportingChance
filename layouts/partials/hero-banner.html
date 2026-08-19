@@ -12,8 +12,9 @@
     <span class="hero-b__wash hero-b__wash--a"></span>
     <span class="hero-b__wash hero-b__wash--b"></span>
   </div>
+  {{ partial "sc-logo-mark.html" (dict "variant" "hero") }}
 
-  <div class="hero-b__content sm:w-4/5 w-5/6 m-auto text-center pt-10 relative z-20">
+  <div class="hero-b__content sc-page-gutter m-auto text-center pt-10 relative z-20">
     <div class="mw6 pv5 animated fadeIn">
       <p class="hero-b__brand font-header uppercase tracking-widest text-white">
         Sporting Chance Project
@@ -24,10 +25,10 @@
       <p class="font-main lg:text-2xl text-xl leading-normal text-white" style="opacity:0.92">
         {{ .Params.hero_sub }}
       </p>
-      <div class="my-12">
+      <div class="hero-b__cta-wrap my-12">
         <a
-          class="hero-b__cta shadow hover:shadow-lg trans-02 my-5 text-xl rounded mt-4 py-4 px-6 text-right font-semibold no-underline text-white inline-block"
-          href="{{ .Params.herolink }}">{{ .Params.herobuttontext }} →</a>
+          class="hero-b__cta shadow hover:shadow-lg trans-02 text-xl rounded py-4 px-6 font-semibold no-underline text-white inline-block"
+          href="{{ .Params.herolink }}">{{ .Params.herobuttontext }}</a>
       </div>
     </div>
   </div>

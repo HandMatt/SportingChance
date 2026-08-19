@@ -1,11 +1,11 @@
-<section class="feedback-quote-carousel my-12 py-24 text-center px-8 sc-reveal{{ partial "helpers/snap-section-class.html" .Params }}" style="background-color: #fafafa;" data-quote-carousel data-reveal>
-    <div class="w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 m-auto">
+<section class="feedback-quote-carousel text-center sc-reveal{{ partial "helpers/snap-section-class.html" .Params }}" style="background-color: #fafafa;" data-quote-carousel data-reveal>
+    <div class="sc-page-gutter max-w-4xl mx-auto">
         {{ with .Params.header }}
-        <h2 class="font-header text-4xl sm:text-5xl font-gray font-medium pb-10">{{ . }}</h2>
+        <h2 class="font-header text-4xl sm:text-5xl font-gray font-medium feedback-quote-carousel__heading">{{ . }}</h2>
         {{ end }}
 
         <div class="feedback-quote-carousel__viewport" aria-roledescription="carousel" aria-label="{{ with .Params.header }}{{ . }}{{ else }}Testimonials{{ end }}">
-            <img src="/img/quote.svg" class="feedback-quote-carousel__icon w-16 mx-auto" alt="" />
+            <img src="/img/quote.svg" class="feedback-quote-carousel__icon mx-auto" alt="" />
 
             <div class="feedback-quote-carousel__stage">
                 {{ range $i, $quote := .Params.quotes }}
@@ -29,7 +29,7 @@
         </div>
 
         {{ if gt (len .Params.quotes) 1 }}
-        <div class="feedback-quote-carousel__controls mt-10 flex items-center justify-center gap-4">
+        <div class="feedback-quote-carousel__controls flex items-center justify-center">
             <button type="button" class="feedback-quote-carousel__btn" data-quote-prev aria-label="Previous testimonial">
                 <span aria-hidden="true">←</span>
             </button>

@@ -7,7 +7,8 @@
 {{- with $Params.image -}}{{- if ne . "" -}}{{- $image = . -}}{{- end -}}{{- end -}}
 
 <section class="leaflet-theme-{{ $theme }} w-full sc-section--left">
-  <div class="leaflet-band py-16 sm:py-20 px-6">
+  <div class="leaflet-band py-16 sm:py-20">
+    {{ partial "sc-logo-mark.html" (dict "variant" "title") }}
     <div class="leaflet-geo" aria-hidden="true">
       <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
       <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>
@@ -23,7 +24,7 @@
   </div>
 
   {{- if $image -}}
-  <div class="leaflet-band pb-14 sm:pb-16 px-6">
+  <div class="leaflet-band pb-14 sm:pb-16">
     <div class="leaflet-geo" aria-hidden="true">
       <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
       <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>

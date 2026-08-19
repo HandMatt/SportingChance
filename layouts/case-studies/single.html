@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ $subtext := .Params.author -}}
+{{- with .Params.role -}}{{- $subtext = printf "%s — %s" $subtext . -}}{{- end -}}
+{{ partial "blocks/generic-header" (dict "Params" (dict "title" .Title "subtext" $subtext) "theme" "teal") }}
+
+<section class="leaflet-theme-teal w-full sc-section--left">
+  <div class="leaflet-band leaflet-band--light leaflet-panel-band">
+    <div class="leaflet-geo" aria-hidden="true">
+      <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
+      <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>
+    </div>
+    <div class="leaflet-band__inner sc-page-gutter">
+      <article class="leaflet-panel leaflet-panel--left sc-case-study sc-reveal sc-reveal--left" data-reveal data-reveal-delay-ms="120">
+        <div class="leaflet-panel__body sc-case-study__body">
+          {{ .Content }}
+        </div>
+        <div class="leaflet-panel__actions sc-section__actions">
+          <a href="/case-studies/" class="leaflet-panel__btn">All case studies</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+{{ end }}

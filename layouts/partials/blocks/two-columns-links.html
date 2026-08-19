@@ -1,26 +1,32 @@
-{{- $theme := "teal" -}}
-{{- if reflect.IsMap . -}}
-  {{- with index . "theme" -}}{{- $theme = . -}}{{- end -}}
-{{- end -}}
-<section class="leaflet-theme-{{ $theme }} w-full">
-  <div class="leaflet-band leaflet-panel-band">
-    <div class="leaflet-geo" aria-hidden="true">
-      <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
-      <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>
-    </div>
-    <div class="leaflet-band__inner sc-page-gutter max-w-5xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
-        {{ range $i, $col := .Params.columns }}
-        <div class="leaflet-panel flex flex-col h-full sc-reveal{{ if eq $i 0 }} sc-reveal--left leaflet-panel--left{{ else }} sc-reveal--right leaflet-panel--right{{ end }}"
-          data-reveal data-reveal-delay="{{ add $i 1 }}" data-reveal-delay-ms="140">
-          <h2 class="leaflet-panel__title w-full" style="min-height:auto;padding:0">{{ $col.header }}</h2>
-          <p class="leaflet-panel__body flex-grow">{{ $col.main_text | safeHTML }}</p>
-          <div class="leaflet-panel__actions mt-auto sc-section__actions{{ if ne $i 0 }} sc-section--right{{ end }}">
-            <a href="{{ $col.buttonlink }}" class="leaflet-panel__btn">{{ $col.buttontext }} →</a>
+<section class="two-columns-links w-full">
+  <div class="two-columns-links__grid grid grid-cols-1 md:grid-cols-2">
+    {{ range $i, $col := .Params.columns }}
+    {{- $colTheme := $col.theme | default "" -}}
+    {{- if not $colTheme -}}
+      {{- if in $col.buttonlink "mentoring-life-skills" -}}{{- $colTheme = "green" -}}
+      {{- else if in $col.buttonlink "construction-workshops" -}}{{- $colTheme = "teal" -}}
+      {{- else if in $col.buttonlink "alternative-learning-provision" -}}{{- $colTheme = "purple" -}}
+      {{- else -}}{{- $colTheme = "teal" -}}
+      {{- end -}}
+    {{- end -}}
+    <div class="two-columns-links__col leaflet-theme-{{ $colTheme }}">
+      <div class="leaflet-band leaflet-panel-band">
+        <div class="leaflet-geo" aria-hidden="true">
+          <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
+          <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>
+        </div>
+        <div class="leaflet-band__inner sc-page-gutter">
+          <div class="leaflet-panel leaflet-panel--{{ if eq $i 0 }}left{{ else }}right{{ end }} two-columns-links__panel sc-reveal sc-reveal--{{ if eq $i 0 }}left{{ else }}right{{ end }}"
+            data-reveal data-reveal-delay="{{ add $i 1 }}" data-reveal-delay-ms="140">
+            <h2 class="leaflet-panel__title w-full" style="min-height:auto;padding:0">{{ $col.header }}</h2>
+            <p class="leaflet-panel__body two-columns-links__body">{{ $col.main_text | safeHTML }}</p>
+            <div class="leaflet-panel__actions sc-section__actions two-columns-links__actions">
+              <a href="{{ $col.buttonlink }}" class="leaflet-panel__btn">{{ $col.buttontext }}</a>
+            </div>
           </div>
         </div>
-        {{ end }}
       </div>
     </div>
+    {{ end }}
   </div>
 </section>

@@ -1,12 +1,12 @@
 # Content update and imagery
 
-**Status:** Identified — brief only; **testimonials moved** to [testimonials-refresh.md](testimonials-refresh.md)  
+**Status:** Identified — brief only  
 **Priority:** Medium — page copy + pictures; imagery blocked on sourcing  
-**Suggested branch:** `feature/content-and-imagery` from `develop` (copy) plus `feature/photo-strips` (grids — already parked, rebase onto rebrand when photos exist)
+**Suggested branch:** `feature/content-and-imagery` from `develop` (copy) plus `feature/photo-strips` (grids — already parked; restore when photos exist)
 
 ## Goal
 
-Broader site **copy refresh** with Tony and new **pictures** once assets are sourced and cleared. Quote/testimonial work is tracked separately.
+Broader site **copy refresh** with Tony and new **pictures** once assets are sourced and cleared.
 
 ## Existing building blocks
 
@@ -24,7 +24,6 @@ Broader site **copy refresh** with Tony and new **pictures** once assets are sou
 
 - Copy can land without new photos if needed.
 - Picture work waits on sourcing + consent — do not block the copy PR on assets that are still outstanding.
-- Testimonials: see [testimonials-refresh.md](testimonials-refresh.md).
 
 ## Open questions (defer to task kickoff)
 
