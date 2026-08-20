@@ -25,4 +25,6 @@ The Sporting Chance website, built using Hugo.
 
 ## Agent / AI context
 
-Shared project context for Cursor (and other agents) lives under [`.cursor/`](.cursor/) — start at [`AGENTS.md`](AGENTS.md). Update [`.cursor/context/TIMELINE.md`](.cursor/context/TIMELINE.md) when material ownership, hosting, or architecture facts change.
+Primary agent brief: [`AGENTS.md`](AGENTS.md). Living history and short-lived
+plans: [`.cursor/`](.cursor/). Update [`.cursor/context/TIMELINE.md`](.cursor/context/TIMELINE.md)
+when material ownership, hosting, or architecture facts change.

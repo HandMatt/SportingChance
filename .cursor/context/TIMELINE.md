@@ -5,6 +5,7 @@ Update in the same PR as the change. Keep entries to one short bullet.
 
 ## 2026-08
 
+- **Agent context aligned to global template** — Root `AGENTS.md` is now the primary brief (filled from `~/.cursor/templates/AGENTS.md`); removed duplicate `.cursor/context/PROJECT.md`; rules/README point at `AGENTS.md` + `TIMELINE.md`.
 - **Rebrand styling pass 2** — Follow-up from feedback on `feature/rebrand-styling-pass-2`: tighter mobile gutters, partner logos on one row, coloured cross-service links, SCP CTA on the main Services page, native Jotform contact form.
 - **Case studies section** — Long CAMHS professional account moved from Testimonials onto `/case-studies/` so quotes stay scannable and stories get their own URLs for SEO.
 - **Rebrand shipped** — Leaflet green / teal / purple (teal default off service pages), parallax hero, quiet scroll reveals, Montserrat. Experiment branches and decision plans removed from `.cursor/plans/`.
