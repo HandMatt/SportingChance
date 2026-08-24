@@ -24,7 +24,7 @@
         {{- if eq .template "news-block" -}}{{ partial "blocks/news-block" (dict "Params" . "ctx" $) }}{{- end -}}
         {{- if eq .template "icon-grid" -}}{{ partial "blocks/icon-grid" (dict "Params" . "theme" $theme) }}{{- end -}}
         {{- if eq .template "partners" -}}{{ partial "blocks/partners" (dict "Params" .) }}{{- end -}}
-        {{- if eq .template "contact-form" -}}{{ partial "blocks/contact-form" (dict "Params" .) }}{{- end -}}
+        {{- if eq .template "contact-form" -}}{{ partial "blocks/contact-form" (dict "Params" . "theme" $theme) }}{{- end -}}
         {{- if eq .template "cta-block" -}}{{ partial "blocks/cta-block" (dict "Params" . "theme" $theme) }}{{- end -}}
         {{- if eq .template "two-columns-links" -}}{{ partial "blocks/two-columns-links" (dict "Params" . "theme" $theme) }}{{- end -}}
 {{- end -}}
