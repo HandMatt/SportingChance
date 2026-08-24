@@ -14,14 +14,14 @@ page_sections:
   alt: ''
 - template: three-columns
   header_1: Mentoring & Life Skills
-  text_1: One-to-one mentoring and life skills coaching for ages 5–18 with behavioural,
+  text_1: One-to-one mentoring and life skills coaching for ages 5–19 with behavioural,
     social, emotional, and mental health needs, working closely with parents and educational
     authorities.
   header_2: Construction Workshops
-  text_2: Hands-on construction trades for 14–18 year olds, including SEN students,
+  text_2: Hands-on construction trades for 14–19 year olds, including SEN students,
     through one-to-one or small group learning in a safe, structured workshop environment.
   header_3: Alternative Learning Provision
-  text_3: Mentoring, education, and life skills for ages 5–18, including SEN or EHCP
+  text_3: Mentoring, education, and life skills for ages 5–19, including SEN or EHCP
     — functional skills, cooking, money management, animal care, sports & fitness,
     and employability.
   bg_1: "/img/1.png"
@@ -36,7 +36,7 @@ page_sections:
   text_section: []
   button: true
   buttontext: Mentoring & Life Skills
-  main_text: Sporting Chance Project supports young people aged 5–18 with behavioural,
+  main_text: Sporting Chance Project supports young people aged 5–19 with behavioural,
     social, emotional, and mental health needs. We provide tailored one-to-one mentoring
     and life skills, working closely with parents and educational authorities.<br/><br/>Our
     sessions include functional skills (ASDAN/NCFE), one-to-one mentoring & life skills
@@ -48,7 +48,7 @@ page_sections:
   text_section: []
   button: true
   buttontext: Construction Workshops
-  main_text: Sporting Chance Project supports 14–18 year olds, including SEN students,
+  main_text: Sporting Chance Project supports 14–19 year olds, including SEN students,
     through one-to-one or small group learning. We provide mentoring, functional skills,
     and alternative education for the construction industry in a safe, structured
     environment.<br/><br/>Our sessions include carpentry, bricklaying, plastering,
@@ -61,7 +61,7 @@ page_sections:
   button: true
   buttontext: Alternative Learning Provision
   main_text: Sporting Chance Project provides mentoring, education, and life skills
-    coaching for ages 5–18, including those with SEN or an EHCP. We collaborate with
+    coaching for ages 5–19, including those with SEN or an EHCP. We collaborate with
     parents and professionals to help young people reach their full potential.<br/><br/>Our
     sessions include functional skills (ASDAN/NCFE), cooking & food preparation, money
     management, animal care, sports & fitness, and employability.
@@ -70,7 +70,8 @@ page_sections:
   header: Education provision
   align: left
   main_text: Our education arm is now <strong>Supporting Children's Pathways</strong>,
-    a charitable not-for-profit.
+    a charitable not-for-profit. They provide primary education support such as phonics
+    and early mathematics, and secondary education support such as functional skills.
   button: true
   buttontext: Supporting Children's Pathways
   buttonlink: "https://www.supportingchildrenspathways.org/"

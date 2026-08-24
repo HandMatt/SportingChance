@@ -18,7 +18,7 @@
         {{ $Params.title }}
       </h1>
       {{- with $Params.subtext -}}
-      <p class="mt-6 font-main text-base sm:text-lg leading-relaxed text-white max-w-3xl" style="opacity:0.95">{{ . }}</p>
+      <p class="mt-6 font-main text-base sm:text-lg leading-relaxed text-white max-w-3xl" style="opacity:0.95">{{ . | safeHTML }}</p>
       {{- end -}}
     </div>
   </div>

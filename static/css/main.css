@@ -2154,9 +2154,6 @@ html.has-scroll-snap {
 .mt-6{
     margin-top: 1.5rem;
 }
-.mt-auto{
-    margin-top: auto;
-}
 .block{
     display: block;
 }
@@ -2680,6 +2677,10 @@ html.has-scroll-snap {
 
 .hover\:underline:hover{
     text-decoration-line: underline;
+}
+
+.hover\:opacity-80:hover{
+    opacity: 0.8;
 }
 
 .hover\:shadow-lg:hover{

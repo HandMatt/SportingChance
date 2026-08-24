@@ -1,12 +1,12 @@
 ---
 type: page
 title: Construction Workshops
-description: Sporting Chance Project supports 14–18 year olds, including SEN
+description: Sporting Chance Project supports 14–19 year olds, including SEN
   students, with hands-on construction workshops in a safe,   structured environment.
 page_sections:
 - template: generic-header
   title: Construction Workshops
-  subtext: Sporting Chance Project supports 14–18 year olds, including SEN students,
+  subtext: Sporting Chance Project supports 14–19 year olds, including SEN students,
     through one-to-one or small group learning. We provide mentoring, functional
     skills, and alternative education for the construction industry in a safe,
     structured environment.
@@ -67,7 +67,7 @@ page_sections:
 - template: two-columns-links
   columns:
   - header: Mentoring & Life Skills
-    main_text: Our experienced team also offers one-to-one mentoring and life skills coaching for young people aged 5–18.
+    main_text: Our experienced team also offers one-to-one mentoring and life skills coaching for young people aged 5–19.
     buttontext: Mentoring & Life Skills
     buttonlink: "/mentoring-life-skills"
   - header: Alternative Learning Provision
