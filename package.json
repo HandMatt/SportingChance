@@ -11,7 +11,7 @@
     "dev": "docker compose up"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.5",
+    "@babel/core": "^7.29.6",
     "@babel/preset-env": "^7.23.5",
     "autoprefixer": "^10.4.16",
     "babel-loader": "^9.1.3",
