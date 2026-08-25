@@ -2461,10 +2461,6 @@ html.has-scroll-snap {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
-.py-24{
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-}
 .py-3{
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
@@ -2797,41 +2793,14 @@ html.has-scroll-snap {
 }
 
 @media (min-width: 992px){
-    .lg\:mx-auto{
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .lg\:mb-0{
-        margin-bottom: 0px;
-    }
-    .lg\:ml-2{
-        margin-left: 0.5rem;
-    }
-    .lg\:mr-2{
-        margin-right: 0.5rem;
-    }
     .lg\:w-5\/12{
         width: 41.666667%;
-    }
-    .lg\:max-w-md{
-        max-width: 28rem;
     }
     .lg\:grid-cols-4{
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
-    .lg\:flex-row{
-        flex-direction: row;
-    }
     .lg\:gap-4{
         gap: 1rem;
-    }
-    .lg\:px-8{
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-    .lg\:py-32{
-        padding-top: 8rem;
-        padding-bottom: 8rem;
     }
     .lg\:text-2xl{
         font-size: 1.5rem;
@@ -2841,17 +2810,9 @@ html.has-scroll-snap {
         font-size: 1.875rem;
         line-height: 2.25rem;
     }
-    .lg\:text-4xl{
-        font-size: 2.25rem;
-        line-height: 2.5rem;
-    }
     .lg\:text-6xl{
         font-size: 3.75rem;
         line-height: 1;
-    }
-    .lg\:text-xl{
-        font-size: 1.25rem;
-        line-height: 1.75rem;
     }
 }
 
@@ -2895,13 +2856,13 @@ html.has-scroll-snap {
         padding-top: 6rem;
         padding-bottom: 6rem;
     }
-    .xl\:text-7xl{
-        font-size: 4.5rem;
-        line-height: 1;
-    }
     .xl\:text-4xl{
         font-size: 2.25rem;
         line-height: 2.5rem;
+    }
+    .xl\:text-7xl{
+        font-size: 4.5rem;
+        line-height: 1;
     }
     .xl\:text-xl{
         font-size: 1.25rem;
