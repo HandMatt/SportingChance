@@ -103,7 +103,7 @@ Netlify: `yarn install && yarn build && hugo` → publish `public/`.
 | Services | `content/services.md`, service pillar pages | Mentoring, Construction, ALP |
 | Policies | `content/policies/`, `layouts/policies/` | OneDrive embeds via `iframe_url` |
 | Testimonials / case studies | `content/Testimonials.md`, `content/case-studies/` | Quotes + long-form stories |
-| Contact | `content/contact.md`, contact form partial | Jotform embed |
+| Contact | `content/contact.md`, `layouts/partials/blocks/contact-form.html`, `config.toml` `jotform_form_id` | Native HTML form → Jotform EU submit; notification email and thank-you redirect are set in the Jotform dashboard (requires account access), not in Hugo |
 
 ---
 
@@ -137,3 +137,4 @@ Netlify: `yarn install && yarn build && hugo` → publish `public/`.
 - Git: `master` = production; `develop` = integration; feature/chore branches → PR into `develop`.
 - Ownership (Aug 2026): GitHub historically `Ieuanoh/SportingChance`; transfer and Netlify access still settling — confirm before changing deploy/domain settings.
 - Human docs: [`README.md`](README.md). Short-lived plans: [`.cursor/plans/`](.cursor/plans/).
+- **Jotform (contact):** Form ID in `config.toml` → `jotform_form_id`. To change submission notifications from `admin@` to `info@sportingchanceproject.co.uk`, log into the Jotform account that owns form `222916591903056`, open **Settings → Emails** (notification emails), and update the recipient. On-page contact copy (`info@`) does not affect where Jotform sends alerts.

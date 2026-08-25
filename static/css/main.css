@@ -152,6 +152,12 @@ html {
     display: block;
 }
 
+.sc-nav__logo {
+    display: block;
+    height: 4.5rem;
+    width: auto;
+}
+
 /* Button styling */
 .trans-02.border-2 {
     border: 2px solid black !important;
@@ -165,7 +171,7 @@ html {
 }
 
 :root {
-    --site-header-offset: 4.8rem;
+    --site-header-offset: 5.25rem;
 }
 
 body {
@@ -173,12 +179,12 @@ body {
 }
 
 body.has-scp-site-notice {
-    --site-header-offset: 6.75rem;
+    --site-header-offset: 7.2rem;
 }
 
 @media (max-width: 640px) {
     body.has-scp-site-notice {
-        --site-header-offset: 7.5rem;
+        --site-header-offset: 7.95rem;
     }
 }
 
@@ -290,7 +296,7 @@ html.scp-site-notice-dismissed .scp-site-notice {
 }
 
 html.scp-site-notice-dismissed body.has-scp-site-notice {
-    --site-header-offset: 4.8rem;
+    --site-header-offset: 5.25rem;
 }
 
 @media (min-width: 640px) {
@@ -1058,7 +1064,8 @@ html.scp-site-notice-dismissed body.has-scp-site-notice {
 .leaflet-columns__card {
     position: relative;
     overflow: hidden;
-    min-height: 18rem;
+    /* overflow:hidden zeroes flex min-size; keep cards tall enough for their copy */
+    min-height: max(18rem, min-content);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -1398,10 +1405,16 @@ a.leaflet-columns__card:focus-visible {
 
 .sc-contact-form__honeypot {
     position: absolute;
-    left: -10000px;
     width: 1px;
     height: 1px;
+    padding: 0;
+    margin: -1px;
     overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+    visibility: hidden;
 }
 
 .sc-case-study {
@@ -2248,6 +2261,9 @@ html.has-scroll-snap {
 .flex-shrink{
     flex-shrink: 1;
 }
+.shrink-0{
+    flex-shrink: 0;
+}
 .flex-grow{
     flex-grow: 1;
 }
@@ -2281,6 +2297,9 @@ html.has-scroll-snap {
 }
 .flex-wrap{
     flex-wrap: wrap;
+}
+.flex-nowrap{
+    flex-wrap: nowrap;
 }
 .content-start{
     align-content: flex-start;
@@ -2321,6 +2340,9 @@ html.has-scroll-snap {
 }
 .overflow-x-hidden{
     overflow-x: hidden;
+}
+.whitespace-nowrap{
+    white-space: nowrap;
 }
 .rounded{
     border-radius: 0.25rem;
@@ -2402,6 +2424,10 @@ html.has-scroll-snap {
 }
 .p-8{
     padding: 2rem;
+}
+.px-2\.5{
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
 }
 .px-3{
     padding-left: 0.75rem;
@@ -2679,10 +2705,6 @@ html.has-scroll-snap {
     text-decoration-line: underline;
 }
 
-.hover\:opacity-80:hover{
-    opacity: 0.8;
-}
-
 .hover\:shadow-lg:hover{
     --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -2788,12 +2810,6 @@ html.has-scroll-snap {
     .lg\:mr-2{
         margin-right: 0.5rem;
     }
-    .lg\:flex{
-        display: flex;
-    }
-    .lg\:hidden{
-        display: none;
-    }
     .lg\:w-5\/12{
         width: 41.666667%;
     }
@@ -2839,12 +2855,56 @@ html.has-scroll-snap {
     }
 }
 
+@media (min-width: 1040px){
+    .nav\:flex{
+        display: flex;
+    }
+    .nav\:hidden{
+        display: none;
+    }
+}
+
 @media (min-width: 1200px){
+    .xl\:mx-auto{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .xl\:mb-0{
+        margin-bottom: 0px;
+    }
+    .xl\:ml-2{
+        margin-left: 0.5rem;
+    }
+    .xl\:mr-2{
+        margin-right: 0.5rem;
+    }
     .xl\:w-4\/12{
         width: 33.333333%;
+    }
+    .xl\:max-w-md{
+        max-width: 28rem;
+    }
+    .xl\:flex-row{
+        flex-direction: row;
+    }
+    .xl\:px-8{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .xl\:py-24{
+        padding-top: 6rem;
+        padding-bottom: 6rem;
     }
     .xl\:text-7xl{
         font-size: 4.5rem;
         line-height: 1;
+    }
+    .xl\:text-4xl{
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+    .xl\:text-xl{
+        font-size: 1.25rem;
+        line-height: 1.75rem;
     }
 }

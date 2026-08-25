@@ -63,37 +63,6 @@ function initScrollReveal() {
     group.querySelectorAll('.sc-reveal-step').forEach((step) => groupedSteps.add(step))
   })
 
-  const iconListItems = new Set()
-  document.querySelectorAll('.sc-icon-list').forEach((list) => {
-    if (list.closest('[data-reveal-group]')) return
-
-    const items = list.querySelectorAll('.sc-icon-list__item[data-reveal]')
-    items.forEach((item) => iconListItems.add(item))
-
-    if (!items.length) return
-
-    const revealItems = () => {
-      items.forEach((item) => reveal(item))
-    }
-
-    const rect = list.getBoundingClientRect()
-    const onFirstScreen = rect.top < firstScreenBottom && rect.bottom > 0
-    if (onFirstScreen) {
-      revealItems()
-      return
-    }
-
-    const listObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return
-        revealItems()
-        listObserver.unobserve(entry.target)
-      })
-    }, observerOptions)
-
-    listObserver.observe(list)
-  })
-
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -122,7 +91,7 @@ function initScrollReveal() {
   })
 
   nodes.forEach((el) => {
-    if (iconListItems.has(el) || groupedSteps.has(el)) return
+    if (groupedSteps.has(el)) return
 
     const rect = el.getBoundingClientRect()
     const onFirstScreen = rect.top < firstScreenBottom && rect.bottom > 0

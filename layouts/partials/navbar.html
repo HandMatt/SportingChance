@@ -6,20 +6,20 @@
     class="sc-page-gutter mx-auto flex items-center justify-between py-2"
     aria-label="Global">
     <div class="flex justify-between">
-      <a href="/">
-        <img src="/img/scplogo1.png" class="w-48" alt="sporting chance logo" />
+      <a href="/" class="block shrink-0">
+        <img src="/img/scplogo1.png" class="sc-nav__logo" alt="Sporting Chance Project" />
       </a>
     </div>
 
-    <!-- Desktop Navigation -->
-    <div class="hidden lg:flex items-center justify-between text-lg py-4">
+    <!-- Desktop Navigation (nav = 1040px — hamburger until links fit on one line) -->
+    <div class="hidden nav:flex items-center flex-nowrap text-lg py-2">
       {{ range .Site.Menus.main }} {{ if .HasChildren }}
       <!-- Dropdown Menu -->
-      <div class="relative group" onmouseenter="!isTouchDevice() && showDropdown(this)"
+      <div class="relative group shrink-0" onmouseenter="!isTouchDevice() && showDropdown(this)"
         onmouseleave="!isTouchDevice() && hideDropdown(this)">
         <div class="flex items-center">
           <a href="{{ .URL }}"
-            class="nav-link px-3 py-2 text-black font-black uppercase tracking-wide transition-all duration-200">
+            class="nav-link px-2.5 py-2 whitespace-nowrap text-black font-black uppercase tracking-wide transition-all duration-200">
             {{ .Name }}
           </a>
           <button type="button" class="nav-toggle" aria-label="Toggle dropdown menu"
@@ -47,14 +47,14 @@
       </div>
       {{ else }}
       <a href="{{ .URL }}"
-        class="nav-link px-3 py-2 text-black font-black uppercase tracking-wide transition-all duration-200">
+        class="nav-link shrink-0 px-2.5 py-2 whitespace-nowrap text-black font-black uppercase tracking-wide transition-all duration-200">
         {{ .Name }}
       </a>
       {{ end }} {{ end }}
     </div>
 
     <!-- Mobile Menu Button -->
-    <div class="flex lg:hidden">
+    <div class="flex nav:hidden">
       <button type="button" class="nav-toggle" id="mobile-menu-btn"
         aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg class="nav-toggle__icon nav-toggle__icon--menu h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -68,7 +68,7 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="lg:hidden hidden" id="mobile-menu">
+  <div class="nav:hidden hidden" id="mobile-menu">
     <div class="sc-page-gutter py-4 bg-white border-t border-gray-100 space-y-3">
       {{ range .Site.Menus.main }} {{ if .HasChildren }}
       <!-- Services and its submenu items -->

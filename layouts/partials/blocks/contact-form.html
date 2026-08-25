@@ -2,9 +2,9 @@
 {{- if reflect.IsMap . -}}
   {{- with index . "theme" -}}{{- $theme = . -}}{{- end -}}
 {{- end -}}
-{{- $formID := "222916591903056" -}}
+{{- $formID := site.Params.jotform_form_id | default "222916591903056" -}}
 {{- $jotformSubmitURL := printf "https://eu-submit.jotform.com/submit/%s" $formID -}}
-{{/* Embed: form.jotform.com/{{ $formID }}. Live source action is eu-submit (EU data region), not submit.jotform.com. */}}
+{{/* Embed: form.jotform.com/{{ $formID }}. EU submit URL; field names must match the Jotform form. */}}
 <section class="leaflet-theme-{{ $theme }} w-full sc-section--center">
   <div class="leaflet-band leaflet-band--light leaflet-panel-band">
     <div class="leaflet-geo" aria-hidden="true">
@@ -19,7 +19,7 @@
         <form class="sc-contact-form__form" method="POST" action="{{ $jotformSubmitURL }}" accept-charset="utf-8" autocomplete="on">
           <input type="hidden" name="formID" value="{{ $formID }}" />
           <input type="hidden" name="simple_spc" value="{{ $formID }}-{{ $formID }}" />
-          <div class="sc-contact-form__honeypot" aria-hidden="true">
+          <div class="sc-contact-form__honeypot" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);visibility:hidden;">
             <label for="website">Website</label>
             <input type="text" id="website" name="website" value="" tabindex="-1" autocomplete="off" />
           </div>
