@@ -103,7 +103,7 @@ Netlify: `yarn install && yarn build && hugo` → publish `public/`.
 | Services | `content/services.md`, service pillar pages | Mentoring, Construction, ALP |
 | Policies | `content/policies/`, `layouts/policies/` | OneDrive embeds via `iframe_url` |
 | Testimonials / case studies | `content/Testimonials.md`, `content/case-studies/` | Quotes + long-form stories |
-| Contact | `content/contact.md`, `layouts/partials/blocks/contact-form.html`, `config.toml` `jotform_form_id` | Native HTML form → Jotform EU submit; notification email and thank-you redirect are set in the Jotform dashboard (requires account access), not in Hugo |
+| Contact | `content/contact.md`, `content/contact-thanks.md` (`/contact/thanks/`), `layouts/partials/blocks/contact-form.html`, `config.toml` `jotform_form_id` | Native HTML form → Jotform EU submit; on-site thank-you at `/contact/thanks/`; Jotform dashboard must redirect there and owns notification emails |
 
 ---
 
@@ -137,4 +137,7 @@ Netlify: `yarn install && yarn build && hugo` → publish `public/`.
 - Git: `master` = production; `develop` = integration; feature/chore branches → PR into `develop`.
 - Ownership (Aug 2026): GitHub historically `Ieuanoh/SportingChance`; transfer and Netlify access still settling — confirm before changing deploy/domain settings.
 - Human docs: [`README.md`](README.md). Short-lived plans: [`.cursor/plans/`](.cursor/plans/).
-- **Jotform (contact):** Form ID in `config.toml` → `jotform_form_id`. To change submission notifications from `admin@` to `info@sportingchanceproject.co.uk`, log into the Jotform account that owns form `222916591903056`, open **Settings → Emails** (notification emails), and update the recipient. On-page contact copy (`info@`) does not affect where Jotform sends alerts.
+- **Jotform (contact):** Form ID in `config.toml` → `jotform_form_id` (`222916591903056`). Site posts to the EU submit endpoint in `contact-form.html`. Verify field names anytime with `yarn verify:jotform` (compares partial ↔ live form HTML). Ops (Jotform dashboard only — Hugo cannot change these):
+  1. **Settings → Thank You Page** → redirect to `https://www.sportingchanceproject.co.uk/contact/thanks/` (or the live Netlify URL until DNS cuts over).
+  2. **Settings → Emails** → notification recipient `info@sportingchanceproject.co.uk` (not `admin@`).
+  3. Account access: whoever owns the Jotform login (check with Tony). On-page contact copy (`info@`) does not affect where Jotform sends alerts.

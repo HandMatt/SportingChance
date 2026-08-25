@@ -4,7 +4,7 @@
 {{- end -}}
 {{- $formID := site.Params.jotform_form_id | default "222916591903056" -}}
 {{- $jotformSubmitURL := printf "https://eu-submit.jotform.com/submit/%s" $formID -}}
-{{/* Embed: form.jotform.com/{{ $formID }}. EU submit URL; field names must match the Jotform form. */}}
+{{/* Embed: form.jotform.com/{{ $formID }}. EU submit URL; q*_ name attrs must match the live form — run: yarn verify:jotform */}}
 <section class="leaflet-theme-{{ $theme }} w-full sc-section--center">
   <div class="leaflet-band leaflet-band--light leaflet-panel-band">
     <div class="leaflet-geo" aria-hidden="true">
