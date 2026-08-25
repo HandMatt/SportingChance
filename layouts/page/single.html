@@ -1,14 +1,32 @@
 {{ define "main" }}
+{{- $theme := "teal" -}}
+{{- $isServices := false -}}
+{{- with .File -}}
+  {{- if eq .ContentBaseName "mentoring-life-skills" -}}{{- $theme = "green" -}}
+  {{- else if eq .ContentBaseName "construction-workshops" -}}{{- $theme = "teal" -}}
+  {{- else if eq .ContentBaseName "alternative-learning-provision" -}}{{- $theme = "purple" -}}
+  {{- else if eq .ContentBaseName "services" -}}{{- $isServices = true -}}{{- $theme = "teal" -}}
+  {{- end -}}
+{{- end -}}
 {{- range .Params.page_sections -}}
-        {{- if eq .template "generic-header" -}}{{ partial "blocks/generic-header" (dict "Params" .) }}{{- end -}}
-        {{- if eq .template "centred-text" -}}{{ partial "blocks/centred-text" (dict "Params" .) }}{{- end -}}
+        {{- $sectionTheme := $theme -}}
+        {{- if $isServices -}}
+          {{- if eq .header "Mentoring & Life Skills" -}}{{- $sectionTheme = "green" -}}
+          {{- else if eq .header "Construction Workshops" -}}{{- $sectionTheme = "teal" -}}
+          {{- else if eq .header "Alternative Learning Provision" -}}{{- $sectionTheme = "purple" -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if eq .template "generic-header" -}}{{ partial "blocks/generic-header" (dict "Params" . "theme" $theme) }}{{- end -}}
+        {{- if eq .template "centred-text" -}}{{ partial "blocks/centred-text" (dict "Params" . "theme" $sectionTheme) }}{{- end -}}
         {{- if eq .template "three-columns" -}}{{ partial "blocks/three-columns" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "feedback-quote" -}}{{ partial "blocks/feedback-quote" (dict "Params" .) }}{{- end -}}
+        {{- if eq .template "feedback-quote-carousel" -}}{{ partial "blocks/feedback-quote-carousel" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "news-block" -}}{{ partial "blocks/news-block" (dict "Params" . "ctx" $) }}{{- end -}}
-        {{- if eq .template "icon-grid" -}}{{ partial "blocks/icon-grid" (dict "Params" .) }}{{- end -}}
+        {{- if eq .template "icon-grid" -}}{{ partial "blocks/icon-grid" (dict "Params" . "theme" $sectionTheme) }}{{- end -}}
         {{- if eq .template "partners" -}}{{ partial "blocks/partners" (dict "Params" .) }}{{- end -}}
-        {{- if eq .template "contact-form" -}}{{ partial "blocks/contact-form" (dict "Params" .) }}{{- end -}}
-        {{- if eq .template "cta-block" -}}{{ partial "blocks/cta-block" (dict "Params" .) }}{{- end -}}
+        {{- if eq .template "contact-form" -}}{{ partial "blocks/contact-form" (dict "Params" . "theme" $theme) }}{{- end -}}
+        {{- if eq .template "cta-block" -}}{{ partial "blocks/cta-block" (dict "Params" . "theme" $theme) }}{{- end -}}
+        {{- if eq .template "two-columns-links" -}}{{ partial "blocks/two-columns-links" (dict "Params" . "theme" $theme) }}{{- end -}}
 {{- end -}}
 
 {{end}}

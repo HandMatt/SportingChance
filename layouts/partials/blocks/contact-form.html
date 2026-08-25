@@ -1,13 +1,71 @@
-
-<section class="sm:max-w-lg w-5/6 sm:my-6 my-4 m-auto py-10">
-    <div class="px-12">
-        <p class="text-xl leading-normal pb-12">{{ .Params.form_text }}</p>
-        <form method="POST" action="https://formspree.io/{{ .Params.email }}">
-            <input class="w-full text-lg py-6 px-4 bg-grey-lighter my-4 rounded" type="name" name="name" placeholder="Your name">
-            <input class="w-full text-lg py-6 px-4 bg-grey-lighter my-4 rounded" type="email" name="email" placeholder="Your email">
-            <textarea class="w-full text-lg py-5 h-48 px-4 bg-grey-lighter my-4 rounded" name="message" placeholder="Your message"></textarea>
-            <button class="trans-02 border-2 hover:border-sc-blue hover:bg-sc-blue my-5 text-xl border-grey-darker rounded mt-4 py-3 px-5 text-center w-full font-semibold no-underline text-grey-dark hover:text-white" type="submit">Send</button>
-            <input type="text" name="_gotcha" style="display:none" />
-        </form>
+{{- $theme := "teal" -}}
+{{- if reflect.IsMap . -}}
+  {{- with index . "theme" -}}{{- $theme = . -}}{{- end -}}
+{{- end -}}
+{{- $formID := site.Params.jotform_form_id | default "222916591903056" -}}
+{{- $jotformSubmitURL := printf "https://eu-submit.jotform.com/submit/%s" $formID -}}
+{{/* Embed: form.jotform.com/{{ $formID }}. EU submit URL; q*_ name attrs must match the live form — run: yarn verify:jotform */}}
+<section class="leaflet-theme-{{ $theme }} w-full sc-section--center">
+  <div class="leaflet-band leaflet-band--light leaflet-panel-band">
+    <div class="leaflet-geo" aria-hidden="true">
+      <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
+      <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>
     </div>
+    <div class="leaflet-band__inner sc-page-gutter">
+      <div class="leaflet-panel sc-contact-form sc-reveal" data-reveal data-reveal-delay-ms="120">
+        {{- with .Params.form_text -}}
+        <p class="leaflet-panel__body sc-contact-form__intro">{{ . }}</p>
+        {{- end -}}
+        <form class="sc-contact-form__form" method="POST" action="{{ $jotformSubmitURL }}" accept-charset="utf-8" autocomplete="on">
+          <input type="hidden" name="formID" value="{{ $formID }}" />
+          <input type="hidden" name="simple_spc" value="{{ $formID }}-{{ $formID }}" />
+          <div class="sc-contact-form__honeypot" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);visibility:hidden;">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" value="" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="sc-contact-form__row">
+            <div class="sc-contact-form__field">
+              <label for="q3_name_first">First name</label>
+              <input id="q3_name_first" type="text" name="q3_name[first]" autocomplete="given-name" required />
+            </div>
+            <div class="sc-contact-form__field">
+              <label for="q3_name_last">Last name</label>
+              <input id="q3_name_last" type="text" name="q3_name[last]" autocomplete="family-name" required />
+            </div>
+          </div>
+
+          <div class="sc-contact-form__field">
+            <label for="q4_email">Email</label>
+            <input id="q4_email" type="email" name="q4_email" autocomplete="email" required />
+          </div>
+
+          <div class="sc-contact-form__field">
+            <label for="q10_phone">Phone number</label>
+            <input id="q10_phone" type="tel" name="q10_phoneNumber[full]" autocomplete="tel" inputmode="tel" title="UK phone number, e.g. 0117 203 4322 or +44 7748 633711" required />
+          </div>
+
+          <div class="sc-contact-form__row">
+            <div class="sc-contact-form__field">
+              <label for="q6_company">Company name <span class="sc-contact-form__optional">(optional)</span></label>
+              <input id="q6_company" type="text" name="q6_companyName" autocomplete="organization" />
+            </div>
+            <div class="sc-contact-form__field">
+              <label for="q7_job">Job title <span class="sc-contact-form__optional">(optional)</span></label>
+              <input id="q7_job" type="text" name="q7_jobTitle" autocomplete="organization-title" />
+            </div>
+          </div>
+
+          <div class="sc-contact-form__field">
+            <label for="q9_message">Message</label>
+            <textarea id="q9_message" name="q9_message" rows="6" required></textarea>
+          </div>
+
+          <div class="leaflet-panel__actions sc-section__actions">
+            <button type="submit" class="leaflet-panel__btn sc-contact-form__submit">Send message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>

@@ -1,71 +1,83 @@
 ---
 type: page
 title: Mentoring & Life Skills
-description: Sporting Chance Project offers mentoring, education and life skills coaching
-  to young people
+description: Sporting Chance Project supports young people aged 5–19 with behavioural,
+  social, emotional, and mental health needs through one-to-one mentoring and life
+  skills coaching.
 page_sections:
 - template: generic-header
   title: Mentoring & Life Skills
-  subtext: Our experienced team provide one-to-one life skills and mentoring to our
-    young people, with parents and educational authorities as an integral part of
-    our process. We aim to offer services depending on what the young person needs.
+  subtext: Sporting Chance Project supports young people aged 5–19 with behavioural,
+    social, emotional, and mental health needs. We provide tailored one-to-one mentoring
+    and life skills, working closely with parents and educational authorities.
   image: "/img/mentoring-and-life-skills-2.png"
   alt: Student walking out glass door
 - template: icon-grid
   icon_boxes:
-  - copy: Special Educational Needs (SEN) provision for young people needing support
-      with behaviour, social, emotional and mental health needs.
-    title: SEN Provision
-    icon: "/img/altedu.svg"
-    iconalt: special educational needs provision icon
-  - copy: Our dedicated and experienced mentors provide one-to-one mentoring and life
-      skills coaching around society, community and social acceptance.
-    title: Experienced Mentors
+  - title: One-to-one Mentoring
+    copy: Dedicated mentors provide one-to-one mentoring and life skills coaching
+      around society, community, and social acceptance.
     icon: "/img/sportcoaching.svg"
-    iconalt: experienced mentors icon
-  - copy: We offer one-to-one tutoring in functional skills including Mathematics,
-      English and ICT.
-    title: Tutoring
+    iconalt: one-to-one mentoring icon
+  - title: Functional Skills
+    copy: ASDAN and NCFE qualifications in Maths, English and ICT, delivered through
+      one-to-one tutoring.
     icon: "/img/maths.svg"
-    iconalt: tutoring icon
-  - copy: Proven track record in helping students transition back into education or
-      onto further education settings.
-    title: Transition Support
+    iconalt: functional skills icon
+  - title: Transition Support
+    copy: Proven support helping students transition back into education or onto
+      further education settings.
     icon: "/img/career.svg"
     iconalt: transition support icon
-  - copy: Work experience and employment pathways for 14 to 18 year olds.
-    title: Career Pathways
+  - title: SEN Provision
+    copy: Support for young people needing help with behaviour, social, emotional,
+      and mental health needs.
+    icon: "/img/altedu.svg"
+    iconalt: special educational needs provision icon
+  - title: Nurturing Environment
+    copy: A safe space where young people can build secure relationships and develop
+      trust.
+    icon: "/img/school.svg"
+    iconalt: nurturing environment icon
+  - title: Career Pathways
+    copy: Work experience and employment pathways for 14 to 19 year olds.
     icon: "/img/apprentice.svg"
     iconalt: career pathways icon
-  - copy: Breaking down barriers to learning with ASDAN, and NCFE qualifications
-      offered.
-    title: Education
-    icon: "/img/intervention.svg"
-    iconalt: education icon
-  - copy: Offering a safe and nurturing environment where young people can build secure
-      relationships and develop trust.
-    title: Nurturing Environment
-    icon: "/img/school.svg"
-    iconalt: reintegration to school
-  - copy: Helping young people find a passion and engaging them in activities they
-      enjoy, as well as signposting and connecting young people to positive pathways.
-    title: Engagement
+  - title: Engagement
+    copy: Helping young people find a passion, engage in activities they enjoy, and
+      connect to positive pathways.
     icon: "/img/book.svg"
     iconalt: engagement icon
+  - title: Working Together
+    copy: Parents and educational authorities are an integral part of our process,
+      so support matches what each young person needs.
+    icon: "/img/intervention.svg"
+    iconalt: working together icon
 - template: centred-text
+  header: Our sessions include
+  align: left
+  main_text: Functional skills (ASDAN/NCFE qualifications), one-to-one mentoring
+    & life skills coaching, and transition back to education.<br/><br/>Support is
+    tailored to the young person, with parents and educational authorities involved
+    throughout.
   button: true
-  main_text: Sporting Chance Project also has an Alternative Learning Provision. We
-    offer taster sessions in the construction industry for 14 to 18-year-olds.
-  buttontext: Find out more
-  header: Alternative Learning Provision
-  left-align: true
+  buttontext: Get in touch
+  buttonlink: "/contact"
   text_section: []
-  buttonlink: "/alternative-learning-provision"
+- template: two-columns-links
+  columns:
+  - header: Construction Workshops
+    main_text: Looking for hands-on construction trades for 14–19 year olds? See our Construction Workshops.
+    buttontext: Construction Workshops
+    buttonlink: "/construction-workshops"
+  - header: Alternative Learning Provision
+    main_text: Looking for functional skills, cooking, money management, animal care, sports & fitness, or employability? See our Alternative Learning Provision.
+    buttontext: Alternative Learning Provision
+    buttonlink: "/alternative-learning-provision"
 - template: cta-block
   heading: How can we help you?
   text: Find out more about our mentoring and life skills services and how we can
     help you.
   buttonlink: "/contact"
   buttontext: Contact Us
-
 ---

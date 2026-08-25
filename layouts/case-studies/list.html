@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{ partial "blocks/generic-header" (dict "Params" (dict "title" .Title "subtext" (.Params.subtext | default .Description)) "theme" "teal") }}
+
+<section class="leaflet-theme-teal w-full">
+  <div class="leaflet-band leaflet-band--light leaflet-panel-band">
+    <div class="leaflet-geo" aria-hidden="true">
+      <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
+      <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>
+    </div>
+    <div class="leaflet-band__inner sc-page-gutter">
+      <div class="grid grid-cols-1 gap-6">
+        {{ range .Pages }}
+        {{ $author := .Params.author }}
+        {{ $role := .Params.role }}
+        <article class="leaflet-panel leaflet-panel--left sc-reveal sc-reveal--left" data-reveal data-reveal-delay-ms="120">
+          <h2 class="leaflet-panel__title">{{ .Title }}</h2>
+          {{ if or $author $role }}
+          <p class="leaflet-panel__body" style="margin-bottom:0.75rem">
+            {{ if $author }}<strong>{{ $author }}</strong>{{ end }}
+            {{ if and $author $role }} — {{ end }}
+            {{ $role }}
+          </p>
+          {{ end }}
+          <p class="leaflet-panel__body">{{ .Params.summary | default .Summary }}</p>
+          <div class="leaflet-panel__actions sc-section__actions">
+            <a href="{{ .RelPermalink }}" class="leaflet-panel__btn">Read the case study</a>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,17 @@
+# Version updates for Yarn/npm (package-ecosystem "npm" covers yarn.lock).
+# Security updates still open separately when alerts have a fix — they do not
+# wait for this schedule.
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+      development-dependencies:
+        dependency-type: "development"

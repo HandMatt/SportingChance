@@ -1,25 +1,28 @@
 <header class="w-full fixed top-0 z-50 bg-white shadow-sm">
+  {{ if and .IsHome .Params.scp_site_notice }}
+    {{ partial "scp-site-notice.html" . }}
+  {{ end }}
   <nav
-    class="w-11/12 sm:w-10/12 md:w-11/12 lg:w-11/12 xl:w-11/12 mx-auto flex items-center justify-between px-4 lg:px-6 py-2"
+    class="sc-page-gutter mx-auto flex items-center justify-between py-2"
     aria-label="Global">
     <div class="flex justify-between">
-      <a href="/">
-        <img src="/img/scplogo1.png" class="w-48" alt="sporting chance logo" />
+      <a href="/" class="block shrink-0">
+        <img src="/img/scplogo1.png" class="sc-nav__logo" alt="Sporting Chance Project" />
       </a>
     </div>
 
-    <!-- Desktop Navigation -->
-    <div class="hidden lg:flex items-center justify-between text-lg py-4">
+    <!-- Desktop Navigation (nav = 1040px — hamburger until links fit on one line) -->
+    <div class="hidden nav:flex items-center flex-nowrap text-lg py-2">
       {{ range .Site.Menus.main }} {{ if .HasChildren }}
       <!-- Dropdown Menu -->
-      <div class="relative group" onmouseenter="!isTouchDevice() && showDropdown(this)"
+      <div class="relative group shrink-0" onmouseenter="!isTouchDevice() && showDropdown(this)"
         onmouseleave="!isTouchDevice() && hideDropdown(this)">
         <div class="flex items-center">
           <a href="{{ .URL }}"
-            class="nav-link px-3 py-2 text-black font-black uppercase tracking-wide transition-all duration-200">
+            class="nav-link px-2.5 py-2 whitespace-nowrap text-black font-black uppercase tracking-wide transition-all duration-200">
             {{ .Name }}
           </a>
-          <button type="button" class="p-1 hover:text-sc-blue transition-colors" aria-label="Toggle dropdown menu"
+          <button type="button" class="nav-toggle" aria-label="Toggle dropdown menu"
             onclick="toggleDropdown(this.parentElement.parentElement, event)">
             <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -44,26 +47,29 @@
       </div>
       {{ else }}
       <a href="{{ .URL }}"
-        class="nav-link px-3 py-2 text-black font-black uppercase tracking-wide transition-all duration-200">
+        class="nav-link shrink-0 px-2.5 py-2 whitespace-nowrap text-black font-black uppercase tracking-wide transition-all duration-200">
         {{ .Name }}
       </a>
       {{ end }} {{ end }}
     </div>
 
     <!-- Mobile Menu Button -->
-    <div class="flex lg:hidden">
-      <button type="button" class="p-2 text-gray-700 hover:text-sc-blue transition-colors" id="mobile-menu-btn"
-        aria-label="Toggle mobile menu">
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div class="flex nav:hidden">
+      <button type="button" class="nav-toggle" id="mobile-menu-btn"
+        aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="nav-toggle__icon nav-toggle__icon--menu h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg class="nav-toggle__icon nav-toggle__icon--close h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="lg:hidden hidden" id="mobile-menu">
-    <div class="px-6 py-4 bg-white border-t border-gray-100 space-y-3">
+  <div class="nav:hidden hidden" id="mobile-menu">
+    <div class="sc-page-gutter py-4 bg-white border-t border-gray-100 space-y-3">
       {{ range .Site.Menus.main }} {{ if .HasChildren }}
       <!-- Services and its submenu items -->
       {{ if eq .Name "Services" }}
@@ -87,7 +93,7 @@
             class="nav-link block py-2 text-black font-black uppercase tracking-wide transition-all duration-200">
             {{ .Name }}
           </a>
-          <button type="button" class="p-1 hover:text-sc-blue transition-colors" onclick="toggleMobileDropdown(this)"
+          <button type="button" class="nav-toggle" onclick="toggleMobileDropdown(this)"
             aria-label="Toggle dropdown menu">
             <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -201,12 +207,22 @@
     return true;
   }
 
-  // Simple mobile menu toggle
+  function setMobileMenuOpen(isOpen) {
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+
+    mobileMenu.classList.toggle("hidden", !isOpen);
+    mobileMenuBtn.classList.toggle("is-active", isOpen);
+    mobileMenuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    mobileMenuBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  }
+
+  // Mobile menu toggle
   document
     .getElementById("mobile-menu-btn")
     .addEventListener("click", function () {
       const mobileMenu = document.getElementById("mobile-menu");
-      mobileMenu.classList.toggle("hidden");
+      setMobileMenuOpen(mobileMenu.classList.contains("hidden"));
     });
 
   // Mobile dropdown toggle
@@ -229,7 +245,7 @@
       !mobileMenu.contains(event.target) &&
       !mobileMenuBtn.contains(event.target)
     ) {
-      mobileMenu.classList.add("hidden");
+      setMobileMenuOpen(false);
     }
   });
 

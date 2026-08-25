@@ -8,6 +8,7 @@ googleAnalytics = ""
 languageCode = "en-us"
 relativeURLs = false
 title = "Sporting Chance"
+
 [[menu.main]]
 name = "About"
 url = "/about"
@@ -17,19 +18,28 @@ name = "Services"
 url = "/services"
 weight = 30
 [[menu.main]]
-name = "Mentoring"
+name = "Mentoring & Life Skills"
 url = "/mentoring-life-skills"
 weight = 1
 parent = "Services"
 [[menu.main]]
-name = "Vocational"
-url = "/alternative-learning-provision"
+name = "Construction Workshops"
+url = "/construction-workshops"
 weight = 2
+parent = "Services"
+[[menu.main]]
+name = "Alternative Learning Provision"
+url = "/alternative-learning-provision"
+weight = 3
 parent = "Services"
 [[menu.main]]
 name = "Testimonials"
 url = "/testimonials"
 weight = 40
+[[menu.main]]
+name = "Case Studies"
+url = "/case-studies"
+weight = 45
 [[menu.main]]
 name = "Contact"
 url = "/contact"
@@ -39,6 +49,8 @@ description = "The Sporting Chance Project is an Alternative Learning Provider w
 facebook = ""
 linkedin = ""
 twitter = ""
+# Contact form posts to Jotform EU; q*_ names in contact-form.html must match the live form (yarn verify:jotform).
+jotform_form_id = "222916591903056"
 [security.funcs]
 getenv = ["^HUGO_", "^WC_", "CONTEXT", "^URL$", "^DEPLOY_PRIME_URL$"]
 [sitemap]

@@ -5,6 +5,15 @@ services:
       - 1313:1313
     volumes:
       - ./:/src
-      - ./static/:/src/static
     command: server --buildDrafts --buildFuture --bind 0.0.0.0
+
+  assets:
+    build:
+      context: .
+      dockerfile: Dockerfile.assets
+    working_dir: /app
+    user: "${UID:-1000}:${GID:-1000}"
+    volumes:
+      - ./:/app
+    # webpack --watch is the image CMD; install is a separate step
   

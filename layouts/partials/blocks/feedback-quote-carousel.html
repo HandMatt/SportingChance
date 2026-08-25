@@ -1,0 +1,47 @@
+<section class="feedback-quote-carousel text-center sc-reveal{{ partial "helpers/snap-section-class.html" .Params }}" style="background-color: #fafafa;" data-quote-carousel data-reveal>
+    <div class="sc-page-gutter max-w-4xl mx-auto">
+        {{ with .Params.header }}
+        <h2 class="font-header text-4xl sm:text-5xl font-gray font-medium feedback-quote-carousel__heading">{{ . }}</h2>
+        {{ end }}
+
+        <div class="feedback-quote-carousel__viewport" aria-roledescription="carousel" aria-label="{{ with .Params.header }}{{ . }}{{ else }}Testimonials{{ end }}">
+            <img src="/img/quote.svg" class="feedback-quote-carousel__icon mx-auto" alt="" />
+
+            <div class="feedback-quote-carousel__stage">
+                {{ range $i, $quote := .Params.quotes }}
+                {{ $plain := $quote.quote | plainify }}
+                {{ $long := gt (len $plain) 280 }}
+                <figure class="feedback-quote-carousel__slide{{ if $long }} feedback-quote-carousel__slide--long{{ end }}{{ if eq $i 0 }} is-active{{ end }}" data-quote-slide{{ if ne $i 0 }} hidden{{ end }} aria-hidden="{{ if eq $i 0 }}false{{ else }}true{{ end }}">
+                    <blockquote class="feedback-quote-carousel__quote">
+                        {{ $quote.quote | safeHTML }}
+                    </blockquote>
+                    <figcaption class="feedback-quote-carousel__caption">
+                        {{ with $quote.name }}
+                        <h3 class="feedback-quote-carousel__name">{{ . }}</h3>
+                        {{ end }}
+                        {{ with $quote.caption }}
+                        <p class="feedback-quote-carousel__role">{{ . }}</p>
+                        {{ end }}
+                    </figcaption>
+                </figure>
+                {{ end }}
+            </div>
+        </div>
+
+        {{ if gt (len .Params.quotes) 1 }}
+        <div class="feedback-quote-carousel__controls flex items-center justify-center">
+            <button type="button" class="feedback-quote-carousel__btn" data-quote-prev aria-label="Previous testimonial">
+                <span aria-hidden="true">←</span>
+            </button>
+            <div class="feedback-quote-carousel__dots" data-quote-dots role="tablist" aria-label="Choose testimonial">
+                {{ range $i, $quote := .Params.quotes }}
+                <button type="button" class="feedback-quote-carousel__dot{{ if eq $i 0 }} is-active{{ end }}" data-quote-dot="{{ $i }}" aria-label="Show testimonial {{ add $i 1 }}" aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}"></button>
+                {{ end }}
+            </div>
+            <button type="button" class="feedback-quote-carousel__btn" data-quote-next aria-label="Next testimonial">
+                <span aria-hidden="true">→</span>
+            </button>
+        </div>
+        {{ end }}
+    </div>
+</section>

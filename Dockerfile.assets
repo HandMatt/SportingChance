@@ -1,0 +1,9 @@
+FROM node:18-bookworm
+
+WORKDIR /app
+
+# Match package.json "packageManager": "yarn@4.9.2"
+RUN corepack enable && corepack prepare yarn@4.9.2 --activate
+
+# Default: watch assets. Override with compose `run` for install/build.
+CMD ["yarn", "webpack", "--watch"]

@@ -1,0 +1,23 @@
+---
+description: Sporting Chance site conventions for agents
+alwaysApply: true
+---
+
+# Sporting Chance
+
+Hugo + Tailwind + Webpack static site. Read root `AGENTS.md` for stack, map,
+commands, and boundaries. Keep `.cursor/context/TIMELINE.md` current when
+ownership, hosting, or architecture changes.
+
+## Do
+
+- Edit page copy in `content/`; templates in `layouts/`; assets in `src/`.
+- Use existing Tailwind / `sc-*` / leaflet theme classes before adding custom CSS.
+- For policy embeds, set `iframe_url` in front matter.
+- Prefer PRs into `develop`; leave `master` for production releases.
+- Prefer updating `AGENTS.md` / `TIMELINE.md` over creating new context docs.
+
+## Don't
+
+- Don't add app/backend scaffolding — this is a static marketing site.
+- Don't invent a large docs tree; `AGENTS.md` + timeline + rules are enough.
