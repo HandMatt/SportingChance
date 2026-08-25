@@ -49,6 +49,8 @@ description = "The Sporting Chance Project is an Alternative Learning Provider w
 facebook = ""
 linkedin = ""
 twitter = ""
+# Contact form posts to Jotform EU; field names in contact-form.html must match the live form.
+jotform_form_id = "222916591903056"
 [security.funcs]
 getenv = ["^HUGO_", "^WC_", "CONTEXT", "^URL$", "^DEPLOY_PRIME_URL$"]
 [sitemap]

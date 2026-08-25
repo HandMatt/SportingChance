@@ -2,12 +2,12 @@
 type: page
 title: Alternative Learning Provision
 description: Sporting Chance Project provides mentoring, education, and life skills
-  coaching for ages 5–18, including those with SEN or an EHCP.
+  coaching for ages 5–19, including those with SEN or an EHCP.
 page_sections:
 - template: generic-header
   title: Alternative Learning Provision
   subtext: Sporting Chance Project provides mentoring, education, and life skills
-    coaching for ages 5–18, including those with SEN or an EHCP. We collaborate with
+    coaching for ages 5–19, including those with SEN or an EHCP. We collaborate with
     parents and professionals to help young people reach their full potential.
   image: "/img/mentoring-and-life-skills-2.png"
   alt: Young people in a learning session
@@ -67,11 +67,11 @@ page_sections:
 - template: two-columns-links
   columns:
   - header: Mentoring & Life Skills
-    main_text: Our experienced team also offers one-to-one mentoring and life skills coaching for young people aged 5–18.
+    main_text: Our experienced team also offers one-to-one mentoring and life skills coaching for young people aged 5–19.
     buttontext: Mentoring & Life Skills
     buttonlink: "/mentoring-life-skills"
   - header: Construction Workshops
-    main_text: Looking for hands-on construction trades for 14–18 year olds? See our Construction Workshops.
+    main_text: Looking for hands-on construction trades for 14–19 year olds? See our Construction Workshops.
     buttontext: Construction Workshops
     buttonlink: "/construction-workshops"
 - template: cta-block

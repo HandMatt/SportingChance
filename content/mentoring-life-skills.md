@@ -1,13 +1,13 @@
 ---
 type: page
 title: Mentoring & Life Skills
-description: Sporting Chance Project supports young people aged 5–18 with behavioural,
+description: Sporting Chance Project supports young people aged 5–19 with behavioural,
   social, emotional, and mental health needs through one-to-one mentoring and life
   skills coaching.
 page_sections:
 - template: generic-header
   title: Mentoring & Life Skills
-  subtext: Sporting Chance Project supports young people aged 5–18 with behavioural,
+  subtext: Sporting Chance Project supports young people aged 5–19 with behavioural,
     social, emotional, and mental health needs. We provide tailored one-to-one mentoring
     and life skills, working closely with parents and educational authorities.
   image: "/img/mentoring-and-life-skills-2.png"
@@ -40,7 +40,7 @@ page_sections:
     icon: "/img/school.svg"
     iconalt: nurturing environment icon
   - title: Career Pathways
-    copy: Work experience and employment pathways for 14 to 18 year olds.
+    copy: Work experience and employment pathways for 14 to 19 year olds.
     icon: "/img/apprentice.svg"
     iconalt: career pathways icon
   - title: Engagement
@@ -67,7 +67,7 @@ page_sections:
 - template: two-columns-links
   columns:
   - header: Construction Workshops
-    main_text: Looking for hands-on construction trades for 14–18 year olds? See our Construction Workshops.
+    main_text: Looking for hands-on construction trades for 14–19 year olds? See our Construction Workshops.
     buttontext: Construction Workshops
     buttonlink: "/construction-workshops"
   - header: Alternative Learning Provision
