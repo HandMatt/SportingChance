@@ -31,7 +31,8 @@ page_sections:
     iconalt: supportive environment icon
   - title: Qualifications
     copy: Skilled tradespeople and tutors deliver nationally recognised pathways,
-      including ASDAN and NCFE Functional Skills in Maths, English and ICT.
+      including accredited ASDAN and NCFE Functional Skills in Maths, English and ICT
+      — suited to this 14–19 age range and preparation for further training or work.
     icon: "/img/altedu.svg"
     iconalt: qualifications icon
   - title: Career Pathways
@@ -67,11 +68,11 @@ page_sections:
 - template: two-columns-links
   columns:
   - header: Mentoring & Life Skills
-    main_text: Our experienced team also offers one-to-one mentoring and life skills coaching for young people aged 5–19.
+    main_text: One-to-one mentoring, life skills, and education pathways for ages 5–19.
     buttontext: Mentoring & Life Skills
     buttonlink: "/mentoring-life-skills"
   - header: Alternative Learning Provision
-    main_text: Looking for functional skills, cooking, money management, animal care, sports & fitness, or employability? See our Alternative Learning Provision.
+    main_text: Education pathways and practical life skills for ages 5–19, including SEN or EHCP.
     buttontext: Alternative Learning Provision
     buttonlink: "/alternative-learning-provision"
 - template: cta-block

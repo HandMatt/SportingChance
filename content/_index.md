@@ -1,10 +1,10 @@
 +++
-description = "Sporting Chance Project is an Alternative Learning Provider which aims to meet the educational, social and lifestyle needs of young people."
+description = "Sporting Chance Project is an Alternative Learning Provider offering mentoring, education from foundational literacy and maths through to Functional Skills, and life skills support for young people."
 hero_banner = true
 scp_site_notice = true
 hero_bg = "/img/hero-alt.jpg"
-hero_sub = "Sporting Chance Project is an Alternative Learning Provider that offers mentoring, education and life skills coaching to children and young people aged 5–19 with Special Educational Needs or an Education, Health and Care Plan."
-hero_text = "Alternative Learning. <br> Engage, Mentor, Educate."
+hero_sub = "Sporting Chance Project is an Alternative Learning Provider that offers mentoring, education across ages 5–19 — from foundational literacy and maths through to accredited Functional Skills — and life skills coaching for children and young people with Special Educational Needs or an Education, Health and Care Plan."
+hero_text = "Education & Mentoring. <br> Engage, Mentor, Educate."
 herobuttontext = "Get in touch"
 herolink = "/contact"
 title = "Engagement & Mentoring Services For Young People"
@@ -17,7 +17,7 @@ buttonlink = "/about"
 buttontext = "About us"
 header = "How can we help you, your school and your students?"
 align = "left"
-main_text = "Sporting Chance Project works with young people to fulfil the potential they all possess.\n\nWe engage with parents and fellow professionals to secure real outcomes that support each young person's life journey. We provide mentoring and life skills coaching, construction workshops, and alternative learning provision.\n\nWe are experienced in working with children and young people with Special Educational Needs (SEN)."
+main_text = "Sporting Chance Project works with young people to fulfil the potential they all possess.\n\nWe engage with parents and fellow professionals to secure real outcomes that support each young person's life journey. We provide mentoring and life skills coaching, construction workshops, and alternative learning provision — spanning foundational literacy and maths through to accredited Functional Skills Maths and English.\n\nWe are experienced in working with children and young people with Special Educational Needs (SEN)."
 template = "centred-text"
 text_section = []
 [[page_sections]]
@@ -31,9 +31,9 @@ link_1 = "/mentoring-life-skills"
 link_2 = "/construction-workshops"
 link_3 = "/alternative-learning-provision"
 template = "three-columns"
-text_1 = "One-to-one mentoring and life skills coaching for ages 5–19 with behavioural, social, emotional, and mental health needs, working closely with parents and educational authorities."
-text_2 = "Hands-on construction trades for 14–19 year olds, including SEN students, through one-to-one or small group learning in a safe, structured workshop environment."
-text_3 = "Functional skills, cooking, money management, animal care, sports & fitness, and employability for ages 5–19, including those with SEN or an EHCP."
+text_1 = "One-to-one mentoring and life skills coaching for ages 5–19, with education from foundational literacy and maths through to Functional Skills, working closely with parents and educational authorities."
+text_2 = "Hands-on construction trades for 14–19 year olds, including SEN students, with accredited Functional Skills pathways in a safe, structured workshop environment."
+text_3 = "Education from foundational literacy and maths through to Functional Skills, plus cooking, money management, animal care, sports & fitness, and employability for ages 5–19, including those with SEN or an EHCP."
 [[page_sections]]
 button = true
 buttonlink = "/services"
@@ -77,7 +77,7 @@ caption = "CAMHS / young persons wellbeing"
 [[page_sections]]
 header = "Education provision"
 align = "left"
-main_text = "Our education arm is now <strong>Supporting Children's Pathways</strong>, a charitable not-for-profit. They provide primary education support such as phonics and early mathematics, and secondary education support such as functional skills."
+main_text = "Our education arm will be <strong>Supporting Children's Pathways</strong>, a charitable not-for-profit. Until that transition, Sporting Chance Project continues to deliver education across ages 5–19 — from foundational literacy and maths, through transitional pathways, to accredited Functional Skills Maths and English."
 button = true
 buttontext = "Supporting Children's Pathways"
 buttonlink = "https://www.supportingchildrenspathways.org/"
@@ -86,7 +86,7 @@ template = "centred-text"
 text_section = []
 [[page_sections]]
 header = "Our Partners"
-main_text = "Sporting Chance Project is an Alternative Learning Provider that works with young people to help them fulfill their potential.<br/><br/> We engage with parents and fellow professionals to secure meaningful outcomes that support each young person's life journey. Our education program emphasizes Functional Mathematics, English, and Sport, which are at the heart of the project. Additionally, we offer various full-time education and vocational packages to meet diverse needs."
+main_text = "Sporting Chance Project is an Alternative Learning Provider that works with young people to help them fulfill their potential.<br/><br/> We engage with parents and fellow professionals to secure meaningful outcomes that support each young person's life journey. Our education programme spans foundational literacy and maths through to Functional Skills Maths and English, alongside Sport, which are at the heart of the project. Additionally, we offer various full-time education and vocational packages to meet diverse needs."
 template = "partners"
 [[page_sections.partner_logos]]
 name = "Bath and Northeast Somerset council"
