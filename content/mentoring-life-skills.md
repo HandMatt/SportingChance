@@ -19,11 +19,12 @@ page_sections:
       around society, community, and social acceptance.
     icon: "/img/sportcoaching.svg"
     iconalt: one-to-one mentoring icon
-  - title: Functional Skills
-    copy: ASDAN and NCFE qualifications in Maths, English and ICT, delivered through
-      one-to-one tutoring.
+  - title: Education Pathways
+    copy: From foundational literacy and maths for younger learners through to accredited
+      Functional Skills (ASDAN/NCFE) in Maths, English and ICT for older learners —
+      delivered through one-to-one support.
     icon: "/img/maths.svg"
-    iconalt: functional skills icon
+    iconalt: education pathways icon
   - title: Transition Support
     copy: Proven support helping students transition back into education or onto
       further education settings.
@@ -56,10 +57,10 @@ page_sections:
 - template: centred-text
   header: Our sessions include
   align: left
-  main_text: Functional skills (ASDAN/NCFE qualifications), one-to-one mentoring
-    & life skills coaching, and transition back to education.<br/><br/>Support is
-    tailored to the young person, with parents and educational authorities involved
-    throughout.
+  main_text: Education from foundational literacy and maths through to accredited
+    Functional Skills (ASDAN/NCFE), one-to-one mentoring & life skills coaching, and
+    transition back to education.<br/><br/>Support is tailored to the young person,
+    with parents and educational authorities involved throughout.
   button: true
   buttontext: Get in touch
   buttonlink: "/contact"
@@ -67,11 +68,11 @@ page_sections:
 - template: two-columns-links
   columns:
   - header: Construction Workshops
-    main_text: Looking for hands-on construction trades for 14–19 year olds? See our Construction Workshops.
+    main_text: Hands-on construction trades and Functional Skills for ages 14–19.
     buttontext: Construction Workshops
     buttonlink: "/construction-workshops"
   - header: Alternative Learning Provision
-    main_text: Looking for functional skills, cooking, money management, animal care, sports & fitness, or employability? See our Alternative Learning Provision.
+    main_text: Education pathways and practical life skills for ages 5–19, including SEN or EHCP.
     buttontext: Alternative Learning Provision
     buttonlink: "/alternative-learning-provision"
 - template: cta-block

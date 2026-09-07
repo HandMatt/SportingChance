@@ -3,6 +3,10 @@
 Living log of material project changes. **Newest first.**
 Update in the same PR as the change. Keep entries to one short bullet.
 
+## 2026-09
+
+- **Education still with Sporting Chance until SCP cutover** — Homepage, Services, and ALP describe education as a spectrum (foundational literacy and maths through to accredited Functional Skills); SCP banner/CTAs use future-tense (“will be / coming soon”) so education is not shown as already moved.
+
 ## 2026-08
 
 - **Contact thank-you page** — On-site `/contact/thanks/` for post-submit redirect; Jotform dashboard must point Thank You Page + notification email (`info@`) there (see `AGENTS.md`).
