@@ -46,6 +46,7 @@ url = "/contact"
 weight = 50
 [params]
 description = "The Sporting Chance Project is an Alternative Learning Provider which aims to meet the educational, social and lifestyle needs of young people"
+favicon = "favicon.ico"
 facebook = ""
 linkedin = ""
 twitter = ""

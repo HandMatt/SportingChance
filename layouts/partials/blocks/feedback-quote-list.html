@@ -1,0 +1,27 @@
+<section class="feedback-quote-list{{ partial "helpers/snap-section-class.html" .Params }}" style="background-color: #fafafa;">
+    <div class="sc-page-gutter max-w-7xl mx-auto">
+        {{ with .Params.header }}
+        <h2 class="font-header text-4xl sm:text-5xl font-gray font-medium feedback-quote-list__heading text-center">{{ . }}</h2>
+        {{ end }}
+
+        <img src="/img/quote.svg" class="feedback-quote-list__icon mx-auto" alt="" />
+
+        <div class="feedback-quote-list__items">
+            {{ range .Params.quotes }}
+            <figure class="feedback-quote-list__item sc-reveal" data-reveal>
+                <blockquote class="feedback-quote-list__quote">
+                    {{ .quote | safeHTML }}
+                </blockquote>
+                <figcaption class="feedback-quote-list__caption">
+                    {{ with .name }}
+                    <h3 class="feedback-quote-list__name">{{ . }}</h3>
+                    {{ end }}
+                    {{ with .caption }}
+                    <p class="feedback-quote-list__role">{{ . }}</p>
+                    {{ end }}
+                </figcaption>
+            </figure>
+            {{ end }}
+        </div>
+    </div>
+</section>

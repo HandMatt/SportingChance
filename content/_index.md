@@ -55,25 +55,25 @@ text_section = []
 header = "Success Stories"
 template = "feedback-quote-carousel"
 [[page_sections.quotes]]
-quote = "I feel that Sporting Chance Project through their positive and trusting relationship with the young person gave me the opportunity to support and advocate for the young person in their engagement and assessment with CAMHS"
-name = "Nurse Prescriber / Clinical Nurse Specialist"
-caption = "CAMHS / young persons wellbeing"
+quote = "I’ve become more productive since knowing you. I appreciate you listening, your patience, and your experience has helped me to think and broaden my outlook on life. Thank you for being someone that cares, that I trust and feel I can always talk to."
+name = "M"
+caption = "Mentee, age 16"
 [[page_sections.quotes]]
-quote = "Thank you so much for everything you have done for H during her time at Sporting Chance. Your patience, encouragement, and support have helped her grow in confidence and develop a real love for boxing.<br/><br/>We are incredibly grateful for all the time and effort you have invested in her, and we feel very lucky that she can continue her boxing journey with you. It means so much to know she will still have your guidance and support moving forward. Thank you again for everything you have done for H. We truly appreciate it and look forward to seeing her continue to grow and thrive with your help."
-name = "L"
+quote = "Mentor, the way L speaks of you, your name is gold in this household."
+name = "AW"
 caption = "Parent / carer"
 [[page_sections.quotes]]
-quote = "Mentors were approachable, positive, professional and created a trusting relationship with the young person, parents and other professionals in the network"
-name = "Fellow professional"
+quote = "Sporting Chance Project Mentors played a key part in supporting a very complex and vulnerable permanently excluded young person. A carefully coordinated programme of mentoring support and education enabled the young person to achieve Maths and English Literature and Language (Grade 4+) and access college, avoiding a second permanent exclusion. It is an example of true collaboration between the education setting and AP having a successful impact on a young person's life."
+name = "Associate Head Teacher & SENCO Lead"
+caption = "WA Academy"
+[[page_sections.quotes]]
+quote = "I feel that Sporting Chance Project through their positive and trusting relationship with the young person gave me the opportunity to support and advocate for the young person in their engagement and assessment with CAMHS"
+name = "Nurse Prescriber / Clinical Nurse Specialist"
 caption = "CAMHS / young persons wellbeing"
 [[page_sections.quotes]]
 quote = "We would like to thank each and everyone of you at SCP. Words cannot express how grateful we are for what you have done for W. He has come so far from when he first started with you and we have you to thank for that. I know he is going to miss seeing you all but it feels like the right time to move on and start his new chapter of his life."
 name = "B, R and W"
 caption = "Family"
-[[page_sections.quotes]]
-quote = "Thank you for your support and professional approach, commitment and dedication as an individual and as a team to really advocate and support a positive experience and relationship with them and also myself as a professional. Really amazing to have been able to be part of the journey and supporting my role with the young person, family and network."
-name = "Neurodevelopmental Specialist Community Public Health Nurse"
-caption = "CAMHS / young persons wellbeing"
 [[page_sections]]
 header = "Education provision"
 align = "left"
