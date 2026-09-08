@@ -20,10 +20,10 @@ template = "centred-text"
 content = "    Sporting Chance Project is an independently run project aiming to meet the educational, employment and lifestyle needs of young people.\n    <br>\n    <br>\n    We offer a wide range of education, mentoring and life skills support for young people aged 5 to 19 years old and operate as an Alternative Learning Provider.\n    <br>\n    <br>\n    Sporting Chance Project was formed in September 2012 and has evolved from delivering within schools, special educational needs schools (SEN), further education establishments and young offenders institutes.\n    <br>\n    <br>\n    The project delivers a range of pathways for all young people with bespoke outcomes to meet individual needs. This includes mentoring, life skills coaching, education transition, vocational learning, work experience and employment pathways. \n    <br>\n    <br>\n    Our aim is to enhance positive student experiences to meet the demands of the ever-changing social, community, educational and employment environments."
 heading = "What we do"
 [[page_sections]]
-caption = "Now working as an apprentice at Mercedes"
+caption = "Mother of a student"
 header = "Success Stories"
-name = "C. N."
-quote = "Sporting Chance was a great way for me to get back into school while having fun playing my favourite sports. My teachers at Sporting Chance were very helpful with getting me to focus on my school work and eventually getting me to work independently."
+name = "Mrs K"
+quote = "Throughout my son's educational years, I have had to fight with professionals to get him an education. I was not one of these parents who didn’t care. Without your support, hard work and compassion, my son wouldn’t be the happy, vibrant lad he has become. The bond and trust he has with his SCP mentor is amazing. I have to say he is a credit to Sporting Chance. You both worked your socks off for months to get my son this happy. I will be eternally grateful. Your company goes above and beyond. Thank you, Tony. Your support has changed my son's life"
 template = "feedback-quote"
 [[page_sections]]
 buttonlink = "/contact"
