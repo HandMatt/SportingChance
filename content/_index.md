@@ -59,7 +59,7 @@ quote = "I’ve become more productive since knowing you. I appreciate you liste
 name = "M"
 caption = "Mentee, age 16"
 [[page_sections.quotes]]
-quote = "Mentor, the way L speaks of you, your name is gold in this household."
+quote = "Sunit (Mentor), the way L speaks of you, your name is gold in this household."
 name = "AW"
 caption = "Parent / carer"
 [[page_sections.quotes]]
