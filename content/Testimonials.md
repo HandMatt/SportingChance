@@ -22,7 +22,7 @@ page_sections:
       you make it real in my world. Thank you.
     name: Mentee
     caption: Age 16
-  - quote: Mentor, the way L speaks of you, your name is gold in this household.
+  - quote: Sunit (Mentor), the way L speaks of you, your name is gold in this household.
     name: AW
     caption: Parent / carer
   - quote: We can’t thank you enough for everything you have done for L. Honestly,
