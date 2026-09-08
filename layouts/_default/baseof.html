@@ -9,8 +9,12 @@
     {{ with .Params.Description }}<meta name="description" content="{{ . }}" /> {{ end }}
     {{- template "_internal/opengraph.html" . -}}
     {{- template "_internal/schema.html" . -}}
-    {{- template "_internal/twitter_cards.html" . -}}   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    {{- template "_internal/twitter_cards.html" . -}}
+    {{- if and .Params.hero_banner .Params.hero_bg -}}
+    <link rel="preload" as="image" href="{{ .Params.hero_bg }}" fetchpriority="high">
+    {{- end -}}
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/karla-latin.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-latin.woff2" crossorigin>
     <link rel="stylesheet" href="/css/main.css"/>
     {{ if and .IsHome .Params.scp_site_notice }}
     <script>

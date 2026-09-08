@@ -6,7 +6,7 @@
     </div>
     <div class="partners-logos sc-reveal sc-reveal--scale" data-reveal data-reveal-delay-ms="200">
       {{ range .Params.partner_logos }}
-      <img src="{{ .src }}" alt="{{ .name }}" />
+      <img src="{{ .src }}" alt="{{ .name }}" height="60" decoding="async" loading="lazy" />
       {{ end }}
     </div>
   </div>

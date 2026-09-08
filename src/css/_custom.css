@@ -4,6 +4,22 @@ html {
     padding: 0;
 }
 
+/* Local stand-in for the few animate.css fadeIn usages (CDN removed) */
+.animated.fadeIn {
+    animation: sc-fade-in 0.6s ease both;
+}
+
+@keyframes sc-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animated.fadeIn {
+        animation: none;
+    }
+}
+
 /* Navigation hover effects */
 .nav-link {
     position: relative;
@@ -1278,10 +1294,11 @@ a.leaflet-columns__card:focus-visible {
     left: 0;
     right: 0;
     top: -12%;
-    bottom: -12%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    height: 124%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
     will-change: transform;
 }
 
@@ -1498,14 +1515,14 @@ a.leaflet-columns__card:focus-visible {
 }
 
 .hero-b__cta {
-    background-color: #19adb4;
-    border: 2px solid #19adb4;
+    background-color: #146d7a;
+    border: 2px solid #146d7a;
 }
 
 .hero-b__cta:hover,
 .hero-b__cta:focus-visible {
-    background-color: #146d7a;
-    border-color: #146d7a;
+    background-color: #0f5863;
+    border-color: #0f5863;
     outline: none;
 }
 
@@ -1537,8 +1554,7 @@ a.leaflet-columns__card:focus-visible {
 @media (prefers-reduced-motion: reduce) {
     .hero-b__parallax {
         top: 0;
-        bottom: 0;
-        height: auto;
+        height: 100%;
         transform: none !important;
     }
 
@@ -2014,6 +2030,10 @@ html.has-scroll-snap {
 }
 
 .sc-footer__logo img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
     max-height: 4.5rem;
 }
 
@@ -2059,6 +2079,8 @@ html.has-scroll-snap {
 
     .sc-footer__logo img {
         max-height: 8rem;
+        width: auto;
+        height: auto;
     }
 
     .sc-footer__policies {
