@@ -1,0 +1,25 @@
+# Sporting Chance Project
+
+> The Sporting Chance Project is an Alternative Learning Provider supporting young people aged 5–19 with education, mentoring, life skills, and vocational pathways when mainstream schooling is a challenge.
+
+Sporting Chance delivers mentoring, construction workshops, and alternative learning provision across schools, SEN settings, and related environments. Use the links below for accurate, up-to-date site content.
+
+## Pages
+
+- [Home](https://www.sportingchanceproject.co.uk/): Overview of the project and how to get in touch
+- [About](https://www.sportingchanceproject.co.uk/about/): Mission, history, and who we support
+- [Services](https://www.sportingchanceproject.co.uk/services/): Summary of mentoring, construction, and ALP offers
+- [Mentoring & Life Skills](https://www.sportingchanceproject.co.uk/mentoring-life-skills/): Mentoring and life-skills pathway details
+- [Construction Workshops](https://www.sportingchanceproject.co.uk/construction-workshops/): Hands-on construction and vocational workshops
+- [Alternative Learning Provision](https://www.sportingchanceproject.co.uk/alternative-learning-provision/): ALP offer for young people outside mainstream education
+- [Testimonials](https://www.sportingchanceproject.co.uk/testimonials/): Feedback from young people, families, and partners
+- [Case Studies](https://www.sportingchanceproject.co.uk/case-studies/): Longer-form outcome stories
+- [Contact](https://www.sportingchanceproject.co.uk/contact/): Referral and enquiry form
+- [Policies](https://www.sportingchanceproject.co.uk/policies/): Safeguarding and organisational policies
+
+## Optional
+
+- [Safeguarding Policy](https://www.sportingchanceproject.co.uk/policies/safeguarding-policy/): Child protection and safeguarding policy
+- [Complaints Procedure](https://www.sportingchanceproject.co.uk/policies/complaints-procedure/): How to raise a complaint
+- [Anti-Bullying Policy](https://www.sportingchanceproject.co.uk/policies/anti-bullying-policy/): Anti-bullying policy
+- [Health and Safety Policy](https://www.sportingchanceproject.co.uk/policies/health-and-safety-policy/): Health and safety policy

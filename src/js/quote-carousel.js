@@ -54,7 +54,11 @@ function initQuoteCarousels() {
       dots.forEach((dot, i) => {
         const active = i === index
         dot.classList.toggle('is-active', active)
-        dot.setAttribute('aria-selected', active ? 'true' : 'false')
+        if (active) {
+          dot.setAttribute('aria-current', 'true')
+        } else {
+          dot.removeAttribute('aria-current')
+        }
       })
       updateDotWindow()
     }
