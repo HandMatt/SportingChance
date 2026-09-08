@@ -33,9 +33,9 @@
             <button type="button" class="feedback-quote-carousel__btn" data-quote-prev aria-label="Previous testimonial">
                 <span aria-hidden="true">←</span>
             </button>
-            <div class="feedback-quote-carousel__dots" data-quote-dots role="tablist" aria-label="Choose testimonial">
+            <div class="feedback-quote-carousel__dots" data-quote-dots aria-label="Choose testimonial">
                 {{ range $i, $quote := .Params.quotes }}
-                <button type="button" class="feedback-quote-carousel__dot{{ if eq $i 0 }} is-active{{ end }}" data-quote-dot="{{ $i }}" aria-label="Show testimonial {{ add $i 1 }}" aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}"></button>
+                <button type="button" class="feedback-quote-carousel__dot{{ if eq $i 0 }} is-active{{ end }}" data-quote-dot="{{ $i }}" aria-label="Show testimonial {{ add $i 1 }}"{{ if eq $i 0 }} aria-current="true"{{ end }}></button>
                 {{ end }}
             </div>
             <button type="button" class="feedback-quote-carousel__btn" data-quote-next aria-label="Next testimonial">

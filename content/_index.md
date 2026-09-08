@@ -90,14 +90,14 @@ main_text = "Sporting Chance Project is an Alternative Learning Provider that wo
 template = "partners"
 [[page_sections.partner_logos]]
 name = "Bath and Northeast Somerset council"
-src = "/img/banes-council.png"
+src = "/img/banes-council.webp"
 [[page_sections.partner_logos]]
 name = "Bristol City council"
-src = "/img/bristol-city-council.png"
+src = "/img/bristol-city-council.webp"
 [[page_sections.partner_logos]]
 name = "North Somerset council"
-src = "/img/north-somerset-council.png"
+src = "/img/north-somerset-council.webp"
 [[page_sections.partner_logos]]
 name = "South Gloucester council"
-src = "/img/southglos.png"
+src = "/img/southglos.webp"
 +++

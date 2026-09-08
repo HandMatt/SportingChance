@@ -1,9 +1,14 @@
 <section class="hero-b hero-with-nav-offset relative z-0 overflow-hidden{{ if .Params.scroll_snap }} sc-snap-section{{ end }}" data-parallax-hero>
   <div class="hero-b__media" aria-hidden="true">
-    <div
+    <img
       class="hero-b__parallax"
-      style="background-image: url({{ .Params.hero_bg }});"
-      data-parallax-layer></div>
+      src="{{ .Params.hero_bg }}"
+      alt=""
+      width="1920"
+      height="776"
+      fetchpriority="high"
+      decoding="async"
+      data-parallax-layer />
     <div class="hero-b__tint"></div>
   </div>
 
