@@ -1,32 +1,27 @@
-# Restore accessible policy documents (OneDrive)
+# Restore accessible policy documents (OneDrive / SharePoint)
 
-**Status:** Identified (Tony / Matt) — brief only; detailed planning when work starts  
-**Priority:** High — policies are currently not accessible on the live site  
-**Suggested branch:** rebase / finish `feature/update-policies-and-procedures` onto `develop` (or a fresh `feature/onedrive-policy-embeds` from `develop` if cleaner)
+**Status:** Wired on `feature/onedrive-policy-embeds` — awaiting IT **Anyone** sharing for signed-out public access; then merge to `develop` / release  
+**Branch:** `feature/onedrive-policy-embeds`
 
-## Problem
+## Done
 
-Policy PDFs moved off Google Drive onto OneDrive (Microsoft 365). The live site still points at Google Drive embeds (or placeholders), so visitors cannot view policies.
+- Real SharePoint embed URLs on all four policy pages (`password_required: false`)
+- Google Drive placeholders and password copy removed
+- `ONEDRIVE_SETUP.md` replaces `GOOGLE_DRIVE_SETUP.md` (view-only + block download, no password)
 
-## Existing work
+## Still needed before production
 
-Local WIP branch `feature/update-policies-and-procedures` already:
+1. M365 admin enables **Anyone with the link** for the SCP SharePoint site.
+2. File shares: **Can view** + **Block download** (no password).
+3. Smoke-test each `/policies/…` page **signed out**; then PR → `develop` → release.
 
-- Replaces `GOOGLE_DRIVE_SETUP.md` with `ONEDRIVE_SETUP.md`
-- Clears / retargets `iframe_url` front matter on policy pages
-- Tweaks `layouts/policies/single.html` copy for OneDrive
+## Embed URLs
 
-Embed URLs were left TBD (`iframe_url: ""` on at least safeguarding). That branch predates `chore/cursor-project-context` / `develop` — rebase or cherry-pick before finishing.
+| Page | UniqueId |
+|------|----------|
+| Safeguarding | `786f0475-f74e-40af-9165-1ac529358cc3` |
+| Health & Safety | `558ceb75-179e-41fa-9841-d0e0f0a7d490` |
+| Anti-bullying | `0338da5e-70ee-4fc1-b3d0-6c4c0eb9f53a` |
+| Complaints | `386f6776-2c5f-4310-9504-ada6fb6c1515` |
 
-## Brief plan
-
-1. Confirm with Tony where the canonical OneDrive/SharePoint folder lives and that “Anyone + password” sharing is allowed on the tenant.
-2. For each policy page under `content/policies/`, generate a OneDrive/SharePoint **embed** URL and set `iframe_url` (see `ONEDRIVE_SETUP.md` on the WIP branch).
-3. Smoke-test each policy page: iframe loads, password prompt works, mobile layout OK.
-4. Land docs + content via PR into `develop`; delete the plan file when shipped.
-
-## Open questions (defer to task kickoff)
-
-- Exact list of policies that must ship (all current pages vs a subset)
-- Whether passwords stay the same as the old Google Drive ones
-- Whether download should be blocked on the share links
+Base: `https://supportingchildrenspathways.sharepoint.com/sites/SCP/_layouts/15/embed.aspx?UniqueId=`

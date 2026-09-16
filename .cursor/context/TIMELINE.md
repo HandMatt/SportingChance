@@ -5,6 +5,7 @@ Update in the same PR as the change. Keep entries to one short bullet.
 
 ## 2026-09
 
+- **Policy embeds → SharePoint** — Four policy pages use SCP SharePoint `embed.aspx` URLs (view-only, no password); Google placeholders removed. Public signed-out access still needs tenant **Anyone** sharing from IT before production cut.
 - **Gallery optimised** — Strip photos (and oversized homepage stock) converted to WebP ≤1600px; `static/img` ~74MB → ~6MB; unused `boxing-2` removed.
 - **Photo strips restored** — Homepage “Life at Sporting Chance” strip plus early strips on Mentoring, Construction, and ALP, wired to `static/img/gallery/` with click-to-enlarge lightbox.
 - **Perf: Netlify cache headers** — Long-lived `Cache-Control` for `/fonts`, `/img`, icons; one-week revalidate for unhashed `/css` and `/app.js` (verify on a Netlify deploy, not `hugo server`).
