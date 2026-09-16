@@ -2,8 +2,8 @@
 title: "Anti-Bullying Policy"
 summary: "Our zero-tolerance approach to bullying and harassment in all forms"
 date: 2024-01-15
-iframe_url: "https://drive.google.com/embed/your-anti-bullying-document-id"
-password_required: true
+iframe_url: "https://supportingchildrenspathways.sharepoint.com/sites/SCP/_layouts/15/embed.aspx?UniqueId=0338da5e-70ee-4fc1-b3d0-6c4c0eb9f53a"
+password_required: false
 tags: ["anti-bullying", "behaviour", "respect"]
 ---
 
@@ -18,4 +18,4 @@ This policy covers:
 - Disciplinary measures
 - Prevention strategies
 
-**Access:** This document requires a password to view. Please contact us for access credentials. 
+The full document is available to view below (view only).

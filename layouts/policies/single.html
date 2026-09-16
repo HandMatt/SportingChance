@@ -13,7 +13,7 @@
         {{ end }}
         {{ if .Params.password_required }}
           <span class="trans-02 border-2 border-red-500 bg-red-500 mb-3 capitalize text-sm rounded mt-4 py-1 px-3 text-right font-semibold no-underline text-white inline-block">
-            🔒 Password Protected
+            Password Protected
           </span>
         {{ end }}
       </div>
@@ -53,26 +53,30 @@
           <h3 class="text-xl font-fancy text-grey-darker">Full Policy Document</h3>
           {{ if .Params.password_required }}
             <p class="text-grey-dark mt-2">
-              <strong>Note:</strong> This document is password protected by Google Drive. 
+              <strong>Note:</strong> This document is password protected.
               You will be prompted to enter the password when you try to view the document.
             </p>
             <p class="text-grey-dark mt-2">
-              Need access? Contact us at 
+              Need access? Contact us at
               <a href="mailto:info@sportingchanceproject.co.uk" class="text-sc-blue hover:underline">
                 info@sportingchanceproject.co.uk
               </a>
+            </p>
+          {{ else }}
+            <p class="text-grey-dark mt-2">
+              View-only document. Download is disabled where sharing settings allow.
             </p>
           {{ end }}
         </div>
         
         <div class="relative">
-          <!-- Document Iframe -->
           <iframe src="{{ .Params.iframe_url }}" 
                   class="w-full h-screen min-h-[600px] border-0"
                   frameborder="0"
-                  allowfullscreen>
+                  allowfullscreen
+                  title="{{ .Title }} document">
             <p>Your browser does not support iframes. 
-              <a href="{{ .Params.iframe_url }}" target="_blank" class="text-sc-blue hover:underline">
+              <a href="{{ .Params.iframe_url }}" target="_blank" rel="noopener" class="text-sc-blue hover:underline">
                 Click here to view the document
               </a>
             </p>
@@ -83,4 +87,4 @@
   </div>
 </section>
 
-{{ end }} 
+{{ end }}
