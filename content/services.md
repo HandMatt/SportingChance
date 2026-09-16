@@ -25,9 +25,9 @@ page_sections:
   text_3: Education from foundational literacy and maths through to Functional Skills,
     plus cooking, money management, animal care, sports & fitness, and employability
     for ages 5–19, including those with SEN or an EHCP.
-  bg_1: "/img/1.png"
-  bg_2: "/img/2.png"
-  bg_3: "/img/3.png"
+  bg_1: "/img/pages/1.png"
+  bg_2: "/img/pages/2.png"
+  bg_3: "/img/pages/3.png"
   link_1: "/mentoring-life-skills"
   link_2: "/construction-workshops"
   link_3: "/alternative-learning-provision"

@@ -5,6 +5,8 @@ Update in the same PR as the change. Keep entries to one short bullet.
 
 ## 2026-09
 
+- **Gallery optimised** — Strip photos (and oversized homepage stock) converted to WebP ≤1600px; `static/img` ~74MB → ~6MB; unused `boxing-2` removed.
+- **Photo strips restored** — Homepage “Life at Sporting Chance” strip plus early strips on Mentoring, Construction, and ALP, wired to `static/img/gallery/` with click-to-enlarge lightbox.
 - **Perf: Netlify cache headers** — Long-lived `Cache-Control` for `/fonts`, `/img`, icons; one-week revalidate for unhashed `/css` and `/app.js` (verify on a Netlify deploy, not `hugo server`).
 - **Perf: self-hosted fonts + smaller logos** — Montserrat/Karla variable woff2 served from `/fonts` (no Google Fonts CSS chain); hero/nav/partner marks switched to display-sized WebP.
 - **Education still with Sporting Chance until SCP cutover** — Homepage, Services, and ALP describe education as a spectrum (foundational literacy and maths through to accredited Functional Skills); SCP banner/CTAs use future-tense (“will be / coming soon”) so education is not shown as already moved.

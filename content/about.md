@@ -4,7 +4,7 @@ title = "About Us"
 type = "page"
 [[page_sections]]
 alt = "Our story image"
-image = "/img/mentoring-and-life-skills.png"
+image = "/img/pages/mentoring-and-life-skills.png"
 subtext = "Sporting Chance Project are passionate about every child's education and life journey. Our mission is to support those who face challenges with mainstream education, including Special Educational Needs."
 template = "generic-header"
 title = "About Us"
