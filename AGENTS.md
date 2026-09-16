@@ -37,7 +37,7 @@ When this file conflicts with global rules, **discuss before coding**.
 ├── content/               ← page Markdown (home, services, policies, …)
 ├── layouts/               ← Hugo templates + partials/blocks
 ├── src/css, src/js        ← Webpack + PostCSS sources
-├── static/                ← files served as-is
+├── static/                ← files served as-is (`img/` → brand, icons, partners, pages, gallery)
 ├── config.toml            ← site config, menus, params
 ├── netlify.toml           ← Netlify build + Hugo/Node versions
 ├── docker-compose.yml     ← local hugo + assets services

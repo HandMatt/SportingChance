@@ -4,55 +4,71 @@ title: Mentoring & Life Skills
 description: Sporting Chance Project supports young people aged 5–19 with behavioural,
   social, emotional, and mental health needs through one-to-one mentoring and life
   skills coaching.
+photo_strip:
+  header: Moments from mentoring
+  photo_titles:
+    - Woodland walk
+    - Feeding goats
+    - Playing with a dog
+  photo_wide:
+    - Woodland walk
+  photo_srcs:
+    - "/img/gallery/wellbeing/woodland-walk.webp"
+    - "/img/gallery/wellbeing/feeding-goats.webp"
+    - "/img/gallery/wellbeing/playing-with-dog.webp"
+  photo_alts:
+    - Mentoring woodland walk
+    - Feeding goats during a wellbeing session
+    - Playing with a dog during mentoring
 page_sections:
 - template: generic-header
   title: Mentoring & Life Skills
   subtext: Sporting Chance Project supports young people aged 5–19 with behavioural,
     social, emotional, and mental health needs. We provide tailored one-to-one mentoring
     and life skills, working closely with parents and educational authorities.
-  image: "/img/mentoring-and-life-skills-2.png"
+  image: "/img/pages/mentoring-and-life-skills-2.png"
   alt: Student walking out glass door
 - template: icon-grid
   icon_boxes:
   - title: One-to-one Mentoring
     copy: Dedicated mentors provide one-to-one mentoring and life skills coaching
       around society, community, and social acceptance.
-    icon: "/img/sportcoaching.svg"
+    icon: "/img/icons/sportcoaching.svg"
     iconalt: one-to-one mentoring icon
   - title: Education Pathways
     copy: From foundational literacy and maths for younger learners through to accredited
       Functional Skills (ASDAN/NCFE) in Maths, English and ICT for older learners —
       delivered through one-to-one support.
-    icon: "/img/maths.svg"
+    icon: "/img/icons/maths.svg"
     iconalt: education pathways icon
   - title: Transition Support
     copy: Proven support helping students transition back into education or onto
       further education settings.
-    icon: "/img/career.svg"
+    icon: "/img/icons/career.svg"
     iconalt: transition support icon
   - title: SEN Provision
     copy: Support for young people needing help with behaviour, social, emotional,
       and mental health needs.
-    icon: "/img/altedu.svg"
+    icon: "/img/icons/altedu.svg"
     iconalt: special educational needs provision icon
   - title: Nurturing Environment
     copy: A safe space where young people can build secure relationships and develop
       trust.
-    icon: "/img/school.svg"
+    icon: "/img/icons/school.svg"
     iconalt: nurturing environment icon
   - title: Career Pathways
     copy: Work experience and employment pathways for 14 to 19 year olds.
-    icon: "/img/apprentice.svg"
+    icon: "/img/icons/apprentice.svg"
     iconalt: career pathways icon
   - title: Engagement
     copy: Helping young people find a passion, engage in activities they enjoy, and
       connect to positive pathways.
-    icon: "/img/book.svg"
+    icon: "/img/icons/book.svg"
     iconalt: engagement icon
   - title: Working Together
     copy: Parents and educational authorities are an integral part of our process,
       so support matches what each young person needs.
-    icon: "/img/intervention.svg"
+    icon: "/img/icons/intervention.svg"
     iconalt: working together icon
 - template: centred-text
   header: Our sessions include

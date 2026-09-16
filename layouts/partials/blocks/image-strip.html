@@ -1,5 +1,6 @@
 {{ $Params := .Params }}
-<section class="image-strip image-strip--header-left leaflet-theme-teal w-full py-16 sm:py-20">
+{{- $theme := .theme | default "teal" -}}
+<section class="image-strip image-strip--header-left leaflet-theme-{{ $theme }} w-full py-16 sm:py-20">
   <div class="sc-page-gutter max-w-6xl">
     {{ with $Params.header }}
     <div class="image-strip__intro mb-10 sc-reveal sc-reveal--left" data-reveal data-reveal-delay-ms="180">
@@ -10,13 +11,16 @@
     </div>
     {{ end }}
 
-    <div class="image-strip__grid">
+    <div class="image-strip__grid" data-image-strip-gallery>
       {{- with $Params.items -}}
         {{- range $i, $item := . -}}
         <figure class="image-strip__item{{ if $item.wide }} image-strip__item--wide{{ end }} sc-reveal sc-reveal--scale"
           data-reveal data-reveal-delay="{{ add $i 1 }}" data-reveal-delay-ms="220">
           {{ if $item.src }}
-          <img src="{{ $item.src }}" alt="{{ $item.alt | default $item.title | default "Sporting Chance Project" }}" />
+          {{- $alt := $item.alt | default $item.title | default "Sporting Chance Project" -}}
+          <button type="button" class="image-strip__open" data-strip-src="{{ $item.src }}" data-strip-alt="{{ $alt }}" aria-label="View larger: {{ $alt }}">
+            <img src="{{ $item.src }}" alt="{{ $alt }}" loading="lazy" decoding="async" />
+          </button>
           {{ else }}
           <div class="image-strip__placeholder" aria-hidden="true">
             <span class="image-strip__placeholder-label">Photo placeholder</span>
@@ -35,7 +39,9 @@
         <figure class="image-strip__item{{ if $wide }} image-strip__item--wide{{ end }} sc-reveal sc-reveal--scale"
           data-reveal data-reveal-delay="{{ add $i 1 }}" data-reveal-delay-ms="220">
           {{ if $src }}
-          <img src="{{ $src }}" alt="{{ $alt | default "Sporting Chance Project" }}" />
+          <button type="button" class="image-strip__open" data-strip-src="{{ $src }}" data-strip-alt="{{ $alt }}" aria-label="View larger: {{ $alt }}">
+            <img src="{{ $src }}" alt="{{ $alt | default "Sporting Chance Project" }}" loading="lazy" decoding="async" />
+          </button>
           {{ else }}
           <div class="image-strip__placeholder" aria-hidden="true">
             <span class="image-strip__placeholder-label">Photo placeholder</span>
