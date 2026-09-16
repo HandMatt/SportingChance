@@ -1,0 +1,60 @@
+{{ $Params := .Params }}
+{{- $theme := .theme | default "teal" -}}
+<section class="image-strip image-strip--header-left leaflet-theme-{{ $theme }} w-full py-16 sm:py-20">
+  <div class="sc-page-gutter max-w-6xl">
+    {{ with $Params.header }}
+    <div class="image-strip__intro mb-10 sc-reveal sc-reveal--left" data-reveal data-reveal-delay-ms="180">
+      <h2 class="font-header text-3xl sm:text-4xl md:text-5xl font-medium text-grey-darker">{{ . }}</h2>
+      {{ with $Params.subtext }}
+      <p class="mt-4 font-main text-lg text-grey-darkest">{{ . }}</p>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="image-strip__grid" data-image-strip-gallery>
+      {{- with $Params.items -}}
+        {{- range $i, $item := . -}}
+        <figure class="image-strip__item{{ if $item.wide }} image-strip__item--wide{{ end }} sc-reveal sc-reveal--scale"
+          data-reveal data-reveal-delay="{{ add $i 1 }}" data-reveal-delay-ms="220">
+          {{ if $item.src }}
+          {{- $alt := $item.alt | default $item.title | default "Sporting Chance Project" -}}
+          <button type="button" class="image-strip__open" data-strip-src="{{ $item.src }}" data-strip-alt="{{ $alt }}" aria-label="View larger: {{ $alt }}">
+            <img src="{{ $item.src }}" alt="{{ $alt }}" loading="lazy" decoding="async" />
+          </button>
+          {{ else }}
+          <div class="image-strip__placeholder" aria-hidden="true">
+            <span class="image-strip__placeholder-label">Photo placeholder</span>
+            <span class="image-strip__placeholder-title">{{ $item.title | default "Imagery coming soon" }}</span>
+          </div>
+          {{ end }}
+        </figure>
+        {{- end -}}
+      {{- else -}}
+        {{- range $i, $title := $Params.photo_titles -}}
+        {{- $src := "" -}}
+        {{- if gt (len ($Params.photo_srcs | default slice)) $i -}}{{- $src = index $Params.photo_srcs $i -}}{{- end -}}
+        {{- $alt := $title -}}
+        {{- if gt (len ($Params.photo_alts | default slice)) $i -}}{{- $alt = index $Params.photo_alts $i | default $title -}}{{- end -}}
+        {{- $wide := in ($Params.photo_wide | default slice) $title -}}
+        <figure class="image-strip__item{{ if $wide }} image-strip__item--wide{{ end }} sc-reveal sc-reveal--scale"
+          data-reveal data-reveal-delay="{{ add $i 1 }}" data-reveal-delay-ms="220">
+          {{ if $src }}
+          <button type="button" class="image-strip__open" data-strip-src="{{ $src }}" data-strip-alt="{{ $alt }}" aria-label="View larger: {{ $alt }}">
+            <img src="{{ $src }}" alt="{{ $alt | default "Sporting Chance Project" }}" loading="lazy" decoding="async" />
+          </button>
+          {{ else }}
+          <div class="image-strip__placeholder" aria-hidden="true">
+            <span class="image-strip__placeholder-label">Photo placeholder</span>
+            <span class="image-strip__placeholder-title">{{ $title | default "Imagery coming soon" }}</span>
+          </div>
+          {{ end }}
+        </figure>
+        {{- end -}}
+      {{- end -}}
+    </div>
+
+    {{ with $Params.caption }}
+    <p class="image-strip__caption image-strip__caption--right sc-reveal sc-reveal--right" data-reveal data-reveal-delay-ms="160">{{ . }}</p>
+    {{ end }}
+  </div>
+</section>

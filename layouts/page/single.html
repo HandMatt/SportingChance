@@ -16,7 +16,12 @@
           {{- else if eq .header "Alternative Learning Provision" -}}{{- $sectionTheme = "purple" -}}
           {{- end -}}
         {{- end -}}
-        {{- if eq .template "generic-header" -}}{{ partial "blocks/generic-header" (dict "Params" . "theme" $theme) }}{{- end -}}
+        {{- if eq .template "generic-header" -}}
+          {{ partial "blocks/generic-header" (dict "Params" . "theme" $theme) }}
+          {{- with $.Params.photo_strip -}}
+            {{ partial "blocks/image-strip" (dict "Params" . "theme" $theme) }}
+          {{- end -}}
+        {{- end -}}
         {{- if eq .template "centred-text" -}}{{ partial "blocks/centred-text" (dict "Params" . "theme" $sectionTheme) }}{{- end -}}
         {{- if eq .template "three-columns" -}}{{ partial "blocks/three-columns" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "feedback-quote" -}}{{ partial "blocks/feedback-quote" (dict "Params" .) }}{{- end -}}

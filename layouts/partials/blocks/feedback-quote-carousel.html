@@ -5,7 +5,7 @@
         {{ end }}
 
         <div class="feedback-quote-carousel__viewport" aria-roledescription="carousel" aria-label="{{ with .Params.header }}{{ . }}{{ else }}Testimonials{{ end }}">
-            <img src="/img/quote.svg" class="feedback-quote-carousel__icon mx-auto" alt="" />
+            <img src="/img/icons/quote.svg" class="feedback-quote-carousel__icon mx-auto" alt="" />
 
             <div class="feedback-quote-carousel__stage">
                 {{ range $i, $quote := .Params.quotes }}

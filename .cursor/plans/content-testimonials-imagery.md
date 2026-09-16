@@ -10,7 +10,7 @@ Broader site **copy refresh** with Tony and new **pictures** once assets are sou
 
 ## Existing building blocks
 
-- Images live under `static/img/` (mix of Unsplash stock and older site assets)
+- Images live under `static/img/` (`brand/`, `icons/`, `partners/`, `pages/`, `gallery/`)
 - Page Markdown under `content/` for copy edits
 
 ## Brief plan

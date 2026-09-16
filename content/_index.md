@@ -2,7 +2,7 @@
 description = "Sporting Chance Project is an Alternative Learning Provider offering mentoring, education from foundational literacy and maths through to Functional Skills, and life skills support for young people."
 hero_banner = true
 scp_site_notice = true
-hero_bg = "/img/hero-alt.jpg"
+hero_bg = "/img/pages/hero-alt.jpg"
 hero_sub = "Sporting Chance Project is an Alternative Learning Provider that offers mentoring, education across ages 5–19 — from foundational literacy and maths through to accredited Functional Skills — and life skills coaching for children and young people with Special Educational Needs or an Education, Health and Care Plan."
 hero_text = "Education & Mentoring. <br> Engage, Mentor, Educate."
 herobuttontext = "Get in touch"
@@ -21,9 +21,9 @@ main_text = "Sporting Chance Project works with young people to fulfil the poten
 template = "centred-text"
 text_section = []
 [[page_sections]]
-bg_1 = "/img/brad-neathery-258926-unsplash.jpg"
-bg_2 = "/img/alejandro-escamilla-2-unsplash.jpg"
-bg_3 = "/img/pexels-pixabay-301703.jpg"
+bg_1 = "/img/pages/brad-neathery-258926-unsplash.webp"
+bg_2 = "/img/pages/alejandro-escamilla-2-unsplash.webp"
+bg_3 = "/img/pages/pexels-pixabay-301703.webp"
 header_1 = "Mentoring & Life Skills"
 header_2 = "Construction Workshops"
 header_3 = "Alternative Learning Provision"
@@ -34,6 +34,36 @@ template = "three-columns"
 text_1 = "One-to-one mentoring and life skills coaching for ages 5–19, with education from foundational literacy and maths through to Functional Skills, working closely with parents and educational authorities."
 text_2 = "Hands-on construction trades for 14–19 year olds, including SEN students, with accredited Functional Skills pathways in a safe, structured workshop environment."
 text_3 = "Education from foundational literacy and maths through to Functional Skills, plus cooking, money management, animal care, sports & fitness, and employability for ages 5–19, including those with SEN or an EHCP."
+[[page_sections]]
+template = "image-strip"
+header = "Life at Sporting Chance"
+subtext = ""
+caption = ""
+[[page_sections.items]]
+title = "Workshop skills"
+wide = true
+src = "/img/gallery/construction/carpentry.webp"
+alt = "Learner practising carpentry skills"
+[[page_sections.items]]
+title = "Boxing"
+src = "/img/gallery/sport/boxing-1.webp"
+alt = "Learner boxing training"
+[[page_sections.items]]
+title = "Woodland walk"
+src = "/img/gallery/wellbeing/woodland-walk.webp"
+alt = "Mentoring woodland walk"
+[[page_sections.items]]
+title = "Basketball"
+src = "/img/gallery/sport/basketball.webp"
+alt = "Basketball activity"
+[[page_sections.items]]
+title = "Decorating"
+src = "/img/gallery/construction/decorating.webp"
+alt = "Painting and decorating workshop"
+[[page_sections.items]]
+title = "Animal care"
+src = "/img/gallery/wellbeing/feeding-goats.webp"
+alt = "Feeding goats"
 [[page_sections]]
 button = true
 buttonlink = "/services"
@@ -90,14 +120,14 @@ main_text = "Sporting Chance Project is an Alternative Learning Provider that wo
 template = "partners"
 [[page_sections.partner_logos]]
 name = "Bath and Northeast Somerset council"
-src = "/img/banes-council.webp"
+src = "/img/partners/banes-council.webp"
 [[page_sections.partner_logos]]
 name = "Bristol City council"
-src = "/img/bristol-city-council.webp"
+src = "/img/partners/bristol-city-council.webp"
 [[page_sections.partner_logos]]
 name = "North Somerset council"
-src = "/img/north-somerset-council.webp"
+src = "/img/partners/north-somerset-council.webp"
 [[page_sections.partner_logos]]
 name = "South Gloucester council"
-src = "/img/southglos.webp"
+src = "/img/partners/southglos.webp"
 +++

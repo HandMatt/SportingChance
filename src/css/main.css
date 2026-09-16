@@ -5,6 +5,7 @@
 @import './_utilities.css';
 @import './_custom.css';
 @import './_hugo.css';
+@import './_image-strip.css';
 
 /* Disable font preview for dev only */
 
