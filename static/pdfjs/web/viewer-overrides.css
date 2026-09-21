@@ -1,0 +1,10 @@
+/* Sporting Chance — UX-only hide of download/print controls.
+   PDFs at /pdfs/*.pdf remain publicly fetchable on a static site. */
+#downloadButton,
+#printButton,
+#secondaryDownload,
+#secondaryPrint,
+#printServiceDialog,
+#printContainer {
+  display: none !important;
+}

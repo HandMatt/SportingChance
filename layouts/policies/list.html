@@ -32,11 +32,6 @@
                   {{ range .Params.tags }}
                     <span class="trans-02 border-2 border-sc-blue bg-sc-blue mb-2 capitalize text-sm rounded py-1 px-3 text-right font-semibold no-underline text-white inline-block mr-2">{{ . }}</span>
                   {{ end }}
-                  {{ if .Params.password_required }}
-                    <span class="trans-02 border-2 border-red-500 bg-red-500 mb-2 capitalize text-sm rounded py-1 px-3 text-right font-semibold no-underline text-white inline-block">
-                      🔒 Password Protected
-                    </span>
-                  {{ end }}
                 </div>
 
                 <div class="text-lg leading-normal text-grey-dark mt-4">

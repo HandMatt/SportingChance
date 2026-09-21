@@ -37,7 +37,7 @@ When this file conflicts with global rules, **discuss before coding**.
 ├── content/               ← page Markdown (home, services, policies, …)
 ├── layouts/               ← Hugo templates + partials/blocks
 ├── src/css, src/js        ← Webpack + PostCSS sources
-├── static/                ← files served as-is (`img/` → brand, icons, partners, pages, gallery)
+├── static/                ← files served as-is (`img/`, `pdfs/`, `pdfjs/`, …)
 ├── config.toml            ← site config, menus, params
 ├── netlify.toml           ← Netlify build + Hugo/Node versions
 ├── docker-compose.yml     ← local hugo + assets services
@@ -54,7 +54,7 @@ When this file conflicts with global rules, **discuss before coding**.
 | Base layout | `layouts/_default/baseof.html` | Shell, asset hooks, shared chrome |
 | Content block | `layouts/partials/blocks/cta-block.html` | Reusable section partial style |
 | Page content | `content/_index.md` | Front matter + Markdown body |
-| Policy embed | `layouts/policies/single.html` + policy MD `iframe_url` | OneDrive iframe pattern |
+| Policy PDF viewer | `layouts/policies/single.html` + `pdf_src` + `static/pdfjs/` | Local PDF.js over `static/pdfs/` |
 | Brand / theme | `tailwind.js`, `layouts/partials/navbar.html` | Tokens and chrome patterns |
 
 ---
@@ -86,7 +86,7 @@ Netlify: `yarn install && yarn build && hugo` → publish `public/`.
 
 - Page copy in `content/**/*.md`; structural/UI in `layouts/`; asset sources in `src/`.
 - Prefer Tailwind utilities and existing `sc-*` / leaflet theme classes before custom CSS.
-- Policy embeds: set `iframe_url` in front matter (OneDrive / Microsoft 365).
+- Policy PDFs: set `pdf_src` in front matter to a `/pdfs/….pdf` path (see `POLICY_PDFS.md`).
 
 ### Testing
 
@@ -101,7 +101,7 @@ Netlify: `yarn install && yarn build && hugo` → publish `public/`.
 |---------|------|-------|
 | Home | `content/_index.md`, `layouts/index.html` | Hero, partners, CTAs |
 | Services | `content/services.md`, service pillar pages | Mentoring, Construction, ALP |
-| Policies | `content/policies/`, `layouts/policies/` | OneDrive embeds via `iframe_url` |
+| Policies | `content/policies/`, `layouts/policies/`, `static/pdfs/`, `static/pdfjs/` | Local PDF.js viewer via `pdf_src` |
 | Testimonials / case studies | `content/Testimonials.md`, `content/case-studies/` | Quotes + long-form stories |
 | Contact | `content/contact.md`, `content/contact-thanks.md` (`/contact/thanks/`), `layouts/partials/blocks/contact-form.html`, `config.toml` `jotform_form_id` | Native HTML form → Jotform EU submit; on-site thank-you at `/contact/thanks/`; Jotform dashboard must redirect there and owns notification emails |
 

@@ -1,0 +1,20 @@
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" | default "PDF document" -}}
+{{- $viewerURL := printf "/pdfjs/web/viewer.html?file=%s#zoom=page-width" ($src | urlquery) -}}
+<div class="secure-pdf">
+  <div class="md:hidden flex flex-col gap-3">
+    <a
+      href="{{ $viewerURL }}"
+      class="trans-02 border-2 border-black hover:border-transparent hover:bg-sc-blue text-black hover:text-white font-bold py-3 px-4 rounded text-center no-underline"
+    >
+      View full document
+    </a>
+  </div>
+  <iframe
+    src="{{ $viewerURL }}"
+    class="hidden md:block w-full h-[80vh] min-h-[640px] border-0"
+    title="{{ $title }}"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>

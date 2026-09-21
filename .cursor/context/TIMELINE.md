@@ -5,7 +5,7 @@ Update in the same PR as the change. Keep entries to one short bullet.
 
 ## 2026-09
 
-- **Policy embeds → SharePoint** — Four policy pages use SCP SharePoint `embed.aspx` URLs (view-only, no password); Google placeholders removed. Public signed-out access still needs tenant **Anyone** sharing from IT before production cut.
+- **Policy PDFs → local PDF.js** — Abandoned public SharePoint/OneDrive iframes (anonymous access dead end). Site serves `static/pdfs/` via vendored PDF.js (`static/pdfjs/`); front matter uses `pdf_src`. Power Automate → GitHub sync planned later (`POLICY_PDFS.md` Task B).
 - **Gallery optimised** — Strip photos (and oversized homepage stock) converted to WebP ≤1600px; `static/img` ~74MB → ~6MB; unused `boxing-2` removed.
 - **Photo strips restored** — Homepage “Life at Sporting Chance” strip plus early strips on Mentoring, Construction, and ALP, wired to `static/img/gallery/` with click-to-enlarge lightbox.
 - **Perf: Netlify cache headers** — Long-lived `Cache-Control` for `/fonts`, `/img`, icons; one-week revalidate for unhashed `/css` and `/app.js` (verify on a Netlify deploy, not `hugo server`).
@@ -28,7 +28,7 @@ Update in the same PR as the change. Keep entries to one short bullet.
 - **Cursor context** — Added `.cursor/` + `AGENTS.md` as the starting point for AI-assisted maintenance (this file, `PROJECT.md`, project rules).
 - **`develop` branch** — Created from `master` as the integration branch; Netlify branch deploys for preview still pending account access.
 - **Maintainer handover** — Lead maintenance moving to Matt / SCP; GitHub transfer and Netlify access requested from previous owner (`Ieuanoh`).
-- **Policy docs** — Site direction is OneDrive (Microsoft 365) embeds with optional link passwords. Setup notes and embed URL wiring may still be in progress on a feature branch.
+- **Policy docs** — Public site serves PDFs from `static/pdfs/` via PDF.js; SharePoint remains staff CMS (see `POLICY_PDFS.md`).
 
 ## Earlier (pre-handover)
 
