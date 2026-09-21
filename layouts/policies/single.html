@@ -1,6 +1,10 @@
 {{ define "main" }}
 
-{{ $Params := .Params }}
+{{ $pdfSrc := .Params.pdf_src }}
+{{ $viewerURL := "" }}
+{{ with $pdfSrc }}
+  {{ $viewerURL = printf "/pdfjs/web/viewer.html?file=%s#zoom=page-width" (. | urlquery) }}
+{{ end }}
 
 <section class="bg-sc-blue w-full relative mt-16">
   <div class="bg-black-20">
@@ -10,11 +14,6 @@
       <div class="text-md uppercase tracking-wide font-bold mt-4">
         {{ range .Params.tags }}
           <span class="trans-02 border-2 border-sc-yellow bg-sc-yellow mb-3 capitalize text-sm rounded mt-4 py-1 px-3 text-right font-semibold no-underline text-white inline-block mr-2">{{ . }}</span>
-        {{ end }}
-        {{ if .Params.password_required }}
-          <span class="trans-02 border-2 border-red-500 bg-red-500 mb-3 capitalize text-sm rounded mt-4 py-1 px-3 text-right font-semibold no-underline text-white inline-block">
-            Password Protected
-          </span>
         {{ end }}
       </div>
 
@@ -42,45 +41,53 @@
     <!-- Policy Content -->
     <div class="mb-12">
       <div class="prose prose-lg max-w-none">
-        {{ .Content | markdownify }}
+        {{ .Content }}
       </div>
     </div>
 
-    <!-- Document Viewer -->
-    {{ if .Params.iframe_url }}
+    <!-- Document Viewer: mobile = full-viewport PDF.js; desktop = in-page embed -->
+    {{ with $pdfSrc }}
       <div class="bg-white border border-grey-light rounded-lg shadow-lg overflow-hidden">
         <div class="bg-grey-lighter px-6 py-4 border-b border-grey-light">
           <h3 class="text-xl font-fancy text-grey-darker">Full Policy Document</h3>
-          {{ if .Params.password_required }}
-            <p class="text-grey-dark mt-2">
-              <strong>Note:</strong> This document is password protected.
-              You will be prompted to enter the password when you try to view the document.
-            </p>
-            <p class="text-grey-dark mt-2">
-              Need access? Contact us at
-              <a href="mailto:info@sportingchanceproject.co.uk" class="text-sc-blue hover:underline">
-                info@sportingchanceproject.co.uk
-              </a>
-            </p>
-          {{ else }}
-            <p class="text-grey-dark mt-2">
-              View-only document. Download is disabled where sharing settings allow.
-            </p>
-          {{ end }}
+          <p class="text-grey-dark mt-2 hidden md:block">
+            Scroll the document below, or open it full screen for a larger view.
+          </p>
+          <p class="text-grey-dark mt-2 md:hidden">
+            Open the document in a full-screen reader for the best experience on a phone.
+          </p>
         </div>
-        
-        <div class="relative">
-          <iframe src="{{ .Params.iframe_url }}" 
-                  class="w-full h-screen min-h-[600px] border-0"
-                  frameborder="0"
-                  allowfullscreen
-                  title="{{ .Title }} document">
-            <p>Your browser does not support iframes. 
-              <a href="{{ .Params.iframe_url }}" target="_blank" rel="noopener" class="text-sc-blue hover:underline">
-                Click here to view the document
-              </a>
-            </p>
-          </iframe>
+
+        <!-- Mobile: CTA → full-viewport PDF.js (no nested page + iframe scroll) -->
+        <div class="md:hidden p-6 flex flex-col items-stretch gap-3">
+          <a
+            href="{{ $viewerURL }}"
+            class="trans-02 border-2 border-black hover:border-transparent hover:bg-sc-blue text-black hover:text-white font-bold py-3 px-4 rounded text-center no-underline"
+          >
+            View full policy
+          </a>
+          <p class="text-sm text-grey-dark text-center m-0">
+            Uses your browser’s back button to return here.
+          </p>
+        </div>
+
+        <!-- Desktop: in-page embed -->
+        <div class="relative hidden md:block">
+          <div class="flex justify-end px-4 py-2 border-b border-grey-light bg-white">
+            <a
+              href="{{ $viewerURL }}"
+              class="text-sc-blue hover:underline text-sm font-semibold no-underline"
+            >
+              Open full screen
+            </a>
+          </div>
+          <iframe
+            src="{{ $viewerURL }}"
+            class="w-full h-[80vh] min-h-[640px] border-0"
+            title="{{ $.Title }} document"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     {{ end }}

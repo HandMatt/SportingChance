@@ -4,6 +4,8 @@
 .cache
 dist/
 build/
+!static/pdfjs/build/
+!static/pdfjs/build/**
 .env
 .env.local
 .env.*.local
