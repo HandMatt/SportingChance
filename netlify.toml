@@ -45,7 +45,5 @@
   [headers.values]
     Cache-Control = "public, max-age=86400, must-revalidate"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# No SPA catch-all: Hugo pages are real static files. Missing paths use
+# public/404.html (layouts/404.html) with a proper 404 status.

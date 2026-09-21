@@ -5,6 +5,12 @@ Update in the same PR as the change. Keep entries to one short bullet.
 
 ## 2026-09
 
+- **Intent-led copy pass** — Meta and leads aligned to validated search intent (ALP, mentoring, mainstream struggle, SEN); one plain-English exclusion clause; no PEX/EBSA jargon. Who-we-support blocks on services, ALP, mentoring.
+- **Service-area content** — “Where we work” sections on About and Contact (Brislington base; Bristol, South Glos, North Somerset, BANES).
+- **Organization JSON-LD** — Sitewide `EducationalOrganization` + `LocalBusiness` structured data from `params.organization` (NAP, phones, Bristol-area `areaServed`).
+- **Local SEO copy** — Titles, meta descriptions, and lead copy on home, services, ALP, mentoring, construction, about, and contact now name Bristol / surrounding area naturally.
+- **Netlify catch-all removed** — Dropped SPA `/* → /index.html` 200 rewrite; missing URLs now 404 via Hugo `layouts/404.html` instead of soft-serving the homepage.
+- **SEO foundations** — Set production `baseURL`, site description, default OG image, canonical + description fallbacks in `baseof.html`; local `<base href>` stays `/` so Docker preview is unaffected.
 - **Policy PDFs → local PDF.js** — Abandoned public SharePoint/OneDrive iframes (anonymous access dead end). Site serves `static/pdfs/` via vendored PDF.js (`static/pdfjs/`); front matter uses `pdf_src`. Power Automate → GitHub sync planned later (`POLICY_PDFS.md` Task B).
 - **Gallery optimised** — Strip photos (and oversized homepage stock) converted to WebP ≤1600px; `static/img` ~74MB → ~6MB; unused `boxing-2` removed.
 - **Photo strips restored** — Homepage “Life at Sporting Chance” strip plus early strips on Mentoring, Construction, and ALP, wired to `static/img/gallery/` with click-to-enlarge lightbox.

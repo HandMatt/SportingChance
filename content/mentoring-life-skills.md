@@ -1,9 +1,9 @@
 ---
 type: page
-title: Mentoring & Life Skills
-description: Sporting Chance Project supports young people aged 5–19 with behavioural,
-  social, emotional, and mental health needs through one-to-one mentoring and life
-  skills coaching.
+title: Mentoring & Life Skills in Bristol
+description: One-to-one mentoring in Bristol for young people who struggle in mainstream
+  school — life skills and education support for ages 5–19, including social and emotional
+  needs and SEN.
 photo_strip:
   header: Moments from mentoring
   photo_titles:
@@ -23,11 +23,21 @@ photo_strip:
 page_sections:
 - template: generic-header
   title: Mentoring & Life Skills
-  subtext: Sporting Chance Project supports young people aged 5–19 with behavioural,
-    social, emotional, and mental health needs. We provide tailored one-to-one mentoring
-    and life skills, working closely with parents and educational authorities.
+  subtext: Across Bristol and the surrounding area, Sporting Chance Project provides
+    tailored one-to-one mentoring and life skills for young people aged 5–19 who struggle
+    in mainstream school — including those excluded from school or at risk of exclusion,
+    and those with social and emotional needs, SEN, or an EHCP. We work closely with
+    parents and educational authorities.
   image: "/img/pages/mentoring-and-life-skills-2.png"
   alt: Student walking out glass door
+- template: centred-text
+  header: Who we support
+  align: left
+  button: false
+  main_text: Mentors help young people build trust, re-engage with learning, and take
+    positive steps — whether the goal is returning to school, moving into further education,
+    or finding a vocational pathway.
+  text_section: []
 - template: icon-grid
   icon_boxes:
   - title: One-to-one Mentoring

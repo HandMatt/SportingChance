@@ -1,8 +1,9 @@
 ---
 type: page
-title: Construction Workshops
-description: Sporting Chance Project supports 14–19 year olds, including SEN
-  students, with hands-on construction workshops in a safe,   structured environment.
+title: Construction Workshops in Bristol
+description: Hands-on construction workshops in Brislington, Bristol for 14–19 year
+  olds who need a practical alternative to the classroom — including SEN students,
+  trades tasters, mentoring, and Functional Skills.
 photo_strip:
   header: In the workshop
   photo_titles:
@@ -25,10 +26,11 @@ photo_strip:
 page_sections:
 - template: generic-header
   title: Construction Workshops
-  subtext: Sporting Chance Project supports 14–19 year olds, including SEN students,
-    through one-to-one or small group learning. We provide mentoring, functional
-    skills, and alternative education for the construction industry in a safe,
-    structured environment.
+  subtext: From our specialist site in Brislington, Bristol, Sporting Chance Project
+    supports 14–19 year olds — including those who struggle in a traditional classroom
+    and SEN students — through one-to-one or small group learning. We provide mentoring,
+    Functional Skills, and alternative education for the construction industry in a
+    safe, structured environment.
   image: "/img/pages/mentoring-and-life-skills-1.png"
   alt: Student in workshop
 - template: icon-grid

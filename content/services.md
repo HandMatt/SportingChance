@@ -1,18 +1,26 @@
 ---
 type: page
-title: Our Services
-description: Sporting Chance Project provides mentoring, construction workshops, and
-  education across ages 5–19 — from foundational literacy and maths through to accredited
-  Functional Skills — for young people, including those with Special Educational Needs.
+title: Our Services in Bristol
+description: Mentoring, construction workshops, and alternative learning provision
+  in Bristol for young people who struggle in mainstream school — including SEN support
+  and Functional Skills pathways.
 page_sections:
 - template: generic-header
   title: Our Services
-  subtext: Sporting Chance Project provides mentoring, construction workshops, and
-    education across ages 5–19 — from foundational literacy and maths through to accredited
-    Functional Skills — to meet the needs of young people, including those with Special
-    Educational Needs.
+  subtext: From our Bristol base we provide mentoring, construction workshops, and
+    alternative learning provision for ages 5–19. We support young people who struggle
+    in mainstream school, including those excluded from school or at risk of exclusion,
+    and those with Special Educational Needs — across Bristol and the surrounding area.
   image: ''
   alt: ''
+- template: centred-text
+  header: Who we support
+  align: left
+  button: false
+  main_text: Parents, schools, and local authorities refer young people who need a
+    different approach to learning — from one-to-one mentoring and life skills through
+    to vocational construction workshops and accredited Functional Skills.
+  text_section: []
 - template: three-columns
   header_1: Mentoring & Life Skills
   text_1: One-to-one mentoring and life skills coaching for ages 5–19, with education

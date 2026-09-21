@@ -1,0 +1,24 @@
+{{ define "title" }}Page not found | {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<section class="leaflet-theme-teal w-full sc-section--center">
+  <div class="leaflet-band leaflet-band--light leaflet-panel-band py-16 sm:py-24">
+    <div class="leaflet-geo" aria-hidden="true">
+      <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
+      <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>
+    </div>
+    <div class="leaflet-band__inner sc-page-gutter">
+      <div class="leaflet-panel sc-reveal" data-reveal data-reveal-delay-ms="100">
+        <h1 class="leaflet-panel__title">Page not found</h1>
+        <p class="leaflet-panel__body">
+          That address isn’t on this site. Try the homepage, our services, or get in touch.
+        </p>
+        <div class="leaflet-panel__actions sc-section__actions">
+          <a href="/" class="leaflet-panel__btn">Home</a>
+          <a href="/services/" class="leaflet-panel__btn">Services</a>
+          <a href="/contact/" class="leaflet-panel__btn">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
