@@ -2,7 +2,9 @@ services:
   hugo:
     image: jakejarvis/hugo-extended:latest
     ports:
-      # Host 4321 avoids Cursor/Windows often holding Hugo’s default 1313
+      # Host 4321 avoids Cursor/Windows often holding Hugo’s default 1313.
+      # Hugo still listens (HTTP + LiveReload) on container :1313; --liveReloadPort
+      # only tells the browser the host/proxy port (same idea as HTTPS on :443).
       - "4321:1313"
     volumes:
       - ./:/src

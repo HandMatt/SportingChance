@@ -3,7 +3,9 @@
 .hugo_build.lock
 .cache
 dist/
-build/
+# Root-only: an unanchored `build/` would also match static/pdfjs/build/.
+# Negations (if needed) must come *after* the ignore pattern — last match wins.
+/build/
 !static/pdfjs/build/
 !static/pdfjs/build/**
 .env
