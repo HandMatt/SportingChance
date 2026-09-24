@@ -6,7 +6,7 @@ The Sporting Chance website, built using Hugo.
 - First time (or after dependency changes):
   - `docker compose build assets`
   - `docker compose run --rm assets yarn install`
-- Run the local site: `docker compose up` (or `yarn dev`) - Hugo and Webpack in Docker; open http://localhost:1313
+- Run the local site: `docker compose up` (or `yarn dev`) - Hugo and Webpack in Docker; open http://localhost:4321
 - Optional: run with a local Hugo CLI and Node/Yarn if you prefer not to use Docker for everything
 
 ## Making styling updates

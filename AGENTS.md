@@ -67,7 +67,7 @@ docker compose build assets
 docker compose run --rm assets yarn install
 
 # Run locally
-docker compose up          # or: yarn dev → http://localhost:1313
+docker compose up          # or: yarn dev → http://localhost:4321
 
 # Build assets (host Node / Netlify)
 yarn build
@@ -101,7 +101,7 @@ Netlify: `yarn install && yarn build && hugo` → publish `public/`.
 |---------|------|-------|
 | Home | `content/_index.md`, `layouts/index.html` | Hero, partners, CTAs |
 | Services | `content/services.md`, service pillar pages | Mentoring, Construction, ALP |
-| Policies | `content/policies/`, `layouts/policies/`, `static/pdfs/`, `static/pdfjs/` | Local PDF.js viewer via `pdf_src` |
+| Policies | `content/policies/`, `layouts/policies/`, `static/pdfs/`, `static/pdfjs/` | Local PDF.js via `pdf_src`; `statement: true` for public statements (full policy on request) |
 | Testimonials / case studies | `content/Testimonials.md`, `content/case-studies/` | Quotes + long-form stories |
 | Contact | `content/contact.md`, `content/contact-thanks.md` (`/contact/thanks/`), `layouts/partials/blocks/contact-form.html`, `config.toml` `jotform_form_id` | Native HTML form → Jotform EU submit; on-site thank-you at `/contact/thanks/`; Jotform dashboard must redirect there and owns notification emails |
 

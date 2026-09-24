@@ -17,7 +17,7 @@ buttonlink = "/about"
 buttontext = "About us"
 header = "How can we help you, your school and your students?"
 align = "left"
-main_text = "Sporting Chance Project works with young people across Bristol and the surrounding area — including South Gloucestershire, North Somerset, and Bath & North East Somerset — to fulfil the potential they all possess.\n\nWe support young people who struggle in mainstream school, including those excluded from school or at risk of exclusion, and those with SEN, an EHCP, or social and emotional needs. We engage with parents and fellow professionals to secure real outcomes that support each young person's life journey.\n\nWe provide mentoring and life skills coaching, construction workshops, and alternative learning provision — spanning foundational literacy and maths through to accredited Functional Skills Maths and English."
+main_text = "Sporting Chance Project works with young people across Bristol and the surrounding area — including South Gloucestershire, North Somerset, and Bath & North East Somerset — to fulfil the potential they all possess.<br><br>We support young people who struggle in mainstream school, including those excluded from school or at risk of exclusion, and those with SEN, an EHCP, or social and emotional needs. We engage with parents and fellow professionals to secure real outcomes that support each young person's life journey.<br><br>We provide mentoring and life skills coaching, construction workshops, and alternative learning provision — spanning foundational literacy and maths through to accredited Functional Skills Maths and English."
 template = "centred-text"
 text_section = []
 [[page_sections]]

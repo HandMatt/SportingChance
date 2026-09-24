@@ -2,10 +2,11 @@ services:
   hugo:
     image: jakejarvis/hugo-extended:latest
     ports:
-      - 1313:1313
+      # Host 4321 avoids Cursor/Windows often holding Hugo’s default 1313
+      - "4321:1313"
     volumes:
       - ./:/src
-    command: server --buildDrafts --buildFuture --bind 0.0.0.0
+    command: server --buildDrafts --buildFuture --bind 0.0.0.0 --liveReloadPort 4321
 
   assets:
     build:
@@ -16,4 +17,3 @@ services:
     volumes:
       - ./:/app
     # webpack --watch is the image CMD; install is a separate step
-  

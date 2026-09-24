@@ -21,10 +21,14 @@ scroll). Desktop also has an **Open full screen** link.
 
 Stable filenames:
 
-- `/pdfs/safeguarding.pdf`
-- `/pdfs/health-and-safety.pdf`
-- `/pdfs/anti-bullying.pdf`
-- `/pdfs/complaints.pdf`
+- `/pdfs/safeguarding.pdf` (public statement)
+- `/pdfs/health-and-safety.pdf` (public statement)
+- `/pdfs/equality-and-diversity.pdf` (public statement)
+- `/pdfs/anti-bullying.pdf` (full bullying & harassment policy)
+- `/pdfs/complaints.pdf` (full policy)
+- `/pdfs/safer-recruitment.pdf` (full policy)
+
+Statement pages use front matter `statement: true` and tell visitors the full policy is available on request.
 
 Vendor tree is trimmed: no `*.map`, no sample PDF, locales limited to `en-GB` / `en-US`.
 Download/print toolbar controls are hidden in `viewer.html` + `viewer-overrides.css`.
