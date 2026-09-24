@@ -1,11 +1,12 @@
 DefaultContentLanguage = "en"
 MetaDataFormat = "yaml"
 pagination.pagerSize = 3
-baseURL = ""
-description = ""
+# Absolute URLs for sitemap, canonicals, and Open Graph (Netlify <base> still uses CONTEXT).
+baseURL = "https://www.sportingchanceproject.co.uk/"
+description = "Alternative learning provision and mentoring in Bristol for young people who struggle in mainstream school."
 enableRobotsTXT = true
 googleAnalytics = ""
-languageCode = "en-us"
+languageCode = "en-gb"
 relativeURLs = false
 title = "Sporting Chance"
 
@@ -45,13 +46,31 @@ name = "Contact"
 url = "/contact"
 weight = 50
 [params]
-description = "The Sporting Chance Project is an Alternative Learning Provider which aims to meet the educational, social and lifestyle needs of young people"
+description = "Alternative learning provision and mentoring in Bristol for young people who struggle in mainstream school."
+# Default social / Open Graph image (page front matter `images` overrides).
+images = ["/img/pages/hero-alt.jpg"]
 favicon = "favicon.ico"
 facebook = ""
 linkedin = ""
 twitter = ""
 # Contact form posts to Jotform EU; q*_ names in contact-form.html must match the live form (yarn verify:jotform).
 jotform_form_id = "222916591903056"
+
+# NAP + service area for JSON-LD (layouts/partials/structured-data.html). Keep in sync with footer.
+[params.organization]
+name = "Sporting Chance Project"
+legalName = "Sporting Chance Project"
+email = "info@sportingchanceproject.co.uk"
+telephone = "+44-117-203-4322"
+telephoneMobile = "+44-7748-633711"
+streetAddress = "Unit 1A & 1B, Heston House, 7-9 Emery Road"
+addressLocality = "Bristol"
+addressRegion = "England"
+postalCode = "BS4 5PF"
+addressCountry = "GB"
+logo = "/img/brand/scplogo1.webp"
+image = "/img/pages/hero-alt.jpg"
+areaServed = ["Bristol", "South Gloucestershire", "North Somerset", "Bath and North East Somerset"]
 [security.funcs]
 getenv = ["^HUGO_", "^WC_", "CONTEXT", "^URL$", "^DEPLOY_PRIME_URL$"]
 [sitemap]

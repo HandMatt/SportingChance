@@ -13,7 +13,7 @@ ownership, hosting, or architecture changes.
 
 - Edit page copy in `content/`; templates in `layouts/`; assets in `src/`.
 - Use existing Tailwind / `sc-*` / leaflet theme classes before adding custom CSS.
-- For policy embeds, set `iframe_url` in front matter.
+- For policy PDFs, set `pdf_src` in front matter (path under `/pdfs/`; see `POLICY_PDFS.md`).
 - Prefer PRs into `develop`; leave `master` for production releases.
 - Prefer updating `AGENTS.md` / `TIMELINE.md` over creating new context docs.
 

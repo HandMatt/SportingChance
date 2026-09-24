@@ -1,0 +1,3 @@
+PDF.js v6.3.289 (Mozilla prebuilt dist)
+Source: https://github.com/mozilla/pdf.js/releases/download/v6.3.289/pdfjs-6.3.289-dist.zip
+Trimmed for this site: no *.map, no sample PDF, no debugger, locales en-GB + en-US only, no wasm JS fallbacks.

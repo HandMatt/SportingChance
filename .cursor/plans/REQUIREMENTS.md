@@ -5,6 +5,6 @@ Short backlog captured 2026-08. Each item has a brief plan; detailed design happ
 | Plan | Summary | Existing work |
 |------|---------|---------------|
 | [content-testimonials-imagery.md](content-testimonials-imagery.md) | Broader copy refresh + imagery (testimonials shipped separately) | Imagery still TBD with Tony |
-| [onedrive-policy-embeds.md](onedrive-policy-embeds.md) | Policies moved to OneDrive; restore accessible embeds | Local `feature/update-policies-and-procedures` (WIP) — on hold |
+| [onedrive-policy-embeds.md](onedrive-policy-embeds.md) | ~~SharePoint iframes~~ → local PDF.js (`POLICY_PDFS.md`) | Superseded; front-end on `feature/policy-pdfjs-viewer` |
 
 Delete individual plan files (and this index if empty) when the work ships.

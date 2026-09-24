@@ -1,12 +1,12 @@
 ---
 title: "Policies & Procedures"
 description: "Our policies and procedures for safeguarding, health and safety, and operational standards"
-date: 2024-01-15
+date: 2026-09-10
 layout: policies/list
 ---
 
-Welcome to our Policies & Procedures section. Here you will find all the important documents that outline our operational standards, safeguarding procedures, and commitment to excellence in our work with young people.
+Welcome to our Policies & Procedures section. Here you will find the documents that outline our operational standards, safeguarding approach, and commitment to young people in our care.
 
-These documents are password protected by Google Drive to ensure the security and confidentiality of our procedures. When you click on a policy document, Google Drive will prompt you for the password if required.
+Each page shows the relevant statement or full policy in a view-only browser viewer. Where we publish a public statement, the full detailed policy is available on request via [contact](/contact/) or [info@sportingchanceproject.co.uk](mailto:info@sportingchanceproject.co.uk).
 
-**Note:** All policies and procedures are regularly reviewed and updated to ensure they meet current best practices and regulatory requirements. 
+**Note:** Policies and procedures are reviewed regularly to meet current best practice and statutory guidance (including KCSIE 2026).

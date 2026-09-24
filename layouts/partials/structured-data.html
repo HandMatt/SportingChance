@@ -1,0 +1,44 @@
+{{- /* Sitewide EducationalOrganization + LocalBusiness JSON-LD from params.organization */ -}}
+{{- with .Site.Params.organization -}}
+{{- $base := $.Site.BaseURL -}}
+{{- $logo := .logo | absURL -}}
+{{- $image := .image | absURL -}}
+{{- $address := dict
+  "@type" "PostalAddress"
+  "streetAddress" .streetAddress
+  "addressLocality" .addressLocality
+  "addressRegion" .addressRegion
+  "postalCode" .postalCode
+  "addressCountry" .addressCountry
+-}}
+{{- $areaServed := slice -}}
+{{- range .areaServed -}}
+  {{- $areaServed = $areaServed | append (dict "@type" "AdministrativeArea" "name" .) -}}
+{{- end -}}
+{{- $telephones := slice .telephone -}}
+{{- with .telephoneMobile -}}{{- $telephones = $telephones | append . -}}{{- end -}}
+{{- $org := dict
+  "@context" "https://schema.org"
+  "@type" (slice "EducationalOrganization" "LocalBusiness")
+  "@id" (printf "%s#organization" $base)
+  "name" .name
+  "legalName" .legalName
+  "url" $base
+  "description" $.Site.Params.description
+  "email" .email
+  "telephone" $telephones
+  "address" $address
+  "areaServed" $areaServed
+  "logo" $logo
+  "image" $image
+  "contactPoint" (slice (dict
+    "@type" "ContactPoint"
+    "telephone" .telephone
+    "email" .email
+    "contactType" "customer service"
+    "areaServed" "GB"
+    "availableLanguage" (slice "en")
+  ))
+-}}
+<script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
+{{- end -}}

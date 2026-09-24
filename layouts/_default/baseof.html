@@ -1,15 +1,19 @@
 <!doctype html>
-<html lang="{{ $.Site.Language.Lang }}" id="top" class="{{ if .Params.scroll_snap }}has-scroll-snap{{ end }}">
+<html lang="{{ .Site.LanguageCode }}" id="top" class="{{ if .Params.scroll_snap }}has-scroll-snap{{ end }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
+    {{/* Netlify: deploy URL. Local: root-relative so production baseURL does not hijack assets. */}}
+    <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}/{{ end }}">
     <link rel="shortcut icon" href="/{{ .Site.Params.favicon }}" type="image/x-icon" />
+    <link rel="canonical" href="{{ .Permalink }}" />
     <title>{{ block "title" . }}{{ with .Params.Title }} {{ . }} |{{ end }} {{ .Site.Title }} {{ end }}</title>
-    {{ with .Params.Description }}<meta name="description" content="{{ . }}" /> {{ end }}
+    {{ $description := .Description | default .Site.Params.description }}
+    {{ with $description }}<meta name="description" content="{{ . }}" />{{ end }}
     {{- template "_internal/opengraph.html" . -}}
     {{- template "_internal/schema.html" . -}}
     {{- template "_internal/twitter_cards.html" . -}}
+    {{ partial "structured-data.html" . }}
     {{- if and .Params.hero_banner .Params.hero_bg -}}
     <link rel="preload" as="image" href="{{ .Params.hero_bg }}" fetchpriority="high">
     {{- end -}}

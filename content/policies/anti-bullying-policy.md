@@ -1,21 +1,21 @@
 ---
-title: "Anti-Bullying Policy"
-summary: "Our zero-tolerance approach to bullying and harassment in all forms"
-date: 2024-01-15
-iframe_url: "https://drive.google.com/embed/your-anti-bullying-document-id"
-password_required: true
+title: "Bullying & Harassment Policy"
+summary: "Zero-tolerance approach to bullying and harassment, including child-on-child abuse"
+date: 2026-09-10
+weight: 40
+pdf_src: "/pdfs/anti-bullying.pdf"
 tags: ["anti-bullying", "behaviour", "respect"]
 ---
 
-# Anti-Bullying Policy
+# Bullying & Harassment Policy
 
-Our Anti-Bullying Policy demonstrates our commitment to creating a safe, respectful environment where all young people can thrive.
+Sporting Chance Project Ltd is committed to a safe, inclusive environment where bullying and harassment in any form are unacceptable and will not be tolerated.
 
-This policy covers:
-- Definition of bullying and harassment
-- Reporting procedures
-- Support for victims
-- Disciplinary measures
-- Prevention strategies
+This policy outlines how we prevent, identify and respond to bullying and harassment promptly, fairly and effectively, in line with Keeping Children Safe in Education 2026. It covers:
 
-**Access:** This document requires a password to view. Please contact us for access credentials. 
+- Definitions of bullying and harassment, including online, discriminatory and sexual harassment
+- Prevention strategies and behaviour expectations
+- Reporting, response and support for those affected
+- Child-on-child abuse and related safeguarding considerations
+
+The full document is available to view below.

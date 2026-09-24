@@ -1,13 +1,13 @@
 +++
-description = "Sporting Chance Project is an Alternative Learning Provider offering mentoring, education from foundational literacy and maths through to Functional Skills, and life skills support for young people."
+description = "Alternative learning provision and mentoring in Bristol for young people who struggle in mainstream school — including SEN and EHCP support across the surrounding area."
 hero_banner = true
 scp_site_notice = true
 hero_bg = "/img/pages/hero-alt.jpg"
-hero_sub = "Sporting Chance Project is an Alternative Learning Provider that offers mentoring, education across ages 5–19 — from foundational literacy and maths through to accredited Functional Skills — and life skills coaching for children and young people with Special Educational Needs or an Education, Health and Care Plan."
+hero_sub = "Based in Bristol, Sporting Chance Project is an Alternative Learning Provider offering mentoring, education across ages 5–19 — from foundational literacy and maths through to accredited Functional Skills — and life skills coaching. We support young people who struggle in mainstream school, including those with Special Educational Needs or an Education, Health and Care Plan, across Bristol and the surrounding area."
 hero_text = "Education & Mentoring. <br> Engage, Mentor, Educate."
 herobuttontext = "Get in touch"
 herolink = "/contact"
-title = "Engagement & Mentoring Services For Young People"
+title = "Mentoring & Alternative Learning in Bristol"
 [menu.main]
 name = "Home"
 weight = 1
@@ -17,7 +17,7 @@ buttonlink = "/about"
 buttontext = "About us"
 header = "How can we help you, your school and your students?"
 align = "left"
-main_text = "Sporting Chance Project works with young people to fulfil the potential they all possess.\n\nWe engage with parents and fellow professionals to secure real outcomes that support each young person's life journey. We provide mentoring and life skills coaching, construction workshops, and alternative learning provision — spanning foundational literacy and maths through to accredited Functional Skills Maths and English.\n\nWe are experienced in working with children and young people with Special Educational Needs (SEN)."
+main_text = "Sporting Chance Project works with young people across Bristol and the surrounding area — including South Gloucestershire, North Somerset, and Bath & North East Somerset — to fulfil the potential they all possess.<br><br>We support young people who struggle in mainstream school, including those excluded from school or at risk of exclusion, and those with SEN, an EHCP, or social and emotional needs. We engage with parents and fellow professionals to secure real outcomes that support each young person's life journey.<br><br>We provide mentoring and life skills coaching, construction workshops, and alternative learning provision — spanning foundational literacy and maths through to accredited Functional Skills Maths and English."
 template = "centred-text"
 text_section = []
 [[page_sections]]
@@ -72,11 +72,11 @@ header = "Ready to overcome the challenges you face?"
 align = "right"
 list_intro = "Do you have children and young people who..."
 list_items = [
-  "Struggle in the classroom or school environment?",
-  "Need direction as they are unsure of future pathways?",
+  "Struggle in the classroom or mainstream school environment?",
+  "Have been excluded from school or are at risk of exclusion?",
+  "Have Special Educational Needs or an EHCP and need additional support?",
   "Could benefit from practical construction trade tasters?",
-  "Have Special Educational Needs and need additional support?",
-  "Require support with life in general?",
+  "Need direction as they are unsure of future pathways?",
 ]
 list_outro = "We can help you, your school and your students!"
 template = "centred-text"
@@ -85,6 +85,10 @@ text_section = []
 header = "Success Stories"
 template = "feedback-quote-carousel"
 [[page_sections.quotes]]
+quote = "Sporting Chance Project Mentors played a key part in supporting a very complex and vulnerable permanently excluded young person. A carefully coordinated programme of mentoring support and education enabled the young person to achieve Maths and English Literature and Language (Grade 4+) and access college, avoiding a second permanent exclusion. It is an example of true collaboration between the education setting and AP having a successful impact on a young person's life."
+name = "Associate Head Teacher & SENCO Lead"
+caption = "WA Academy"
+[[page_sections.quotes]]
 quote = "I’ve become more productive since knowing you. I appreciate you listening, your patience, and your experience has helped me to think and broaden my outlook on life. Thank you for being someone that cares, that I trust and feel I can always talk to."
 name = "M"
 caption = "Mentee, age 16"
@@ -92,10 +96,6 @@ caption = "Mentee, age 16"
 quote = "Sunit (Mentor), the way L speaks of you, your name is gold in this household."
 name = "AW"
 caption = "Parent / carer"
-[[page_sections.quotes]]
-quote = "Sporting Chance Project Mentors played a key part in supporting a very complex and vulnerable permanently excluded young person. A carefully coordinated programme of mentoring support and education enabled the young person to achieve Maths and English Literature and Language (Grade 4+) and access college, avoiding a second permanent exclusion. It is an example of true collaboration between the education setting and AP having a successful impact on a young person's life."
-name = "Associate Head Teacher & SENCO Lead"
-caption = "WA Academy"
 [[page_sections.quotes]]
 quote = "I feel that Sporting Chance Project through their positive and trusting relationship with the young person gave me the opportunity to support and advocate for the young person in their engagement and assessment with CAMHS"
 name = "Nurse Prescriber / Clinical Nurse Specialist"
@@ -116,7 +116,7 @@ template = "centred-text"
 text_section = []
 [[page_sections]]
 header = "Our Partners"
-main_text = "Sporting Chance Project is an Alternative Learning Provider that works with young people to help them fulfill their potential.<br/><br/> We engage with parents and fellow professionals to secure meaningful outcomes that support each young person's life journey. Our education programme spans foundational literacy and maths through to Functional Skills Maths and English, alongside Sport, which are at the heart of the project. Additionally, we offer various full-time education and vocational packages to meet diverse needs."
+main_text = "Sporting Chance Project is a Bristol-based Alternative Learning Provider working with local authorities and schools across the region.<br/><br/>We support young people who struggle in mainstream school through mentoring, Functional Skills, and vocational pathways — working with parents and fellow professionals to secure meaningful outcomes."
 template = "partners"
 [[page_sections.partner_logos]]
 name = "Bath and Northeast Somerset council"

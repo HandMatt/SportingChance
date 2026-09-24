@@ -1,9 +1,9 @@
 ---
 type: page
-title: Alternative Learning Provision
-description: Sporting Chance Project provides mentoring, education, and life skills
-  coaching for ages 5–19, including those with SEN or an EHCP — from foundational
-  literacy and maths through to Functional Skills.
+title: Alternative Learning Provision in Bristol
+description: Alternative learning provision in Bristol for young people who struggle
+  in mainstream school — mentoring, education, and life skills for ages 5–19, including
+  SEN or EHCP pathways.
 photo_strip:
   header: Sport and activity
   photo_titles:
@@ -29,13 +29,23 @@ photo_strip:
 page_sections:
 - template: generic-header
   title: Alternative Learning Provision
-  subtext: Sporting Chance Project provides mentoring, education, and life skills
-    coaching for ages 5–19, including those with SEN or an EHCP. Education spans foundational
-    literacy and maths through to accredited Functional Skills, alongside practical
-    life skills. We collaborate with parents and professionals to help young people
-    reach their full potential.
+  subtext: Based in Bristol, Sporting Chance Project provides alternative learning
+    provision (often called alternative provision nationally) — mentoring, education,
+    and life skills coaching for ages 5–19 across Bristol and the surrounding area.
+    We support young people who struggle in mainstream school, including those excluded
+    from school or at risk of exclusion, and those with SEN or an EHCP. Education spans
+    foundational literacy and maths through to accredited Functional Skills, alongside
+    practical life skills.
   image: "/img/pages/mentoring-and-life-skills-2.png"
   alt: Young people in a learning session
+- template: centred-text
+  header: Who we support
+  align: left
+  button: false
+  main_text: We work with schools, local authorities, parents, and carers to re-engage
+    young people in learning — helping improve attendance, confidence, and readiness
+    to return to education or move onto the next pathway.
+  text_section: []
 - template: icon-grid
   icon_boxes:
   - title: Education Pathways
