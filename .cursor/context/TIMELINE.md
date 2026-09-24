@@ -5,6 +5,8 @@ Update in the same PR as the change. Keep entries to one short bullet.
 
 ## 2026-09
 
+- **Local preview port 4321** — `docker compose` publishes Hugo on host `4321` (container still 1313) because Windows/Cursor often holds `:1313`, so Docker cannot bind and the browser never reaches a healthy Hugo build.
+- **KCSIE 2026 policy pack live** — Replaced placeholder `static/pdfs/` with Jordan’s SCP docs (safeguarding, H&S, equality statements; bullying & harassment, complaints, safer recruitment policies). Statement pages set `statement: true` and note full policy on request; equality + safer recruitment pages added.
 - **Intent-led copy pass** — Meta and leads aligned to validated search intent (ALP, mentoring, mainstream struggle, SEN); one plain-English exclusion clause; no PEX/EBSA jargon. Who-we-support blocks on services, ALP, mentoring.
 - **Service-area content** — “Where we work” sections on About and Contact (Brislington base; Bristol, South Glos, North Somerset, BANES).
 - **Organization JSON-LD** — Sitewide `EducationalOrganization` + `LocalBusiness` structured data from `params.organization` (NAP, phones, Bristol-area `areaServed`).
