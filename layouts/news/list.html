@@ -9,8 +9,8 @@
     </div>
     <div class="leaflet-band__inner sc-page-gutter">
       <div class="grid grid-cols-1 gap-6">
-        {{ range .Pages }}
-        <article class="leaflet-panel leaflet-panel--left sc-reveal sc-reveal--left" data-reveal data-reveal-delay-ms="120">
+        {{ range $i, $page := .Paginator.Pages }}
+        <article class="leaflet-panel leaflet-panel--left sc-reveal sc-reveal--left" data-reveal data-reveal-delay="{{ add $i 1 }}" data-reveal-delay-ms="120">
           {{ if not .Date.IsZero }}
           <p class="leaflet-panel__body" style="margin-bottom:0.75rem">
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
@@ -24,6 +24,11 @@
         </article>
         {{ end }}
       </div>
+      {{ if gt .Paginator.TotalPages 1 }}
+      <nav class="news-pagination" aria-label="News pages">
+        {{ template "_internal/pagination.html" . }}
+      </nav>
+      {{ end }}
     </div>
   </div>
 </section>

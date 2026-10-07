@@ -1666,6 +1666,15 @@ a.leaflet-columns__card:focus-visible {
     text-underline-offset: 0.15em;
 }
 
+.news-pagination {
+    margin-top: 2.5rem;
+}
+
+.news-pagination .pagination {
+    margin: 0;
+    justify-content: center;
+}
+
 .hero-b__brand {
     font-size: clamp(0.8rem, 1.4vw, 0.95rem);
     letter-spacing: 0.18em;
@@ -1786,6 +1795,8 @@ a.leaflet-columns__card:focus-visible {
 .sc-reveal[data-reveal-delay="6"] { transition-delay: 0.8s; }
 .sc-reveal[data-reveal-delay="7"] { transition-delay: 0.92s; }
 .sc-reveal[data-reveal-delay="8"] { transition-delay: 1.04s; }
+.sc-reveal[data-reveal-delay="9"] { transition-delay: 1.16s; }
+.sc-reveal[data-reveal-delay="10"] { transition-delay: 1.28s; }
 
 .sc-page-gutter {
     width: 100%;
