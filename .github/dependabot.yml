@@ -13,5 +13,17 @@ updates:
     groups:
       production-dependencies:
         dependency-type: "production"
+        update-types:
+          - "minor"
+          - "patch"
       development-dependencies:
         dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+    # Tailwind 3, Babel 7, and Webpack 5 are the site toolchain. Major bumps
+    # (especially Tailwind 4) fail the Netlify build and kept reopening as one
+    # grouped PR. Security update PRs are not affected by this ignore.
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
