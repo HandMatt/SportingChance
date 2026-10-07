@@ -6,4 +6,5 @@ WORKDIR /app
 RUN corepack enable && corepack prepare yarn@4.9.2 --activate
 
 # Default: watch assets. Override with compose `run` for install/build.
-CMD ["yarn", "webpack", "--watch"]
+# Yarn 4 only runs package.json scripts; `yarn webpack` is not the binary.
+CMD ["yarn", "watch"]

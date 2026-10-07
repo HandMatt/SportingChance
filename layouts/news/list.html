@@ -1,39 +1,30 @@
 {{ define "main" }}
-  {{ partial "blocks/generic-header" . }}
-  
-    <section class="bg-grey-lighter stripe-texture sm:py-24 py-8">
-      <div class="max-w-4xl m-auto">
-      {{ range .Paginator.Pages }}
-        <div class="shadow-md bg-white sm:w-3/5 mx-4 sm:mx-auto rounded overflow-hidden my-16 text-left">
-            {{ if .Params.featured_image }}
-            <a href="{{ .RelPermalink }}"><img src="{{ .Params.featured_image }}" /></a>
-            {{ end }}
-            <div class="p-8 sm:p-12">
-                {{ if .Date }}
-                  <div class="text-md uppercase tracking-wide font-bold">
-                    {{ .Date.Format "January 2, 2006" }}
-                  </div>
-                {{ end }}
-                
-                <h1 class="font-fancy sm:text-3xl text-2xl text-grey-darker pt-2">
-                  <a href="{{ .RelPermalink }}" class="hover:text-sc-blue text-grey-darkest no-underline">
-                    {{ .Title }}
-                  </a>
-                </h1>
-                <div class="text-md uppercase tracking-wide font-bold">
-                  {{ range .Params.tags }}
-                    <button class="trans-02 border-2 border-sc-blue bg-sc-blue mb-3 capitalize text-sm rounded mt-4 py-1 px-3 text-right font-semibold no-underline text-white">{{ . }}</button>
-                  {{ end }}
-                </div>
-                <div class="text-xl leading-normal">
-                  {{ .Summary  }}
-                </div>
-              </div>
-        </div>
-      {{ end }}
-        <article class="m-auto w-3/5 flex list-reset justify-center">
-          {{ template "_internal/pagination.html" . }}
+{{ partial "blocks/generic-header" (dict "Params" (dict "title" .Title "subtext" (.Params.subtext | default .Description)) "theme" "teal") }}
+
+<section class="leaflet-theme-teal w-full">
+  <div class="leaflet-band leaflet-band--light leaflet-panel-band">
+    <div class="leaflet-geo" aria-hidden="true">
+      <span class="leaflet-geo__shape leaflet-geo__shape--a"></span>
+      <span class="leaflet-geo__shape leaflet-geo__shape--b"></span>
+    </div>
+    <div class="leaflet-band__inner sc-page-gutter">
+      <div class="grid grid-cols-1 gap-6">
+        {{ range .Pages }}
+        <article class="leaflet-panel leaflet-panel--left sc-reveal sc-reveal--left" data-reveal data-reveal-delay-ms="120">
+          {{ if not .Date.IsZero }}
+          <p class="leaflet-panel__body" style="margin-bottom:0.75rem">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+          </p>
+          {{ end }}
+          <h2 class="leaflet-panel__title">{{ .Title }}</h2>
+          <p class="leaflet-panel__body">{{ .Params.summary | default .Summary }}</p>
+          <div class="leaflet-panel__actions sc-section__actions">
+            <a href="{{ .RelPermalink }}" class="leaflet-panel__btn">Read the update</a>
+          </div>
         </article>
+        {{ end }}
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 {{ end }}

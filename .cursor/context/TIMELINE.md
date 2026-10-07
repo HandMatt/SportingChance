@@ -5,6 +5,7 @@ Update in the same PR as the change. Keep entries to one short bullet.
 
 ## 2026-10
 
+- **Local asset watch** — Docker assets runs `yarn watch`, which calls `./node_modules/.bin/webpack`. Yarn 4 does not treat `webpack` as a script or a declared binary, so the assets container was exiting on `docker compose up`.
 - **Dependabot majors ignored** — Weekly npm groups stay minor/patch only. Semver-major version PRs (Tailwind 4, Babel 8, and the rest of that toolchain) are ignored; security update PRs still open.
 
 ## 2026-09

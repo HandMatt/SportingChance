@@ -1495,16 +1495,26 @@ a.leaflet-columns__card:focus-visible {
     visibility: hidden;
 }
 
-.sc-case-study {
+.sc-case-study,
+.sc-news {
     max-width: 44rem;
 }
 
-.sc-case-study__body p {
+.sc-case-study__body p,
+.sc-news__body p {
     margin: 0 0 1.15rem;
 }
 
-.sc-case-study__body p:last-child {
+.sc-case-study__body p:last-child,
+.sc-news__body p:last-child {
     margin-bottom: 0;
+}
+
+.sc-news__body a {
+    color: var(--leaflet-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
 }
 
 .hero-b__brand {

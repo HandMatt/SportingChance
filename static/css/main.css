@@ -1644,16 +1644,26 @@ a.leaflet-columns__card:focus-visible {
     visibility: hidden;
 }
 
-.sc-case-study {
+.sc-case-study,
+.sc-news {
     max-width: 44rem;
 }
 
-.sc-case-study__body p {
+.sc-case-study__body p,
+.sc-news__body p {
     margin: 0 0 1.15rem;
 }
 
-.sc-case-study__body p:last-child {
+.sc-case-study__body p:last-child,
+.sc-news__body p:last-child {
     margin-bottom: 0;
+}
+
+.sc-news__body a {
+    color: var(--leaflet-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
 }
 
 .hero-b__brand {
@@ -2593,10 +2603,6 @@ body.image-strip-lightbox-open {
 .m-auto{
     margin: auto;
 }
-.mx-4{
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
 .mx-auto{
     margin-left: auto;
     margin-right: auto;
@@ -2604,10 +2610,6 @@ body.image-strip-lightbox-open {
 .my-12{
     margin-top: 3rem;
     margin-bottom: 3rem;
-}
-.my-16{
-    margin-top: 4rem;
-    margin-bottom: 4rem;
 }
 .my-2{
     margin-top: 0.5rem;
@@ -2655,9 +2657,6 @@ body.image-strip-lightbox-open {
 }
 .mr-2{
     margin-right: 0.5rem;
-}
-.mt-12{
-    margin-top: 3rem;
 }
 .mt-16{
     margin-top: 4rem;
@@ -2713,9 +2712,6 @@ body.image-strip-lightbox-open {
 .w-16{
     width: 4rem;
 }
-.w-3\/5{
-    width: 60%;
-}
 .w-4{
     width: 1rem;
 }
@@ -2755,9 +2751,6 @@ body.image-strip-lightbox-open {
 }
 .max-w-full{
     max-width: 100%;
-}
-.max-w-lg{
-    max-width: 32rem;
 }
 .max-w-none{
     max-width: none;
@@ -3227,21 +3220,11 @@ body.image-strip-lightbox-open {
         margin-left: 0.75rem;
         margin-right: 0.75rem;
     }
-    .sm\:mx-auto{
-        margin-left: auto;
-        margin-right: auto;
-    }
     .sm\:flex{
         display: flex;
     }
     .sm\:w-1\/2{
         width: 50%;
-    }
-    .sm\:w-3\/5{
-        width: 60%;
-    }
-    .sm\:p-12{
-        padding: 3rem;
     }
     .sm\:p-8{
         padding: 2rem;
@@ -3260,10 +3243,6 @@ body.image-strip-lightbox-open {
     .sm\:text-2xl{
         font-size: 1.5rem;
         line-height: 2rem;
-    }
-    .sm\:text-3xl{
-        font-size: 1.875rem;
-        line-height: 2.25rem;
     }
     .sm\:text-4xl{
         font-size: 2.25rem;

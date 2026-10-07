@@ -18,4 +18,5 @@ services:
     user: "${UID:-1000}:${GID:-1000}"
     volumes:
       - ./:/app
-    # webpack --watch is the image CMD; install is a separate step
+    # Yarn 4: run the package.json script, not `yarn webpack` (that looks up a missing script).
+    command: ["yarn", "watch"]
