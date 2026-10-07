@@ -3,6 +3,10 @@
 Living log of material project changes. **Newest first.**
 Update in the same PR as the change. Keep entries to one short bullet.
 
+## 2026-10
+
+- **Dependabot majors ignored** — Weekly npm groups stay minor/patch only. Semver-major version PRs (Tailwind 4, Babel 8, and the rest of that toolchain) are ignored; security update PRs still open.
+
 ## 2026-09
 
 - **Local preview port 4321** — `docker compose` publishes Hugo on host `4321` (container still 1313) because Windows/Cursor often holds `:1313`, so Docker cannot bind and the browser never reaches a healthy Hugo build.
