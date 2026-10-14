@@ -1289,6 +1289,10 @@ a.leaflet-columns__card:focus-visible {
     overflow: hidden;
 }
 
+.hero-b__media picture {
+    display: contents;
+}
+
 .hero-b__parallax {
     position: absolute;
     left: 0;

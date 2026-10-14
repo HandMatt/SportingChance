@@ -44,26 +44,38 @@ title = "Workshop skills"
 wide = true
 src = "/img/gallery/construction/carpentry.webp"
 alt = "Learner practising carpentry skills"
+width = 1200
+height = 1600
 [[page_sections.items]]
 title = "Boxing"
 src = "/img/gallery/sport/boxing-1.webp"
 alt = "Learner boxing training"
+width = 739
+height = 1600
 [[page_sections.items]]
 title = "Woodland walk"
 src = "/img/gallery/wellbeing/woodland-walk.webp"
 alt = "Mentoring woodland walk"
+width = 1200
+height = 1600
 [[page_sections.items]]
 title = "Basketball"
 src = "/img/gallery/sport/basketball.webp"
 alt = "Basketball activity"
+width = 1200
+height = 1600
 [[page_sections.items]]
 title = "Decorating"
 src = "/img/gallery/construction/decorating.webp"
 alt = "Painting and decorating workshop"
+width = 1200
+height = 1600
 [[page_sections.items]]
 title = "Animal care"
 src = "/img/gallery/wellbeing/feeding-goats.webp"
 alt = "Feeding goats"
+width = 1200
+height = 1600
 [[page_sections]]
 button = true
 buttonlink = "/services"
@@ -121,13 +133,21 @@ template = "partners"
 [[page_sections.partner_logos]]
 name = "Bath and Northeast Somerset council"
 src = "/img/partners/banes-council.webp"
+width = 216
+height = 120
 [[page_sections.partner_logos]]
 name = "Bristol City council"
 src = "/img/partners/bristol-city-council.webp"
+width = 118
+height = 120
 [[page_sections.partner_logos]]
 name = "North Somerset council"
 src = "/img/partners/north-somerset-council.webp"
+width = 300
+height = 120
 [[page_sections.partner_logos]]
 name = "South Gloucester council"
 src = "/img/partners/southglos.webp"
+width = 240
+height = 70
 +++

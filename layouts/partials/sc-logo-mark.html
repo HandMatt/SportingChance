@@ -1,7 +1,13 @@
 {{- $variant := .variant | default "title" -}}
+{{- $sizes := "(min-width: 768px) min(22vw, 12rem), min(34vw, 13rem)" -}}
+{{- if eq $variant "hero" -}}
+  {{- $sizes = "(min-width: 768px) min(36vw, 20rem), min(58vw, 22rem)" -}}
+{{- end -}}
 <img
   class="sc-logo-mark sc-logo-mark--{{ $variant }}"
   src="/img/brand/sc-logo-mark.webp"
+  srcset="/img/brand/sc-logo-mark-240.webp 240w, /img/brand/sc-logo-mark-420.webp 420w, /img/brand/sc-logo-mark.webp 480w"
+  sizes="{{ $sizes }}"
   alt=""
   width="480"
   height="480"
