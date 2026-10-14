@@ -5,6 +5,7 @@ Update in the same PR as the change. Keep entries to one short bullet.
 
 ## 2026-10
 
+- **Homepage image delivery** — Hero is served as AVIF with a WebP fallback (JPEG kept for social cards). Nav and watermark logos use srcset at their displayed sizes, and the CSS build minifies with cssnano.
 - **Dependabot majors ignored** — Weekly npm groups stay minor/patch only. Semver-major version PRs (Tailwind 4, Babel 8, and the rest of that toolchain) are ignored; security update PRs still open.
 
 ## 2026-09
