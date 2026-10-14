@@ -15,7 +15,7 @@
     {{- template "_internal/twitter_cards.html" . -}}
     {{ partial "structured-data.html" . }}
     {{- if and .Params.hero_banner .Params.hero_bg -}}
-    <link rel="preload" as="image" href="{{ .Params.hero_bg }}" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ replaceRE "\\.[^.]+$" ".avif" .Params.hero_bg }}" type="image/avif" fetchpriority="high">
     {{- end -}}
     <link rel="preload" as="font" type="font/woff2" href="/fonts/karla-latin.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-latin.woff2" crossorigin>
@@ -43,7 +43,7 @@
 
     {{ partial "back-to-top.html" . }}
 
-    <script src="/app.js"></script>
+    <script src="/app.js" defer></script>
 
   </body>
 </html>

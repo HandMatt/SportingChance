@@ -19,7 +19,7 @@
           {{ if $item.src }}
           {{- $alt := $item.alt | default $item.title | default "Sporting Chance Project" -}}
           <button type="button" class="image-strip__open" data-strip-src="{{ $item.src }}" data-strip-alt="{{ $alt }}" aria-label="View larger: {{ $alt }}">
-            <img src="{{ $item.src }}" alt="{{ $alt }}" loading="lazy" decoding="async" />
+            <img src="{{ $item.src }}" alt="{{ $alt }}" {{ with $item.width }}width="{{ . }}" {{ end }}{{ with $item.height }}height="{{ . }}" {{ end }}loading="lazy" decoding="async" />
           </button>
           {{ else }}
           <div class="image-strip__placeholder" aria-hidden="true">
